@@ -1,0 +1,119 @@
+site_name: DepledgeLabWiki
+repo_url: https://github.com/e-fuhrmann/test_repository_public
+repo_name: This Wiki on GitHub
+nav:
+  - Home:
+    - Welcome: index.md
+    - Some text: about6.md
+    - Tags: tags.md
+  - About:
+    - Lor: about.md
+    - Um:
+      - Words: test-sub-dir/about2.md
+      - Text: test-sub-dir/about3.md
+      - Another Text: test-sub-dir/about4.md
+    - A Word: about5.md
+theme:
+  name: material
+  icon:
+    logo: fontawesome/solid/vial-virus
+    tag:
+      lorips: material/book-open-blank-variant
+
+  favicon: img/favicon_notebook-inverse.png
+  font:
+    text: Roboto
+  palette:
+
+    # Pallette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      primary: deep purple
+      accent: deep orange
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: deep orange
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: deep orange
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to automatic mode
+
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+    - toc.follow
+    - toc.integrate
+    - search.suggest
+    - search.share
+    - content.action.edit
+    - content.action.view
+
+
+extra:
+  tags:
+    LoremIpsum: lorips
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/DepledgeLab
+      name: DepledgeLab on GitHub
+    - icon: material/web
+      link: https://depledgelab.github.io/
+      name: DepledgeLab Website
+
+extra_css:
+  - stylesheets/extra.css
+
+
+plugins:
+  - search
+  - tags:
+      tags_file: tags.md
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: ⚓︎
+      permalink_title: Link to this section
+      title: Content of this page
+      toc_depth: 3
+  - tables
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.blocks.caption
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
