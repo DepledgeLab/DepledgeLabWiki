@@ -179,11 +179,11 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
       type: datetime
-      #enabled: !ENV [CI, false]
+      enabled: !ENV [CI, false]
   - git-committers:
       repository: DepledgeLab/DepledgeLabWiki
       branch: main
-      #enabled: !ENV [CI, false]
+      enabled: !ENV [CI, false]
 markdown_extensions:
   - abbr
   - admonition
