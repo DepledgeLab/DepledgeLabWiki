@@ -1,18 +1,110 @@
 site_name: DepledgeLabWiki
-repo_url: https://github.com/e-fuhrmann/test_repository_public
+repo_url: https://github.com/DepledgeLab/DepledgeLabWiki
 repo_name: This Wiki on GitHub
+edit_uri: edit/main/docs/
 nav:
   - Home:
-    - Welcome: index.md
-    - Some text: about6.md
-    - Tags: tags.md
-  - About:
-    - Lor: about.md
-    - Um:
-      - Words: test-sub-dir/about2.md
-      - Text: test-sub-dir/about3.md
-      - Another Text: test-sub-dir/about4.md
-    - A Word: about5.md
+    - Home: index.md
+    - News: Home/news.md
+    - Schedules and Events:
+      - Monday Lab meetings: Home/Schedules_and_Events/monday_meeting.md
+      - Other Seminars: Home/Schedules_and_Events/other_seminars.md
+      - Upcoming Events: Home/Schedules_and_Events/upcoming_events.md
+    - How to use this Wiki:
+      - Read, Search and Tags:
+        - Manouver through the Wiki: Home/How_to_use_this_Wiki/read_search.md
+        - List of Tags: tags.md
+      - Manage:
+        - Edit 1: Home/How_to_use_this_Wiki/Edit/howto_edit_1.md
+  - Gettings Started:
+    - Overview: Getting_started/general_info.md
+    - First steps (wet-lab):
+      - Page 1: Getting_started/basic_wetlab/intro_wetlab.md
+    - First steps (dry-lab):
+      - Page 1: Getting_started/basic_drylab/intro_drylab.md
+      - Installing Programms:
+        - Get HPC access: Getting_started/basic_drylab/Installation_help/installing_hpcaccess.md
+        - R(Studio): Getting_started/basic_drylab/Installation_help/installing_R.md
+        - MHH-VPN (Citrix): Getting_started/basic_drylab/Installation_help/installing_citrix.md
+    - For new Students:
+      - Tips for Theses: Getting_started/Student_help/theses_tips.md
+      - Tips for PhD Students: Getting_started/Student_help/phd_tips.md
+  - Theoretical Backgrounds:
+      - Topic 1:
+        - Overview Topic 1: Theoretical_backgrounds/Topic_1/explanation_1.md
+        - Subtopic_1-1:
+          - Explanation 1: Theoretical_backgrounds/Topic_1/Subtopic_1-1/explanation_1-1p1.md
+          - Explanation 2: Theoretical_backgrounds/Topic_1/Subtopic_1-1/explanation_1-1p2.md
+        - Subtopic_1-2:
+          - Explanation 1: Theoretical_backgrounds/Topic_1/Subtopic_1-2/explanation_1-2.md
+      - Topic 2:
+        - Explanation 2: Theoretical_backgrounds/Topic_2/explanation_2.md
+      - Topic 3:
+        - Explanation 3: Theoretical_backgrounds/Topic_3/explanation_3.md
+      - Topic 4:
+        - Explanation 4: Theoretical_backgrounds/Topic_4/explanation_4.md
+      - Topic 5:
+        - Explanation 5: Theoretical_backgrounds/Topic_5/explanation_5.md
+  - "How to: Wet-lab":
+    - Overview: How-to_Wet-lab/wetlab-general.md
+    - Guidelines:
+      - Guideline 1: How-to_Wet-lab/Guidelines/guideline_XY.md
+    - Protocols:
+      - Protocol 1: How-to_Wet-lab/Protocols/protocol_XY.md
+  - "How to: Dry-lab":
+    - Overview: How-to_Dry-lab/drylab_general.md
+    - Work with the HPC:
+      - Overview: How-to_Dry-lab/HPC/hpc_general.md
+      - HPC Hardware: How-to_Dry-lab/HPC/infrastructure.md
+      - How to use the Terminal & Bash: How-to_Dry-lab/HPC/bash.md
+      - How to move files: How-to_Dry-lab/HPC/how_to_move_files.md
+      - Modules: How-to_Dry-lab/HPC/modules.md
+      - How jobs are managed (Slurm): How-to_Dry-lab/HPC/slurm.md
+      - Parsing documents (awk, grep & Co): How-to_Dry-lab/HPC/awk.md
+      - Restoring deleted files from backup: How-to_Dry-lab/HPC/restore_backup.md
+      - Other useful command line tools: How-to_Dry-lab/HPC/commandline_tools.md
+    - Analyses (Scripts):
+      - Analysis 1:
+        - Script 1: How-to_Dry-lab/Analyses_Scripts/Analysis_1/anal_1.md
+      - Analysis 2:
+        - Script 2: How-to_Dry-lab/Analyses_Scripts/Analysis_2/anal_2.md
+    - Other tools:
+      - AcademicCloud:
+        - Overview: How-to_Dry-lab/Other_tools/AcademicCloud/accloud_general.md
+        - OwnCloud: How-to_Dry-lab/Other_tools/AcademicCloud/owncloud.md
+        - TheothertoolsTODO: How-to_Dry-lab/Other_tools/AcademicCloud/furthertools_1.md
+      - Versioning (Git):
+        - Git: How-to_Dry-lab/Other_tools/Git/git.md
+        - GitLab (& GitHub): How-to_Dry-lab/Other_tools/Git/gitlab.md
+      - Python:
+        - General: How-to_Dry-lab/Other_tools/Python/language_python.md
+        - Useful (Bioinformatics) Packages: How-to_Dry-lab/Other_tools/Python/packages_python.md
+      - R(Studio):
+        - General: How-to_Dry-lab/Other_tools/R/language_r.md
+        - Useful (Bioinformatics) Packages: How-to_Dry-lab/Other_tools/R/packages_r.md
+    - Other useful Code:
+      - Code 1: How-to_Dry-lab/Other_useful_code/code_AB.md
+      - Code 2: How-to_Dry-lab/Other_useful_code/code_XY.md
+  - Work at MHH:
+    - MHH processes:
+      - Where to find documents (SharePoint): Work_at_MHH/MHH_processes/sharepoint_and_documents.md
+      - How to print posters: Work_at_MHH/MHH_processes/poster_printing.md
+    - Institute of Virology:
+      - General Information: Work_at_MHH/Institute_of_Virology/rules_and_info.md
+      - Regular Events: Work_at_MHH/Institute_of_Virology/general_events.md
+      - Work Groups (AGs): Work_at_MHH/Institute_of_Virology/ags.md
+    - AG Depledge:
+      - General Information: Work_at_MHH/AG_Depledge/rules.md
+  - Teaching:
+    - Stuff 1: Teaching/stuff_1.md
+  - Miscellaneous:
+    - Helpful MHH-Links:
+      - Links 1: Miscellaneous/Helpful_MHH_LinksResources/mhh_res_1.md
+    - Helpful external Resources:
+      - Links 1: Miscellaneous/Helpful_externel_Resources/external_res_1.md
+    - Templates: 
+      - Topic 1: Miscellaneous/Templates/template_1.md
+
 theme:
   name: material
   icon:
@@ -82,6 +174,12 @@ plugins:
   - search
   - tags:
       tags_file: tags.md
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: datetime
+  - git-committers:
+      repository: DepledgeLab/DepledgeLabWiki
+      branch: main
 markdown_extensions:
   - abbr
   - admonition
