@@ -1,64 +1,55 @@
 ---
 tags:
-    - LoremIpsum
+    - Dates
 ---
 
-# Auget fuit nymphis paludibus
+# Monday Lab Meetings
 
-## Miletida rogantem suos poteras Rhoetei verte erat
+---
 
-Lorem markdownum gerit quotiensque fuit alieni, equidem credere. Lapsum timor
-[rabiemque dat] haec edita dea sanguis ducis capiti:
-inprobe in et radice Melicerta. At urbes aer iacuit amor rebus, hic quem
-Arcesius? Crescit spatium sed tamen summis; monte erat oderat tantae heres
-lumine, cum tulit blandis; levibus ipse.
+## Time table
+Last updated: See the bottom of this page.
 
-- Templa tu ossa sum at Nesso
-- Senilibus nec
-- Cornua ruunt Atlantiades simul prosunt
-- Tela iube
-- Demersit silvarum opto
-- Dixerat mihi sunt relictis tyrannidis figura
+| Date                  | Type of meeting       | Presentor/Topic/Paper | Comment               |
+| :-------------------- | :-------------------: | :-------------------: | :-------------------- |
+| January 20            | General               | /                     |                       |
+| January 27            | Ask Me Anything       | TBD                   |                       |
+| February 03           | Journal Discussion    | TBD                   |                       |
+| February 10           | Individual Presenter  | TBD                   |                       |
+| February 17           | General               | /                     |                       |
+| February 24           | Ask Me Anything       | TBD                   |                       |
+| March 03              | Journal Discussion    | TBD                   |                       |
+| March 10              | Individual Presenter  | TBD                   |                       |
 
-Vixque accipiter vestigia cum in hactenus viribus communis vasto? Mala quem
-alvum ad vetetve coeunt Psamathen [flavam]
-plumbum. Quotiens bellum **intus** medullis propioraque risisse, est inter
-pascere adpellare senectae palmis, legi Iuno aut [spernenda dedit
-Maeandrius]? Ante potius interdum deserti.
+<br><br>
 
-## Andraemon vidit
+---
 
-Turba est, et subito, esse, nobilitate terrae fassurae, tenebrisque. Petentia
-quo dixerat? Cetera apium mortalia, hic et exitiabile ego velate corpora [lyram
-Peneia] sparsa foedantem.
+## The new Monday Lab meeting explained
 
-1. Crotonis odio
-2. Python cadit negat venerisque delere rubescunt
-3. Marmore natum rettulit
-4. Moderantur cursu pello Apolline iactata
-5. Agmen longe Lelex quodque
-6. Coronatae carmen
+Hello everybody and Happy New Year from me, too :D!
+As some of you may have already heard, with the beginning of this year I will now be responsible to organise the Monday Lab Meetings, which previously Elene did (thanks! :)).
+In the coming days I will send you the first schedule for the next weeks. The first meeting of this year will be on January, 20th.
+But first I'd like to inform you about some of the changes we plan to do to the Monday Lab Meetings. Instead of having someone present their progress (alomst) every single week, we now plan to rotate through (~4) different formats every week.
+These are the formats we came up with (not necessarily in this order):
 
-## Non cedentique nominat rupit gnato
+1. Individual presentation
+    1. This is the format from the previous meetings we already know, one person presents their work.
+2. Journal discussion
+    1. Similar to a journal club, but without a single, dedicated presenter
+    2. In advance, one paper will be chosen as the paper for the resepective Monday Lab Meeting. For that, papers can be suggested by everyone (and cleared by Dan). The chosen paper will be added to our papers-please collection and marked as such at (https://sync.academiccloud.de/index.php/apps/onlyoffice/s/jEqtZdjGY1d84fT?fileId=569377339).
+    3. As mentioned, there is no individual presenter, instead we will discuss our thoughts and questions on said paper together (for this, everybody will need to read the paper). There will however be 1-2 people (rotating) leading the discussion.
+3. AMA (Ask Me Anything)
+    1. An open Question session dedicated to a specific topic
+    2. In advance, one specific topic will be chosen (e.g. Nanopore DRS). Before the meeting we will give this topic some thought and collect questions we have about it/ read up on some details if we are knowledgable in that topic.
+    3. In the meeting we then try to awnser each others questions (obviously, often Dan will be doing a lot of the awnsering)
+    4. Feel free to suggest specific topics you would like to discuss
+4. General meeting
+    1. This format we also already know. Here, general lab topics, dates etc. will be discussed.
 
-Auro gratum artus Achilles saniemque, fertque sub si haec. Facies mihi gaudetque
-induitur Pentheus erit inritaturque cum corpus cognorat lacertis sonantibus teli
-videtur ferat moderatus. Labores Thisbes, Troiana hoc Ortygiam fusus;
-**adultera** in et qui obortae partes etiamnum clarum letoque pavit puppe utque?
-Materque firmat fruges subito?
+Additionally, if you have ideas for other formats feel free to make suggestions. :)
 
-> In Ardea vulgaris [lapsae et acuti]. Iam natos
-> letifera *laevae*. Pro haec inrita refugit illa. Nate abit et sola et silvas
-> undas Egeriae corpora in cogeret? Flebile emisitque et inde.
+To test these new formats, I have scheduled the next 8 meetings, this way we get 2 coomplete cycles and can evaluate how it went.
 
-Quod rege coronas sine nisi torrem, adspicerent [dedit]
-haustos. Currum face matri letalem quoque et miserrima quae dicta ex utinam,
-nitidum. Illa medii dextra **placido** quoque structoque moratus plebe, lux in
-alii est, ubi.
-
-Quinque mundi Iphis nostras **Peleu** conscelero iunxit. Est Caras annos obicit,
-perlucentes iugis, subiectis sui. Humus et potiora placetque foribusque,
-promissaque serpens dispensat ventris abstulerunt. Novissima evolvit spes,
-convertit vellera Clytiumque intortos spem subcrescit etiam at dea pariter
-fortuna iussit, *nullos*, causam. Novo summa verba ponto, ille *ignes* faciem,
-eris qua; et est vestibus sibila mille lacertis saxo vulnere.
+Tüdelü<br>
+Erik

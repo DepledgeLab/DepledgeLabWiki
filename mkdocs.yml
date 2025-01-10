@@ -110,7 +110,8 @@ theme:
   icon:
     logo: fontawesome/solid/vial-virus
     tag:
-      lorips: material/book-open-blank-variant
+      tag_lorips: material/book-open-blank-variant
+      tag_dates: material/calendar-alert-outline
 
   favicon: img/favicon_notebook-inverse.png
   font:
@@ -119,7 +120,7 @@ theme:
 
     # Pallette toggle for automatic mode
     - media: "(prefers-color-scheme)"
-      primary: deep purple
+      primary: cyan
       accent: deep orange
       toggle:
         icon: material/brightness-auto
@@ -128,7 +129,7 @@ theme:
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: deep purple
+      primary: cyan
       accent: deep orange
       toggle:
         icon: material/toggle-switch-off-outline
@@ -137,7 +138,7 @@ theme:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: deep purple
+      primary: cyan
       accent: deep orange
       toggle:
         icon: material/toggle-switch
@@ -157,7 +158,8 @@ theme:
 
 extra:
   tags:
-    LoremIpsum: lorips
+    LoremIpsum: tag_lorips
+    Dates: tag_dates
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/DepledgeLab
@@ -177,9 +179,11 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
       type: datetime
+      #enabled: !ENV [CI, false]
   - git-committers:
       repository: DepledgeLab/DepledgeLabWiki
       branch: main
+      #enabled: !ENV [CI, false]
 markdown_extensions:
   - abbr
   - admonition
