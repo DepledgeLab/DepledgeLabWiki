@@ -7,25 +7,37 @@ tags:
 
 ---
 
+!!! warning "Work in progress"
+
+    This Wiki (and the webpage) are currently under construction, many parts still have an unfinished look / just contain filler content.<br>
+    The Monday Lab Meeting schedule is correct though.<br>
+    ~Erik
+
+
 ## Time table
 Last updated: See the bottom of this page.
 
-| Date                  | Type of meeting       | Presentor/Topic/Paper | Comment               |
-| :-------------------- | :-------------------: | :-------------------: | :-------------------- |
-| January 20            | General               | /                     |                       |
-| January 27            | Ask Me Anything       | TBD                   |                       |
-| February 03           | Journal Discussion    | TBD                   |                       |
-| February 10           | Individual Presenter  | TBD                   |                       |
-| February 17           | General               | /                     |                       |
-| February 24           | Ask Me Anything       | TBD                   |                       |
-| March 03              | Journal Discussion    | TBD                   |                       |
-| March 10              | Individual Presenter  | TBD                   |                       |
+| Date           | Type of meeting                                                                                 | Presentor/Topic/Paper | Comment                          |
+| :------------- | :---------------------------------------------------------------------------------------------- | :-------------------: | :------------------------------- |
+| January 20     | <span style="color:royalblue">:octicons-comment-discussion-24:</span> `General`                 | /                     |                                  |
+| January 27     | <span style="color:orange">:material-account-question:</span> `Ask Me Anything`                 | TBD                   |                                  |
+| February 03    | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`  | TBD                   |                                  |
+| February 10    | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                     | **Pierina**           |                                  |
+| February 17    | <span style="color:royalblue">:octicons-comment-discussion-24:</span> `General`                 | /                     |                                  |
+| February 24    | <span style="color:orange">:material-account-question:</span> `Ask Me Anything`                 | TBD                   |                                  |
+| March 03       | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`  | TBD                   |                                  |
+| March 10       | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                     | **Dan**               |                                  |
+
+
+Feel free to write Erik suggestions regarding AMA topics or the Journal discussions.
 
 <br><br>
 
 ---
 
 ## The new Monday Lab meeting explained
+
+(For the moment just the message I sent to you)
 
 Hello everybody and Happy New Year from me, too :D!
 As some of you may have already heard, with the beginning of this year I will now be responsible to organise the Monday Lab Meetings, which previously Elene did (thanks! :)).
