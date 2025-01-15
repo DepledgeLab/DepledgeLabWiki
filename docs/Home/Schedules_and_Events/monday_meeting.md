@@ -20,12 +20,12 @@ Last updated: See the bottom of this page.
 | Date           | Type of meeting                                                                                 | Presentor/Topic/Paper | Comment                          |
 | :------------- | :---------------------------------------------------------------------------------------------- | :-------------------: | :------------------------------- |
 | January 20     | <span style="color:royalblue">:octicons-comment-discussion-24:</span> `General`                 | /                     |                                  |
-| January 27     | <span style="color:orange">:material-account-question:</span> `Ask Me Anything`                 | TBD                   |                                  |
-| February 03    | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`  | TBD                   |                                  |
+| January 27     | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`  | TBD                   |                                  |
+| February 03    | <span style="color:orange">:material-account-question:</span> `Ask Me Anything`                 | TBD                   |                                  |
 | February 10    | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                     | **Pierina**           |                                  |
 | February 17    | <span style="color:royalblue">:octicons-comment-discussion-24:</span> `General`                 | /                     |                                  |
-| February 24    | <span style="color:orange">:material-account-question:</span> `Ask Me Anything`                 | TBD                   |                                  |
-| March 03       | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`  | TBD                   | Moderator: Ruth                  |
+| February 24    | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`  | [Evidence of RNA polymerase III recruitment and transcription at protein-coding gene promoters](https://doi.org/10.1016/j.molcel.2024.09.019)                   | Moderator: Ruth                  |
+| March 03       | <span style="color:orange">:material-account-question:</span> `Ask Me Anything`                 | TBD                   |                                  |
 | March 10       | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                     | **Dan**               |                                  |
 
 
