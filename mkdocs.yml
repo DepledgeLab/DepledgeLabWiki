@@ -112,6 +112,7 @@ theme:
     tag:
       tag_lorips: material/book-open-blank-variant
       tag_dates: material/calendar-alert-outline
+      website: material/web
 
   favicon: img/favicon_notebook-inverse.png
   font:
@@ -160,6 +161,7 @@ extra:
   tags:
     LoremIpsum: tag_lorips
     Dates: tag_dates
+    Website: website
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/DepledgeLab
