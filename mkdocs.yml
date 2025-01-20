@@ -54,15 +54,15 @@ nav:
   - "How to: Dry-lab":
     - Overview: How-to_Dry-lab/drylab_general.md
     - Work with the HPC:
-      - Overview: How-to_Dry-lab/HPC/hpc_general.md
-      - HPC Hardware: How-to_Dry-lab/HPC/infrastructure.md
-      - How to use the Terminal & Bash: How-to_Dry-lab/HPC/bash.md
-      - How to move files: How-to_Dry-lab/HPC/how_to_move_files.md
-      - Modules: How-to_Dry-lab/HPC/modules.md
-      - How jobs are managed (Slurm): How-to_Dry-lab/HPC/slurm.md
-      - Parsing documents (awk, grep & Co): How-to_Dry-lab/HPC/awk.md
-      - Restoring deleted files from backup: How-to_Dry-lab/HPC/restore_backup.md
-      - Other useful command line tools: How-to_Dry-lab/HPC/commandline_tools.md
+      - Overview: How-to_Dry-lab/hpc/hpc_general.md
+      - HPC Hardware: How-to_Dry-lab/hpc/infrastructure.md
+      - How to use the Terminal & Bash: How-to_Dry-lab/hpc/bash.md
+      - How to move files: How-to_Dry-lab/hpc/how_to_move_files.md
+      - Modules: How-to_Dry-lab/hpc/modules.md
+      - How jobs are managed (Slurm): How-to_Dry-lab/hpc/slurm.md
+      - Parsing documents (awk, grep & Co): How-to_Dry-lab/hpc/awk.md
+      - Restoring deleted files from backup: How-to_Dry-lab/hpc/restore_backup.md
+      - Other useful command line tools: How-to_Dry-lab/hpc/commandline_tools.md
     - Analyses (Scripts):
       - Analysis 1:
         - Script 1: How-to_Dry-lab/Analyses_Scripts/Analysis_1/anal_1.md
@@ -198,12 +198,12 @@ plugins:
       enable_creation_date: true
       type: datetime
       # GitHub: commented out; local: not commented out
-      enabled: !ENV [CI, false]
+      #enabled: !ENV [CI, false]
   - git-committers:
       repository: DepledgeLab/DepledgeLabWiki
       branch: main
       # GitHub: commented out; local: not commented out
-      enabled: !ENV [CI, false]
+      #enabled: !ENV [CI, false]
 
 markdown_extensions:
   - abbr

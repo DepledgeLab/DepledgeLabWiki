@@ -97,7 +97,7 @@ If you have already done parts of the following steps you can just skip them.
     1. Type `ssh-keygen`.
     2. Press ++return++ thrice.
     3. Go to ~/.ssh (yourUser/.ssh) and copy the **^^public^^** key (content of the .pub file).
-5. Add your SSH-key to GitHub.
+5. Add your SSH-key to GitHub. (TODO: move to local Git only)
     1. Open the web browser of your choice and login to GitHub.
     2. Go to your profile settings.
     3. Go to Access -> SSH and GPG keys.
@@ -107,7 +107,7 @@ If you have already done parts of the following steps you can just skip them.
     1. Go to your local repository in the Git bash and pull the Wiki (`git pull origin main`).
 7. Install Python on your local machine ([Download](https://www.python.org/downloads/)).
 8. Install VSCode on your local machine ([Download](https://code.visualstudio.com/)).
-    1. Add extensions (Python, GitHub Actions) (optional: many more that are useful).
+    1. Add extensions (Python, GitHub Pull Requests) (optional: many more that are useful).
     2. In VScode, go to the parent folder of your local repository (built-in Terminal) and create a new python environment (++ctrl+shift+p++ -> "Create Environment" -> Use a python version). (You can also use conda, but this example will use a standard python environment.)
     3. Open the python terminal and install necessary packages.
     ```
@@ -115,6 +115,7 @@ If you have already done parts of the following steps you can just skip them.
     pip install mkdocs-git-revision-date-localized-plugin
     pip install mkdocs-git-committers-plugin-2
     ```
+    4. TODO: add login
 9. Setup
 
 Unless you used conda or created your python environment differently, your files should now be arranged like this (with hidden files visible):
