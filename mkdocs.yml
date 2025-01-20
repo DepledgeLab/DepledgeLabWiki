@@ -4,7 +4,7 @@ repo_name: This Wiki on GitHub
 edit_uri: edit/main/docs/
 nav:
   - Home:
-    - Home: index.md
+    - Welcome: index.md
     - News: Home/news.md
     - Schedules and Events:
       - Monday Lab meetings: Home/Schedules_and_Events/monday_meeting.md
@@ -109,10 +109,16 @@ theme:
   name: material
   icon:
     logo: fontawesome/solid/vial-virus
+    # add tag here to set ion and at the bottom to define name
+    # good search at https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#logo-icon-bundled
+    # and press the "+" in the first code block
+    # for in-text icons search at https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
     tag:
       tag_lorips: material/book-open-blank-variant
       tag_dates: material/calendar-alert-outline
       website: material/web
+      wiki: material/notebook
+      guide: octicons/book-24
 
   favicon: img/favicon_notebook-inverse.png
   font:
@@ -147,21 +153,31 @@ theme:
 
   features:
     - navigation.tabs
-    - navigation.indexes
+    # activate to allow header sections to have content, too. Not compatible with toc.integrate.
+    #- navigation.indexes
+    # ----------
     - navigation.top
+    - navigation.prune
     - toc.follow
-    - toc.integrate
+    # activate to move the table of content to the left:
+    #- toc.integrate
+    # ----------
     - search.suggest
     - search.share
     - content.action.edit
     - content.action.view
+    - content.code.copy
 
 
 extra:
+  # add tags here (DisplayedName: ReferenceName) and at the top do define icon
   tags:
     LoremIpsum: tag_lorips
     Dates: tag_dates
     Website: website
+    Wiki: wiki
+    Guide: guide
+
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/DepledgeLab
@@ -182,12 +198,13 @@ plugins:
       enable_creation_date: true
       type: datetime
       # GitHub: commented out; local: not commented out
-      #enabled: !ENV [CI, false]
+      enabled: !ENV [CI, false]
   - git-committers:
       repository: DepledgeLab/DepledgeLabWiki
       branch: main
       # GitHub: commented out; local: not commented out
-      #enabled: !ENV [CI, false]
+      enabled: !ENV [CI, false]
+
 markdown_extensions:
   - abbr
   - admonition
@@ -211,6 +228,8 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight:
       anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.smartsymbols
