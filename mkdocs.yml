@@ -1,7 +1,15 @@
+### General information
 site_name: DepledgeLabWiki
 repo_url: https://github.com/DepledgeLab/DepledgeLabWiki
 repo_name: This Wiki on GitHub
+# set site_url to either remote or local
+site_url: https://depledgelab.github.io/DepledgeLabWiki/
+#site_url: http://127.0.0.1:8000/
 edit_uri: edit/main/docs/
+watch:
+  - includes
+
+### Structure of the Wiki
 nav:
   - Home:
     - Welcome: index.md
@@ -15,7 +23,8 @@ nav:
         - Manouver through the Wiki: Home/How_to_use_this_Wiki/read_search.md
         - List of Tags: tags.md
       - Manage:
-        - Edit 1: Home/How_to_use_this_Wiki/Edit/howto_edit_1.md
+        - Editing this Wiki: Home/How_to_use_this_Wiki/Edit/editing_this_wiki.md
+        - Further Information on this Wiki: Home/How_to_use_this_Wiki/Edit/further_wiki_info.md
   - Gettings Started:
     - Overview: Getting_started/general_info.md
     - First steps (wet-lab):
@@ -105,13 +114,14 @@ nav:
     - Templates: 
       - Topic 1: Miscellaneous/Templates/template_1.md
 
+### Cosmetics
 theme:
   name: material
   icon:
     logo: fontawesome/solid/vial-virus
     # add tag here to set ion and at the bottom to define name
     # good search at https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#logo-icon-bundled
-    # and press the "+" in the first code block
+    # and press the "+" in the first code block (Icon, bundled)
     # for in-text icons search at https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
     tag:
       tag_lorips: material/book-open-blank-variant
@@ -127,7 +137,7 @@ theme:
 
     # Pallette toggle for automatic mode
     - media: "(prefers-color-scheme)"
-      primary: cyan
+      primary: teal
       accent: deep orange
       toggle:
         icon: material/brightness-auto
@@ -136,7 +146,7 @@ theme:
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: cyan
+      primary: teal
       accent: deep orange
       toggle:
         icon: material/toggle-switch-off-outline
@@ -145,12 +155,14 @@ theme:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: cyan
+      primary: teal
       accent: deep orange
       toggle:
         icon: material/toggle-switch
         name: Switch to automatic mode
 
+
+  ## Activated features
   features:
     - navigation.tabs
     # activate to allow header sections to have content, too. Not compatible with toc.integrate.
@@ -158,6 +170,8 @@ theme:
     # ----------
     - navigation.top
     - navigation.prune
+    # turn navigation.instant off when site_url unknown:
+    - navigation.instant
     - toc.follow
     # activate to move the table of content to the left:
     #- toc.integrate
@@ -167,8 +181,10 @@ theme:
     - content.action.edit
     - content.action.view
     - content.code.copy
+    - content.tooltips
 
 
+### Additional, non-cosmetic feautures
 extra:
   # add tags here (DisplayedName: ReferenceName) and at the top do define icon
   tags:
@@ -190,6 +206,7 @@ extra_css:
   - stylesheets/extra.css
 
 
+### Activated plugins
 plugins:
   - search
   - tags:
@@ -205,6 +222,8 @@ plugins:
       # GitHub: commented out; local: not commented out
       #enabled: !ENV [CI, false]
 
+
+### Activated markdown-extensions
 markdown_extensions:
   - abbr
   - admonition
@@ -233,8 +252,15 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.smartsymbols
-  - pymdownx.snippets
-  - pymdownx.superfences
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
+
+  - pymdownx.superfences:
+      custom_fences:
+      - name: mermaid
+        class: mermaid
+        format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
@@ -242,3 +268,9 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.mark
   - pymdownx.tilde
+
+
+### Additional javascript files that were added
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js

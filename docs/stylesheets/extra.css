@@ -46,6 +46,7 @@
     width: 80vw;
     height: 200px;
     border-radius: 5px;
+    font-size: 1rem;
     background: linear-gradient(
         90deg,
         rgba(255, 0, 0, 1) 0%,
@@ -60,4 +61,20 @@
         rgba(251, 7, 217, 1) 90%,
         rgba(255, 0, 0, 1) 100%
     );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 10s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+
+@keyframes rainbow_animation {
+  0%,100% {
+      background-position: 0 0;
+  }
+
+  50% {
+      background-position: 100% 0;
+  }
 }

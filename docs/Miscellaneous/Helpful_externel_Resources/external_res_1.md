@@ -22,6 +22,7 @@ This site is currently under construction.
 | [YAML syntax checker](https://yamlchecker.com/)                 | 
 
 When editing the website repo, I recommend pressing ".". it opens the integrated VSCode for GitHub, makes it a lot easier.
+It might also help to make changes on the testing_branch and create a pull request. That way not every change is imeadiatly pushed to main and can be previewed. [See more](https://greene-lab.gitbook.io/lab-website-template-docs/getting-started/preview-your-site)
 
 
 
