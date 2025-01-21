@@ -195,6 +195,7 @@ Either way, you will have to do the following steps to be able to edit the Wiki:
        ├─ .git
        ├─ .github
        ├─ docs
+       ├─ includes
        ├─ site
        ├─ LICENSE
        ├─ mkdocs.yml
