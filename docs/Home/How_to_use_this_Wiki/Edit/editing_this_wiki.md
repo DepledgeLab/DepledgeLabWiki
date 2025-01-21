@@ -64,7 +64,7 @@ This leads us to the most important question in this guide:
 > How do I properly edit the Wiki the easiest way, and without breaking anything?
 
 Of course, there are many ways to skin a cat. Because of this you can find a collection of possible solutions below. You are free to use whatever method suits you best, just keep in mind the listed pros and especially the cons.  
-Erik **strongly** recommends the [Local - Git + IDE (VSCode)](./#option-4-local-git-ide-vscode-recommended) solution.
+Erik **strongly** recommends the [Local - Git + IDE (VSCode)](#option-4-local-git-ide-vscode-recommended) solution.
 
 <br>
 

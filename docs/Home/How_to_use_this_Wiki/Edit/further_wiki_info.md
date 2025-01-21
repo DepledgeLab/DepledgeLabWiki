@@ -41,11 +41,11 @@ TODO: more detailed
 - Add Tag Name and reference name in YAML file (bottom part).
 - Add icon (using reference name) in YAML file (top part).
 - Add Tag Name to the head of an .md file.
-- Currently (automaticcaly) lists all tags at tags.md.
+- Currently (automatically) lists all tags at tags.md.
 
 ### Adding abbreviations (the includes/abbreviations.md file)
 - Full text automatically pops up as a tooltip (e.g.: hover over the term "HTML" on any page).
-- just add an abbreviation in includes/abbreviations.md in the format `#yaml [TIAE]: This Es An Example`.
+- just add an abbreviation in includes/abbreviations.md in the format `!#yaml *[TIAE]: This Es An Example`.
 - The rest is done by the configurations, tooltips work globally.
 
 
