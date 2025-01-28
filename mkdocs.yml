@@ -116,6 +116,7 @@ nav:
 
 ### Cosmetics
 theme:
+  custom_dir: docs/overrides
   name: material
   icon:
     logo: fontawesome/solid/vial-virus

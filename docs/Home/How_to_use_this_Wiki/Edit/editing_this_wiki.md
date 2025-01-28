@@ -42,7 +42,7 @@ The actual repository link of this Wiki is therefore "[https://github.com/Depled
 | -------------------------------- | -------------------------------------------------------------------------------------------- |
 | MkDocs                           | [Click me](https://www.mkdocs.org/)
 | ^^**Materials for MkDocs**^^         | [--> ^^**Click me**^^ <--](https://squidfunk.github.io/mkdocs-material/)
-| GutHub Pages                     | [Click me](https://docs.github.com/en/pages)
+| GitHub Pages                     | [Click me](https://docs.github.com/en/pages)
 | Markdown                         | [Click me](https://www.markdownguide.org/)
 | HTML                             | [Click me](https://www.w3schools.com/html/default.asp)
 | CSS                              | [Click me](https://www.w3schools.com/cssref/index.php)
@@ -54,8 +54,8 @@ The actual repository link of this Wiki is therefore "[https://github.com/Depled
 ## Working with the repository
 The actual content of this Wiki lies at https://github.com/DepledgeLab/DepledgeLabWiki. From the files available there, all sites are rendered to this Wiki. This means that if you want to change, add or remove any content you will have to edit, add, or remove the approraite files in mentioned GitHub repository. In most cases you will only want to change one of these files:
 
-`A Mardown file`
-:   It are the markdown files that contain the actual content of the sites. One markdown files equals to one site on the Wiki. For example, you can find the content of this page at docs/Home/How_to_ise_this_Wiki/Edit/howto_edit_1.md (in the GitHub repository)(name might change). If you were to change anything in that file the changes would reflect in the rendered Wiki.
+`A Markdown file`
+:   It are the markdown files that contain the actual content of the sites. One markdown files equals to one site on the Wiki. For example, you can find the content of this page at docs/Home/How_to_ise_this_Wiki/Edit/editing_this_wiki.md (in the GitHub repository)(name might change). If you were to change anything in that file the changes would reflect in the rendered Wiki.
 
 `The mkdocs.yml file`
 :   This is the main configuration file of this Wiki and might be considered the heart. It contains information on the strucuture of this Wiki, which themes and plugins are enabled etc. More info on that file can be found at [Further Information on this Wiki](./further_wiki_info.md).
