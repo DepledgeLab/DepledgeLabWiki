@@ -62,6 +62,7 @@ nav:
       - Protocol 1: How-to_Wet-lab/Protocols/protocol_XY.md
   - "How to: Dry-lab":
     - Overview: How-to_Dry-lab/drylab_general.md
+    - Metaplots: How-to_Dry-lab/metaplots/metaplot.md 
     - Work with the HPC:
       - Overview: How-to_Dry-lab/hpc/hpc_general.md
       - HPC Hardware: How-to_Dry-lab/hpc/infrastructure.md
