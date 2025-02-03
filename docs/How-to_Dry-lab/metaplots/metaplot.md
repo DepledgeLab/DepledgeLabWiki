@@ -19,7 +19,7 @@ input files:
 
 The R script, txome-metaplot.R (AGDepledge/scripts/), can be used to process such an input file and produce an analysis of m6A and pseU density across sequenced RNAs. 
 
-![metaplot-txome](/images/txome-metaplot.jpg)
+![metaplot-txome](/docs/img/txome-metaplot.jpg)
 
 
 
