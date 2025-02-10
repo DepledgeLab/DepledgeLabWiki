@@ -28,7 +28,7 @@ Last updated: See the bottom of this page.
 | <span style="color:grey">Wednesday,<br>February 12</span> | <span style="color:grey">13:00</span> | <span style="color:grey">Viro Seminar</span> | <span style="color:grey">Hanan</span> |  |
 | Monday,<br>February 17  | <span style="color:red">**15:00**</span> | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                     | **Pierina**           | Pierinas first PhD supervisor meeting                                 |
 | Monday,<br>February 24  | 14:30 | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`  | [Evidence of RNA polymerase III recruitment and transcription at protein-coding gene promoters](https://doi.org/10.1016/j.molcel.2024.09.019)                   | Moderator: Ruth                  |
-| Monday,<br>March 03     | 14:30 | <span style="color:orange">:material-account-question:</span> `Ask Me Anything`                 | TBD                   |                                  |
+| Monday,<br>March 03     | 14:30 | <span style="color:orange">:material-account-question:</span> `Ask Me Anything`                 | RNA modifications                   |                                  |
 | Monday,<br>March 10     | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                     | **Dan**               |                                  |
 
 
