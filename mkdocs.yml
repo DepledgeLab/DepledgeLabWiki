@@ -63,7 +63,8 @@ nav:
   - "How to: Dry-lab":
     - Overview: How-to_Dry-lab/drylab_general.md
     - Metaplots: How-to_Dry-lab/metaplots/metaplot.md 
-    - Read_Alignment_&_Processing: How-to_Dry-lab/Read_Alignment_&_Processing/funwithflags.md 
+    - Read Alignment & Processing: How-to_Dry-lab/Read_Alignment_&_Processing/fun_with_flags.md
+    - Read Alignment & Processing: How-to_Dry-lab/Read_Alignment_&_Processing/alignments.md
     - Work with the HPC:
       - Overview: How-to_Dry-lab/hpc/hpc_general.md
       - HPC Hardware: How-to_Dry-lab/hpc/infrastructure.md
