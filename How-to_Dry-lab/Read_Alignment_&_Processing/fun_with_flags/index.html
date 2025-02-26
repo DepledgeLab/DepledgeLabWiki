@@ -870,6 +870,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nanopore-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nanopore considerations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#illumina-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Illumina considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -939,10 +963,20 @@
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Link to this section">⚓︎</a></h2>
 <p>Filtering sequence read alignments based on their alignment flag (SAM/BAM column 3) is extremely useful for evaluating the mapping quality of read alignments and inferring strandedness. It is also possible to filter 
 SAM/BAM files to retain only alignments with specific alignment flags.</p>
-<p><img alt="funwithflags" src="../../../img/funwithflags.jpg" />
-*** flags relevant to nanopore DRS and derivatives</p>
-<p>A common step in processing nanopore datasets is to retain only primary alignments for downstream processing. This can be accomplished when converting between SAM to BAM e.g.</p>
+<p><img alt="funwithflags" src="../../../img/funwithflags.jpg" /></p>
+<p>*** flags relevant to nanopore DRS and derivatives</p>
+<h3 id="nanopore-considerations">Nanopore considerations<a class="headerlink" href="#nanopore-considerations" title="Link to this section">⚓︎</a></h3>
+<p>Nanopore datasets comprise single-end reads. A common step in processing nanopore datasets is to retain only primary alignments for downstream processing. This can be accomplished when converting between SAM to BAM e.g.</p>
 <p><code>samtools view -F 2308 -o filtered.bam in.sam</code></p>
+<p>The sum total of nanopore-related flags is 0+4+16+256+2048 = 2324. Subtracting 0+16 (primary alignments against forward and reverse strand) gives 2308. The -F flag acts to exclude all bits that can be used to make 2308 (e.g. 4+256+2048).</p>
+<p>Filtering for reverse strand alignments only can thus be accomplished with -f 16 (primary only) or -f 2320 (primary, secondary, and supplementary)</p>
+<p>Filtering for primary forward strand alignments only requires -F 2324</p>
+<h3 id="illumina-considerations">Illumina considerations<a class="headerlink" href="#illumina-considerations" title="Link to this section">⚓︎</a></h3>
+<p>Illumina datasets may be unpaired (single-end, one read per fragment) or paired-end (two reads per fragment). For unpaired reads, the rules outlined above for nanopore remain valid. For paired-end reads, alignment flag operations are a little more complex.</p>
+<p>Examples:
+- a correctly paired primary alignment with R1 aligning to the forward strand would have a value of 0+1+2+32+64 = 99
+- a correctly paired primary alignment with R2 aligning to the forward strand would have a value of 0+1+2+32+128 = 163
+- an incorrectly paired primary alignment with R2 aligning to the reverse strand could have a value of 1+16+128 = 145 (implies mate is aligned to same strand)</p>
 <h2 id="further-reading">Further reading<a class="headerlink" href="#further-reading" title="Link to this section">⚓︎</a></h2>
 <p><a href="http://broadinstitute.github.io/picard/explain-flags.html">Alignment flag decoder</a></p>
 
@@ -967,7 +1001,7 @@ SAM/BAM files to retain only alignments with specific alignment flags.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">February 26, 2025 14:10:37</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">February 26, 2025 14:23:44</span>
   </span>
 
     
