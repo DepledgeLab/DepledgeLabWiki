@@ -17,20 +17,37 @@ tags:
 ## Time table
 Last updated: See the bottom of this page.
 
-| Date         | Time  | Type of meeting                                                                                 | Presentor/Topic/Paper | Comment                          |
-| :----------- | :---: | :---------------------------------------------------------------------------------------------: | :-------------------: | :------------------------------- |
-| Monday,<br>January 20   | 14:30 | <span style="color:royalblue">:octicons-comment-discussion-24:</span> `General`                 | /                     |                                  |
-| Monday,<br>January 27   | 14:30 | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`  | [Charting the epitranscriptomic landscape across RNA biotypes using native RNA nanopore sequencing](https://doi.org/10.1016/j.molcel.2024.12.014)                   | Moderator: Erik                   |
-| Monday,<br>February 03  | <span style="color:red">**14:15**</span> | <span style="color:orange">:material-account-question:</span> `Ask Me Anything`                 | Nanopore DRS          | Dan has to leave at ~15:00                                 |
-| <span style="color:grey">Tuesday,<br>February 04</span> | <span style="color:grey">12:30</span> | <span style="color:grey">Viro Journal Club</span> | <span style="color:grey">Pierina</span> | |
-| <span style="color:grey">Friday,<br>February 07</span> | <span style="color:grey">09:00</span> | <span style="color:grey">Viro Club</span> | <span style="color:grey">Ruth</span> |  |
-| Monday,<br>February 10  | 14:30 | <span style="color:royalblue">:octicons-comment-discussion-24:</span> `General`                 | /                     |                                  |
-| <span style="color:grey">Wednesday,<br>February 12</span> | <span style="color:grey">13:00</span> | <span style="color:grey">Viro Seminar</span> | <span style="color:grey">Hanan</span> |  |
-| Monday,<br>February 17  | <span style="color:red">**15:00**</span> | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                     | **Pierina**           | Pierinas first PhD supervisor meeting                                 |
-| Monday,<br>February 24  | 14:30 | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`  | [Evidence of RNA polymerase III recruitment and transcription at protein-coding gene promoters](https://doi.org/10.1016/j.molcel.2024.09.019)                   | Moderator: Ruth                  |
-| Monday,<br>March 03     | <span style="color:red">**14:00**</span> | <span style="color:orange">:material-account-question:</span> `Ask Me Anything`                 | RNA modifications                   |                                  |
-| Monday,<br>March 10     | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                     | **Dan**               |                                  |
+=== "NEW: 17.03.25-12.05.25"
 
+    | Date         | Time  | Type of meeting                                                                                 | Presentor/Topic/Paper | Comment                          |
+    | :----------- | :---: | :---------------------------------------------------------------------------------------------: | :-------------------: | :------------------------------- |
+    | Monday,<br>March 17  | 14:30 | <span style="color:royalblue">:octicons-comment-discussion-24:</span> `General`                 | /                     |                                  |
+    | Monday,<br>March 24  | 14:30 | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`  | TBD (Please send suggestions!)                   | Moderator: Ruchira<br>_Dan away_                   |
+    | Monday,<br>March 31  | 14:30 | <span style="color:orange">:material-account-question:</span> `Ask Me Anything`                 | AI in our Research          | _Jens away_                                 |
+    | Monday,<br>April 07  | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                     | **Erik**           | _Jens away_                                 |
+    | Monday,<br>April 14  | 14:30 | <span style="color:royalblue">:octicons-comment-discussion-24:</span> `General`                 | /                     | _Dan away_                                 |
+    | _Monday,<br>April 21_  |  | _EASTER MONDAY_                 |                      |                                  |
+    | Monday,<br>April 28  | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                     | **Carolin**           |                                  |
+    | <span style="color:grey">Tuesday,<br>April 29</span> | <span style="color:grey">12:30</span> | <span style="color:grey">Viro Journal Club</span> | <span style="color:grey">Elene</span> | |
+    | Monday,<br>May 05  | 14:30 | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`  | TBD (Please send suggestions!)                   | Moderator: Hanan                   |
+    | Monday,<br>May 12  | 14:30 | <span style="color:orange">:material-account-question:</span> `Ask Me Anything`                 | TBD (Please send suggestions!)          |                                  |
+
+
+=== "20.01.25-10.03.25"
+
+    | Date         | Time  | Type of meeting                                                                                 | Presentor/Topic/Paper | Comment                          |
+    | :----------- | :---: | :---------------------------------------------------------------------------------------------: | :-------------------: | :------------------------------- |
+    | Monday,<br>January 20   | 14:30 | <span style="color:royalblue">:octicons-comment-discussion-24:</span> `General`                 | /                     |                                  |
+    | Monday,<br>January 27   | 14:30 | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`  | [Charting the epitranscriptomic landscape across RNA biotypes using native RNA nanopore sequencing](https://doi.org/10.1016/j.molcel.2024.12.014)                   | Moderator: Erik                   |
+    | Monday,<br>February 03  | <span style="color:red">**14:15**</span> | <span style="color:orange">:material-account-question:</span> `Ask Me Anything`                 | Nanopore DRS          | Dan has to leave at ~15:00                                 |
+    | <span style="color:grey">Tuesday,<br>February 04</span> | <span style="color:grey">12:30</span> | <span style="color:grey">Viro Journal Club</span> | <span style="color:grey">Pierina</span> | |
+    | <span style="color:grey">Friday,<br>February 07</span> | <span style="color:grey">09:00</span> | <span style="color:grey">Viro Club</span> | <span style="color:grey">Ruth</span> |  |
+    | Monday,<br>February 10  | 14:30 | <span style="color:royalblue">:octicons-comment-discussion-24:</span> `General`                 | /                     |                                  |
+    | <span style="color:grey">Wednesday,<br>February 12</span> | <span style="color:grey">13:00</span> | <span style="color:grey">Viro Seminar</span> | <span style="color:grey">Hanan</span> |  |
+    | Monday,<br>February 17  | <span style="color:red">**15:00**</span> | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                     | **Pierina**           | Pierinas first PhD supervisor meeting                                 |
+    | Monday,<br>February 24  | 14:30 | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`  | [Evidence of RNA polymerase III recruitment and transcription at protein-coding gene promoters](https://doi.org/10.1016/j.molcel.2024.09.019)                   | Moderator: Ruth                  |
+    | Monday,<br>March 03     | <span style="color:red">**14:00**</span> | <span style="color:orange">:material-account-question:</span> `Ask Me Anything`                 | RNA modifications                   |                                  |
+    | Monday,<br>March 10     | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                     | **Dan**               |                                  |
 
 
 Feel free to write Erik suggestions regarding AMA topics or the Journal discussions.

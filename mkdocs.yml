@@ -57,7 +57,7 @@ nav:
   - "How to: Wet-lab":
     - Overview: How-to_Wet-lab/wetlab-general.md
     - Guidelines:
-      - Guideline 1: How-to_Wet-lab/Guidelines/guideline_XY.md
+      - Wet-lab 101: How-to_Wet-lab/Guidelines/wetlab-guide-intro.md
     - Protocols:
       - Protocol 1: How-to_Wet-lab/Protocols/protocol_XY.md
   - "How to: Dry-lab":
@@ -133,6 +133,8 @@ theme:
       website: material/web
       wiki: material/notebook
       guide: octicons/book-24
+      instr: fontawesome/solid/circle-exclamation
+      misc: material/dots-horizontal
 
   favicon: img/favicon_notebook-inverse.png
   font:
@@ -197,6 +199,8 @@ extra:
     Website: website
     Wiki: wiki
     Guide: guide
+    Instruction: instr
+    Miscellaneous: misc
 
   social:
     - icon: fontawesome/brands/github
