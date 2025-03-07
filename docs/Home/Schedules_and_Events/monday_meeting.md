@@ -22,14 +22,14 @@ Last updated: See the bottom of this page.
     | Date         | Time  | Type of meeting                                                                                 | Presentor/Topic/Paper | Comment                          |
     | :----------- | :---: | :---------------------------------------------------------------------------------------------: | :-------------------: | :------------------------------- |
     | Monday,<br>March 17  | 14:30 | <span style="color:royalblue">:octicons-comment-discussion-24:</span> `General`                 | /                     |                                  |
-    | Monday,<br>March 24  | 14:30 | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`  | [MoDorado: Enhanced detection of tRNA modifications in nanopore sequencing by off-label use of modification callers](https://doi.org/10.1101/2025.02.18.638820)                   | Moderator: Ruchira<br>_Dan away_                   |
+    | Monday,<br>March 24  | 14:30 | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`  | [MoDorado: Enhanced detection of tRNA modifications in nanopore sequencing by off-label use of modification callers](https://doi.org/10.1101/2025.02.18.638820)                   | Moderator: Pierina<br>_Dan away_                   |
     | Monday,<br>March 31  | 14:30 | <span style="color:orange">:material-account-question:</span> `Ask Me Anything`                 | AI in our Research          | _Jens away_                                 |
     | Monday,<br>April 07  | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                     | **Erik**           | _Jens away_                                 |
     | Monday,<br>April 14  | 14:30 | <span style="color:royalblue">:octicons-comment-discussion-24:</span> `General`                 | /                     | _Dan away_                                 |
     | _Monday,<br>April 21_  |  | _EASTER MONDAY_                 |                      |                                  |
     | Monday,<br>April 28  | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                     | **Carolin**           |                                  |
     | <span style="color:grey">Tuesday,<br>April 29</span> | <span style="color:grey">12:30</span> | <span style="color:grey">Viro Journal Club</span> | <span style="color:grey">Elene</span> | |
-    | Monday,<br>May 05  | 14:30 | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`  | [Immune evasion through mitochondrial transfer in the tumour microenvironment](https://doi.org/10.1038/s41586-024-08439-0)                   | Moderator: Hanan                   |
+    | Monday,<br>May 05  | 14:30 | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`  | [Immune evasion through mitochondrial transfer in the tumour microenvironment](https://doi.org/10.1038/s41586-024-08439-0)                   | Moderator: Ruchira                   |
     | Monday,<br>May 12  | 14:30 | <span style="color:orange">:material-account-question:</span> `Ask Me Anything`                 | TBD (Please send suggestions!)          |                                  |
 
 
