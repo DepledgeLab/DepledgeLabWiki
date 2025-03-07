@@ -22,14 +22,14 @@ Last updated: See the bottom of this page.
     | Date         | Time  | Type of meeting                                                                                 | Presentor/Topic/Paper | Comment                          |
     | :----------- | :---: | :---------------------------------------------------------------------------------------------: | :-------------------: | :------------------------------- |
     | Monday,<br>March 17  | 14:30 | <span style="color:royalblue">:octicons-comment-discussion-24:</span> `General`                 | /                     |                                  |
-    | Monday,<br>March 24  | 14:30 | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`  | TBD (Please send suggestions!)                   | Moderator: Ruchira<br>_Dan away_                   |
+    | Monday,<br>March 24  | 14:30 | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`  | [MoDorado: Enhanced detection of tRNA modifications in nanopore sequencing by off-label use of modification callers](https://doi.org/10.1101/2025.02.18.638820)                   | Moderator: Ruchira<br>_Dan away_                   |
     | Monday,<br>March 31  | 14:30 | <span style="color:orange">:material-account-question:</span> `Ask Me Anything`                 | AI in our Research          | _Jens away_                                 |
     | Monday,<br>April 07  | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                     | **Erik**           | _Jens away_                                 |
     | Monday,<br>April 14  | 14:30 | <span style="color:royalblue">:octicons-comment-discussion-24:</span> `General`                 | /                     | _Dan away_                                 |
     | _Monday,<br>April 21_  |  | _EASTER MONDAY_                 |                      |                                  |
     | Monday,<br>April 28  | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                     | **Carolin**           |                                  |
     | <span style="color:grey">Tuesday,<br>April 29</span> | <span style="color:grey">12:30</span> | <span style="color:grey">Viro Journal Club</span> | <span style="color:grey">Elene</span> | |
-    | Monday,<br>May 05  | 14:30 | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`  | TBD (Please send suggestions!)                   | Moderator: Hanan                   |
+    | Monday,<br>May 05  | 14:30 | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`  | [Immune evasion through mitochondrial transfer in the tumour microenvironment](https://doi.org/10.1038/s41586-024-08439-0)                   | Moderator: Hanan                   |
     | Monday,<br>May 12  | 14:30 | <span style="color:orange">:material-account-question:</span> `Ask Me Anything`                 | TBD (Please send suggestions!)          |                                  |
 
 
@@ -67,7 +67,7 @@ This is how our weekly meetings work:
         - One person presents the progress of their current work. Discussions, questions and advice is encoured.
     - <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussions`
         - Similar to a journal club, but without a single, dedicated presenter
-        - In advance, one paper will be chosen as the paper for the resepective Monday Lab Meeting. For that, papers can be suggested by everyone (and cleared by Dan). The chosen paper will be added to our [papers-please collection]((https://sync.academiccloud.de/index.php/apps/onlyoffice/s/jEqtZdjGY1d84fT?fileId=569377339)) and marked as such.
+        - In advance, one paper will be chosen as the paper for the resepective Monday Lab Meeting. For that, papers can be suggested by everyone (and cleared by Dan). The chosen paper will be added to our [papers-please collection](https://sync.academiccloud.de/index.php/apps/onlyoffice/s/jEqtZdjGY1d84fT?fileId=569377339) and marked as such.
         - As mentioned, there is no individual presenter, instead we will discuss our thoughts and questions on said paper together (for this, everybody will need to read the paper). There will however be 1-2 people (rotating) leading the discussion.
     - <span style="color:orange">:material-account-question:</span> `AMAs (Ask Me Anything)` 
         - An open question session dedicated to a specific topic
