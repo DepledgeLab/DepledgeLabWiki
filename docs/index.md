@@ -4,7 +4,7 @@
 
 !!! warning "Work in progress"
 
-    <span style="color:red">**THIS WIKI IS CURRENTLY UNDER CONSTRUCTION AND CURRENTLY CONSISTS OF MANY PLACEHOLDERS**</span><br>
+    <span style="color:red">**THIS WIKI IS CURRENTLY UNDER CONSTRUCTION AND  CONSISTS OF MANY PLACEHOLDERS.**</span><br>
     <span style="color:red"> **THE MONDAY LAB MEETING SCHEDULE IS BEING REGULARY UPDATED THOUGH.**</span><br>
 
     For a full view of currently available pages check out the [tag directory](tags).<br><br>
