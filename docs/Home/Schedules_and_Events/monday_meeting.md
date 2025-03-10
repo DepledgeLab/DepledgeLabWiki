@@ -11,7 +11,7 @@ tags:
 
     This Wiki (and the webpage) are currently under construction, many parts still have an unfinished look / just contain filler content.<br>
     The Monday Lab Meeting schedule is correct though.<br>
-    For a full view of currently available pages check out the [tag directory](/tags).<br>
+    For a full view of currently available pages check out the [tag directory](../../../tags).<br>
     ~Erik
 
 

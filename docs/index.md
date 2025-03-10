@@ -2,10 +2,15 @@
 
 ---
 
-<span style="color:red">**THIS WIKI IS CURRENTLY UNDER CONSTUCTION!**</span><br>
-<span style="color:red">**FOR NOW, IT ONLY HAS PLACEHOLDERS (EXCEPT THE MONDAY LAB MEETING SCHEDULE)**</span>
+!!! warning "Work in progress"
 
-Thank you for your patience.
+    <span style="color:red">**THIS WIKI IS CURRENTLY UNDER CONSTRUCTION AND CURRENTLY CONSISTS OF MANY PLACEHOLDERS**</span><br>
+    <span style="color:red"> **THE MONDAY LAB MEETING SCHEDULE IS BEING REGULARY UPDATED THOUGH.**</span><br>
+
+    For a full view of currently available pages check out the [tag directory](tags).<br><br>
+    Thank you for your patience.<br><br>
+    ~Erik
+
 
 ---
 
