@@ -1,9 +1,11 @@
 ---
 tags:
-    - metaplot
+    - Metaplot
 ---
 
 # Metaplot
+
+---
 
 ## Overview
 

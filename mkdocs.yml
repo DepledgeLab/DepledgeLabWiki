@@ -25,7 +25,7 @@ nav:
       - Manage:
         - Editing this Wiki: Home/How_to_use_this_Wiki/Edit/editing_this_wiki.md
         - Further Information on this Wiki: Home/How_to_use_this_Wiki/Edit/further_wiki_info.md
-  - Gettings Started:
+  - Getting Started:
     - Overview: Getting_started/general_info.md
     - First steps (wet-lab):
       - Page 1: Getting_started/basic_wetlab/intro_wetlab.md
@@ -58,13 +58,17 @@ nav:
     - Overview: How-to_Wet-lab/wetlab-general.md
     - Guidelines:
       - Wet-lab 101: How-to_Wet-lab/Guidelines/wetlab-guide-intro.md
+      - Emergency procedure for phenol/trizol: How-to_Wet-lab/Protocols/first_aid_phenol-trizol.md
     - Protocols:
-      - Protocol 1: How-to_Wet-lab/Protocols/protocol_XY.md
+      - Intro to Cell culture: How-to_Wet-lab/Protocols/intro_cell_culture.md
+      - Useful numbers for Cell culture: How-to_Wet-lab/Protocols/cell_cuture_table.md
+      - Disposal of Cell culture waste: How-to_Wet-lab/Protocols/cell_cuture_waste.md
   - "How to: Dry-lab":
     - Overview: How-to_Dry-lab/drylab_general.md
     - Metaplots: How-to_Dry-lab/metaplots/metaplot.md 
-    - Read Alignment & Processing: How-to_Dry-lab/Read_Alignment_&_Processing/fun_with_flags.md
-    - Read Alignment & Processing: How-to_Dry-lab/Read_Alignment_&_Processing/alignments.md
+    - Read Alignment & Processing:
+      - Overview: How-to_Dry-lab/Read_Alignment_&_Processing/alignments.md
+      - Fun with (alignment) Flags: How-to_Dry-lab/Read_Alignment_&_Processing/fun_with_flags.md
     - Work with the HPC:
       - Overview: How-to_Dry-lab/hpc/hpc_general.md
       - HPC Hardware: How-to_Dry-lab/hpc/infrastructure.md
@@ -113,7 +117,7 @@ nav:
     - Helpful MHH-Links:
       - Links 1: Miscellaneous/Helpful_MHH_LinksResources/mhh_res_1.md
     - Helpful external Resources:
-      - Links 1: Miscellaneous/Helpful_externel_Resources/external_res_1.md
+      - Link collection (Website): Miscellaneous/Helpful_externel_Resources/external_res_1.md
     - Templates: 
       - Topic 1: Miscellaneous/Templates/template_1.md
 
@@ -135,6 +139,11 @@ theme:
       guide: octicons/book-24
       instr: fontawesome/solid/circle-exclamation
       misc: material/dots-horizontal
+      align: material/format-align-bottom
+      flags: material/flag-triangle
+      metaplot: material/chart-line
+      protocol: material/file-document-alert
+      cell_cult: material/scatter-plot-outline
 
   favicon: img/favicon_notebook-inverse.png
   font:
@@ -201,6 +210,11 @@ extra:
     Guide: guide
     Instruction: instr
     Miscellaneous: misc
+    Alignment: align
+    Flags: flags
+    Metaplot: metaplot
+    Protocol: protocol
+    Cell Culture: cell_cult
 
   social:
     - icon: fontawesome/brands/github

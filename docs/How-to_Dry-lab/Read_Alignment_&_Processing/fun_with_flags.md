@@ -1,10 +1,12 @@
 ---
 tags:
-    - alignment
-    - flags
+    - Alignment
+    - Flags
 ---
 
 # Fun with (alignment) flags
+
+---
 
 ## Overview
 

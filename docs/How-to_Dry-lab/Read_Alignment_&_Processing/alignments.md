@@ -1,8 +1,12 @@
+---
+tags:
+    - Alignment
+---
 
+# Overview
 
+---
 
-
-## Overview
 
 A sequence read (or read-pair) may have one or more primary alignments against a reference genome. 
 
