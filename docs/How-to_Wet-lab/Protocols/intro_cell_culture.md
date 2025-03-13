@@ -11,7 +11,7 @@ tags:
 !!! warning "Work in progress"
 
     This site is currently under construction, many parts still have an unfinished look or are yet to be written.<br>
-    For a full view of currently available pages check out the [tag directory](../../../tags).<br>
+    For a full view of currently available pages check out the [tag directory](../../tags.md).<br>
     ~Erik
 
 The ability to grow cells *in vitro* has been central to biomedical discovery for the past century. While cells in a dish have adapted to their new environment and are not identical to cells *in vivo*, many of the basic cellular processes remain intact. 

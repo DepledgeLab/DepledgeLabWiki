@@ -11,7 +11,7 @@ tags:
 
     This Wiki (and the webpage) are currently under construction, many parts still have an unfinished look / just contain filler content.<br>
     The Monday Lab Meeting schedule is correct though.<br>
-    For a full view of currently available pages check out the [tag directory](../../../tags).<br>
+    For a full view of currently available pages check out the [tag directory](../../tags.md).<br>
     ~Erik
 
 
@@ -22,8 +22,8 @@ Last updated: See the bottom of this page.
 
     | Date         | Time  | Type of meeting                                                                                 | Presentor/Topic/Paper | Comment                          |
     | :----------- | :---: | :---------------------------------------------------------------------------------------------: | :-------------------: | :------------------------------- |
-    | Monday,<br>March 17  | 14:30 | <span style="color:royalblue">:octicons-comment-discussion-24:</span> `General`                 | /                     |                                  |
-    | Monday,<br>March 24  | 14:30 | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`  | [MoDorado: Enhanced detection of tRNA modifications in nanopore sequencing by off-label use of modification callers](https://doi.org/10.1101/2025.02.18.638820)                   | Moderator: Pierina<br>_Dan away_                   |
+    | Monday,<br>March 17  | 14:30 | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`  | [MoDorado: Enhanced detection of tRNA modifications in nanopore sequencing by off-label use of modification callers](https://doi.org/10.1101/2025.02.18.638820)                   | Moderator: Pierina                   |
+    | Monday,<br>March 24  | 14:30 | <span style="color:royalblue">:octicons-comment-discussion-24:</span> `General`                 | /                     | _Dan away_                                 |
     | Monday,<br>March 31  | 14:30 | <span style="color:orange">:material-account-question:</span> `Ask Me Anything`                 | AI in our Research          |                                  |
     | Monday,<br>April 07  | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                     | **Erik**           | _Jens away_                                 |
     | Monday,<br>April 14  | 14:30 | <span style="color:royalblue">:octicons-comment-discussion-24:</span> `General`                 | /                     | _Dan away_                                 |

@@ -11,7 +11,7 @@ tags:
 !!! warning "Work in progress"
 
     This site is currently under construction, many parts still have an unfinished look or are yet to be written.<br>
-    For a full view of currently available pages check out the [tag directory](../../../tags).<br>
+    For a full view of currently available pages check out the [tag directory](../../tags.md).<br>
     ~Erik
 
 |   | **Surface area (cm^2^)**  | **Seeding density[^1]**  | **Cells at confluency[^2]**  | **[Versene](https://www.thermofisher.com/order/catalog/product/15040066) (mL of 0.05% EDTA). Approx. volume** | **[Trypsin](https://www.thermofisher.com/de/de/home/life-science/cell-culture/mammalian-cell-culture/reagents/cell-dissociation.html) (mL of 0.05% trypsin, 0.53 mM EDTA). Approx. volume**  | **[Growth medium](https://www.thermofisher.com/de/de/home/life-science/cell-culture/mammalian-cell-culture/cell-culture-media.html) (mL). Approx. volume**  |
