@@ -62,7 +62,7 @@ While more complicated than analyses of transcriptome-level alignments, genome-l
     intersectBed -a m6A.sorted.bed -b hg38_annot.sorted.bed -sorted -wo -s > annot_m6a.sorted.bed
 
     # Filter outputs for desired depth and frequency
-    awk '$5 > 20 && $6 > 10' annot_m6a.sorted.bed > annot_m6a.filtdepth50freq10.sorted.bed
+    awk '$5 > 50 && $6 > 10' annot_m6a.sorted.bed > annot_m6a.filtdepth50freq10.sorted.bed
 ```    
 
 #### 4. Generate metagene co-ordinate file 
