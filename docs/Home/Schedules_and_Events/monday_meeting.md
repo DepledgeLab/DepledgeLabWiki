@@ -18,6 +18,10 @@ tags:
 ## Time table
 Last updated: See the bottom of this page.
 <span style="color:red">  </span>
+
+
+    
+
 === "NEW: 17.03.25-12.05.25"
 
     | Date         | Time  | Type of meeting                                                                                 | Presentor/Topic/Paper | Comment                          |
@@ -29,9 +33,10 @@ Last updated: See the bottom of this page.
     | Monday,<br>April 14  | 14:30 | <span style="color:royalblue">:octicons-comment-discussion-24:</span> `General`                 | /                     | _Dan away_                                 |
     | _Monday,<br>April 21_  |  | _EASTER MONDAY_                 |                      |                                  |
     | Monday,<br>April 28  | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                     | **Carolin**           |                                  |
-    | <span style="color:grey">Tuesday,<br>April 29</span> | <span style="color:grey">12:30</span> | <span style="color:grey">Viro Journal Club</span> | <span style="color:grey">Elene</span> | |
+    | <span style="color:grey">{--Tuesday,<br>April 29--}</span> | <span style="color:grey">{--12:30--}</span> | <span style="color:grey">{--Viro Journal Club--}</span> | <span style="color:grey">{--Elene--}</span> | |
     | Monday,<br>May 05  | 14:30 | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`  | {--Immune evasion through mitochondrial transfer in the tumour microenvironment--}<br>{++[mRNA export factors store nascent transcripts within nuclear speckles as an adaptive response to transient global inhibition of transcription](https://doi.org/10.1016/j.molcel.2024.12.008)++}                   | Moderator: <span style="color:red"> Ruchira </span>                  |
-    | Monday,<br>May 12  | 14:30 | <span style="color:orange">:material-account-question:</span> `Ask Me Anything`                 | TBD (Please send suggestions!)          |                                  |
+    | <span style="color:grey">Friday,<br>May 09</span> | <span style="color:grey">09:00</span> | <span style="color:grey">Viro Club</span> | <span style="color:grey">Pierina</span> | |
+    | Monday,<br>May 12  | 14:30 | <span style="color:orange">:material-account-question:</span> `Ask Me Anything`                 | Methods & Experiments Talk          |                                  |
 
 
 === "20.01.25-10.03.25"
