@@ -34,7 +34,8 @@ Last updated: See the bottom of this page.
     | _Monday,<br>June 30_  |  | _CANCELLED_                 |                      | _Dan absent_                                 |
     | Monday,<br>July 07  | 14:30 | <span style="color:orange">:material-account-question:</span> `Ask Me Anything`                 | Comparison of Sequencing platforms:<br>Illumina, Nanopore & PacBio          |                                  |
     | <span style="color:grey">Wednesday,<br>July 09</span> | <span style="color:grey">13:00</span> | <span style="color:grey">Viro Seminar</span> | <span style="color:grey">Carolin</span> | |
-    
+    | Monday,<br>July 14 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                 | IHW attendees practice talk                     |                                  |
+    | Monday,<br>July 21 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                 | IHW attendees practice talk                     |                                  |
 
 === "17.03.25-12.05.25"
 
