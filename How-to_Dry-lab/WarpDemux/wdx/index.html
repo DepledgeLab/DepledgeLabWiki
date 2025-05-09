@@ -990,6 +990,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#filtering-of-dorado-basecalled-ubams" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtering of Dorado-basecalled uBAMs
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1107,21 +1116,30 @@
 <h2 id="wdx-output-parsing">WDX output &amp; parsing<a class="headerlink" href="#wdx-output-parsing" title="Link to this section">⚓︎</a></h2>
 <p>Following the demux step, an output folder will be generated in the output directory. The folder name will reflect the model used and the date of the demux run. The output folder will contain a  subfolder called predictions which contains large number of .csv files, each file containing predictions for 40000 reads. These should be combined into a single file
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>cat barcode_predictions_* &gt; barcode_predictions.all.csv
+</span></code></pre></div>
+The barcode_predictions.all.csv contains a list of all read ids (column 1), the predicted barcode (col 2), the confidence score (col 3), and the individual confidence scores for each barcode (cols 4+).
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>read_id,predicted_barcode,confidence_score,p03,p04,p05,p07,p-1
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>cd3c0eab-1e24-4059-86e5-0f5845d417d4,5,0.893,0.045,0.0047,0.9384,0.0107,0.0012
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>4cc652e6-2369-452d-ad5d-668ed5b63198,5,0.964,0.0048,0.0006,0.9786,0.0141,0.0019
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>58346cc3-6624-4b59-97cb-0ab91c361ad9,5,0.976,0.0077,0.0037,0.9838,0.0036,0.0011
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>021ff088-6183-4035-9d84-8d5c7c52cfe0,4,0.994,0.002,0.9961,0.0005,0.0008,0.0006
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>d1a12590-4408-4ce4-a740-0696bf6f5651,4,0.991,0.0033,0.9944,0.0006,0.0011,0.0006
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>87ce2169-e6c0-4d5b-a7b5-c39df46264a8,5,0.972,0.0046,0.0015,0.982,0.0098,0.0021
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>09dde30c-5aa6-452c-a0ea-178efe165dba,4,0.966,0.0112,0.9767,0.002,0.0078,0.0024
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>79bf882c-f6f1-405a-9672-60d76691f72f,5,1.0,0.0,0.0,0.9998,0.0001,0.0001
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>33bc3975-8fdd-4583-abad-0094bafba834,4,0.997,0.0009,0.998,0.0004,0.0004,0.0004
+</span></code></pre></div>
+We process this using the following commands to select only high confidence barcodes to produce a list of read ids associated with each demultiplexed sample. In the below example we are compiling lists of read ids associated with barcode 04 and barcode 05 and with probability scores of &gt;90%
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>awk -F&#39;,&#39; &#39;$3 == 4 &amp;&amp; $4 &gt;= 0.9 {print $1}&#39; predictions_filtered.bam.csv &gt; barcode04.p0.9.list.txt
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>awk -F&#39;,&#39; &#39;$3 == 5 &amp;&amp; $4 &gt;= 0.9 {print $1}&#39; predictions_filtered.bam.csv &gt; barcode05.p0.9.list.txt
 </span></code></pre></div></p>
-<ul>
-<li>latest gencode predictions (obtained via UCSC Table browser) in genepred format</li>
-<li>reduced modkit BED files containing modification calls against genome alignments</li>
-<li>assorted python and R scripts (AGDepledge/scripts/)</li>
-</ul>
-<p>While more complicated than analyses of transcriptome-level alignments, genome-level alignments may be preferred in many cases. The following described how to generate genome-level metaplots when using standard DRS approaches. This approach can be applied to all modifications that can be natively called by Dorado.</p>
-<h4 id="1-navigate-to-ucsc-table-browser">1. Navigate to <a href="https://genome.ucsc.edu/cgi-bin/hgTables">UCSC Table browser</a><a class="headerlink" href="#1-navigate-to-ucsc-table-browser" title="Link to this section">⚓︎</a></h4>
-<ul>
-<li>set assembly to Dec. 2013 HG38</li>
-<li>set track to All Gencode V47 (or later version)</li>
-<li>set table to Basic(wgEncodeGencodeBasicV47)</li>
-<li>set output file name to hg38_gencode_v47.genePred</li>
-<li>download</li>
-</ul>
+<h2 id="filtering-of-dorado-basecalled-ubams">Filtering of Dorado-basecalled uBAMs<a class="headerlink" href="#filtering-of-dorado-basecalled-ubams" title="Link to this section">⚓︎</a></h2>
+<p>Finally, we can use BBMap to create individual (demultiplexed) uBAMs from a dorado-basecalled uBAM that is generated using the full datasets (multiplexed).
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>module load BBMap
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>module load SAMtools
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>filterbyname.sh in=../../EMC1_wt_U1mut_ARPE19_MPlex-2.hac.trimAdapters.dorado.0.8.0.bam out=EMC1_wt_ARPE19-wdx4.hac.trimAdapters.dorado.0.8.0.bam names=EMC1_wt_U1mut_ARPE19_MPlex-2.WDX12_rna004-v0.4.4/barcode04.p0.9.list.txt include=true overwrite=true usejni=t -Xmx16g
+</span></code></pre></div></p>
+<p>From here, we can proceed to generating FASTQ files for downstream alignments etc.</p>
 
 
 
@@ -1144,7 +1162,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="May 9, 2025 11:05:41">May 9, 2025 11:05:41</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="May 9, 2025 11:55:39">May 9, 2025 11:55:39</span>
   </span>
 
     
