@@ -67,21 +67,31 @@ Following the demux step, an output folder will be generated in the output direc
 ```
 cat barcode_predictions_* > barcode_predictions.all.csv
 ```
+The barcode_predictions.all.csv contains a list of all read ids (column 1), the predicted barcode (col 2), the confidence score (col 3), and the individual confidence scores for each barcode (cols 4+).
+```
+read_id,predicted_barcode,confidence_score,p03,p04,p05,p07,p-1
+cd3c0eab-1e24-4059-86e5-0f5845d417d4,5,0.893,0.045,0.0047,0.9384,0.0107,0.0012
+4cc652e6-2369-452d-ad5d-668ed5b63198,5,0.964,0.0048,0.0006,0.9786,0.0141,0.0019
+58346cc3-6624-4b59-97cb-0ab91c361ad9,5,0.976,0.0077,0.0037,0.9838,0.0036,0.0011
+021ff088-6183-4035-9d84-8d5c7c52cfe0,4,0.994,0.002,0.9961,0.0005,0.0008,0.0006
+d1a12590-4408-4ce4-a740-0696bf6f5651,4,0.991,0.0033,0.9944,0.0006,0.0011,0.0006
+87ce2169-e6c0-4d5b-a7b5-c39df46264a8,5,0.972,0.0046,0.0015,0.982,0.0098,0.0021
+09dde30c-5aa6-452c-a0ea-178efe165dba,4,0.966,0.0112,0.9767,0.002,0.0078,0.0024
+79bf882c-f6f1-405a-9672-60d76691f72f,5,1.0,0.0,0.0,0.9998,0.0001,0.0001
+33bc3975-8fdd-4583-abad-0094bafba834,4,0.997,0.0009,0.998,0.0004,0.0004,0.0004
+```
+We process this using the following commands to select only high confidence barcodes to produce a list of read ids associated with each demultiplexed sample. In the below example we are compiling lists of read ids associated with barcode 04 and barcode 05 and with probability scores of >90%
+```
+awk -F',' '$3 == 4 && $4 >= 0.9 {print $1}' predictions_filtered.bam.csv > barcode04.p0.9.list.txt
+awk -F',' '$3 == 5 && $4 >= 0.9 {print $1}' predictions_filtered.bam.csv > barcode05.p0.9.list.txt
+```
 
+## Filtering of Dorado-basecalled uBAMs
+Finally, we can use BBMap to create individual (demultiplexed) uBAMs from a dorado-basecalled uBAM that is generated using the full datasets (multiplexed).
+```
+module load BBMap
+module load SAMtools
+filterbyname.sh in=../../EMC1_wt_U1mut_ARPE19_MPlex-2.hac.trimAdapters.dorado.0.8.0.bam out=EMC1_wt_ARPE19-wdx4.hac.trimAdapters.dorado.0.8.0.bam names=EMC1_wt_U1mut_ARPE19_MPlex-2.WDX12_rna004-v0.4.4/barcode04.p0.9.list.txt include=true overwrite=true usejni=t -Xmx16g
+```
 
-
-
-
-- latest gencode predictions (obtained via UCSC Table browser) in genepred format
-- reduced modkit BED files containing modification calls against genome alignments
-- assorted python and R scripts (AGDepledge/scripts/)
-
-While more complicated than analyses of transcriptome-level alignments, genome-level alignments may be preferred in many cases. The following described how to generate genome-level metaplots when using standard DRS approaches. This approach can be applied to all modifications that can be natively called by Dorado.
-
-#### 1. Navigate to [UCSC Table browser](https://genome.ucsc.edu/cgi-bin/hgTables)
-- set assembly to Dec. 2013 HG38
-- set track to All Gencode V47 (or later version)
-- set table to Basic(wgEncodeGencodeBasicV47)
-- set output file name to hg38_gencode_v47.genePred
-- download
-
+From here, we can proceed to generating FASTQ files for downstream alignments etc.
