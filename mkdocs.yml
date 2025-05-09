@@ -132,6 +132,8 @@ theme:
     # good search at https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#logo-icon-bundled
     # and press the "+" in the first code block (Icon, bundled)
     # for in-text icons search at https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
+    # might be nice: :material-chart-timeline:, :material-chart-donut:
+
     tag:
       tag_lorips: material/book-open-blank-variant
       tag_dates: material/calendar-alert-outline
@@ -145,6 +147,9 @@ theme:
       metaplot: material/chart-line
       protocol: material/file-document-alert
       cell_cult: material/scatter-plot-outline
+      drs: material/chart-gantt
+      wdx: material/call-split
+      nanopore: simple/circle
 
   favicon: img/favicon_notebook-inverse.png
   font:
@@ -216,6 +221,10 @@ extra:
     Metaplot: metaplot
     Protocol: protocol
     Cell Culture: cell_cult
+    DRS: drs
+    WarpDemux: wdx
+    WDX: wdx
+    Nanopore: nanopore
 
   social:
     - icon: fontawesome/brands/github
