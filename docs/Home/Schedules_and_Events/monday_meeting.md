@@ -23,7 +23,7 @@ Last updated: See the bottom of this page.
 
     | Date         | Time  | Type of meeting                                                                                 | Presentor/Topic/Paper | Comment                          |
     | :----------- | :---: | :---------------------------------------------------------------------------------------------: | :-------------------: | :------------------------------- |
-    | Monday,<br>May 19 | 14:30 | <span style="color:royalblue">:octicons-comment-discussion-24:</span> `General`  | /                   |                   |
+    | {--Monday,<br>May 19--} | {--14:30--} | <span style="color:royalblue">{--:octicons-comment-discussion-24:--}</span> {--`General`--}<br><span style="color:red">**_CANCELLED_**</span>  | {--/--}                   |                   |
     | Monday,<br>May 26 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                 | Joana                     |                                  |
     | Monday,<br>June 02  | 14:30 | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`  | [SeqTagger, a rapid and accurate tool to demultiplex direct RNA nanopore sequencing datasets](https://doi.org/10.1101/2024.10.29.620808)<br>**AND**<br>[Demultiplexing and barcode-specific adaptive sampling for nanopore direct RNA sequencing](https://doi.org/10.1038/s41467-025-59102-9)                   | Moderator: Erik                  |
     | _Monday,<br>June 09_  |  | _CANCELLED_                 |                      | _WHIT MONDAY_                                 |
