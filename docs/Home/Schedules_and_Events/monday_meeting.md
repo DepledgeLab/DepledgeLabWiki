@@ -19,13 +19,15 @@ tags:
 Last updated: See the bottom of this page.
 <span style="color:red">  </span>
 
+<div class="annotate" markdown>
+
 === "NEW: 19.04.25-07.75.25"
 
     | Date         | Time  | Type of meeting                                                                                 | Presentor/Topic/Paper | Comment                          |
     | :----------- | :---: | :---------------------------------------------------------------------------------------------: | :-------------------: | :------------------------------- |
     | {--Monday,<br>May 19--} | {--14:30--} | <span style="color:royalblue">{--:octicons-comment-discussion-24:--}</span> {--`General`--}<br><span style="color:red">**_CANCELLED_**</span>  | {--/--}                   |                   |
     | Monday,<br>May 26 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                 | Joana                     |                                  |
-    | Monday,<br>June 02  | 14:30 | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`  | [SeqTagger, a rapid and accurate tool to demultiplex direct RNA nanopore sequencing datasets](https://doi.org/10.1101/2024.10.29.620808)<br>**AND**<br>[Demultiplexing and barcode-specific adaptive sampling for nanopore direct RNA sequencing](https://doi.org/10.1038/s41467-025-59102-9)                   | Moderator: Erik                  |
+    | Monday,<br>June 02  | 14:30 | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`  | [**LINK CHANGED ON 26.05!** (1)<br>SeqTagger, a rapid and accurate tool to demultiplex direct RNA nanopore sequencing datasets](https://www.genome.org/cgi/doi/10.1101/gr.279290.124) <br>**AND**<br>[Demultiplexing and barcode-specific adaptive sampling for nanopore direct RNA sequencing](https://doi.org/10.1038/s41467-025-59102-9)                   | Moderator: Erik               |
     | _Monday,<br>June 09_  |  | _CANCELLED_                 |                      | _WHIT MONDAY_                                 |
     | <span style="color:grey">Friday,<br>June 13</span> | <span style="color:grey">09:00</span> | <span style="color:grey">Viro Club</span> | <span style="color:grey">Elene</span> | |
     | <span style="color:grey">Tuesday,<br>June 17</span> | <span style="color:grey">12:30</span> | <span style="color:grey">Viro Journal Club</span> | <span style="color:grey">Ruchira</span> | |
@@ -36,6 +38,7 @@ Last updated: See the bottom of this page.
     | <span style="color:grey">Wednesday,<br>July 09</span> | <span style="color:grey">13:00</span> | <span style="color:grey">Viro Seminar</span> | <span style="color:grey">Carolin</span> | |
     | Monday,<br>July 14 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                 | IHW attendees practice talk                     |                                  |
     | Monday,<br>July 21 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                 | IHW attendees practice talk                     |                                  |
+
 
 === "17.03.25-12.05.25"
 
@@ -69,6 +72,9 @@ Last updated: See the bottom of this page.
     | Monday,<br>February 24  | 14:30 | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`  | [Evidence of RNA polymerase III recruitment and transcription at protein-coding gene promoters](https://doi.org/10.1016/j.molcel.2024.09.019)                   | Moderator: Ruth                  |
     | Monday,<br>March 03     | <span style="color:red">**14:00**</span> | <span style="color:orange">:material-account-question:</span> `Ask Me Anything`                 | RNA modifications                   |                                  |
     | Monday,<br>March 10     | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                     | **Dan**               |                                  |
+
+</div>
+1.  This linked got changed on 26.05., because the paper was fully published. The original, preprint link was this: [SeqTagger Preprint Link](https://doi.org/10.1101/2024.10.29.620808)
 
 
 Feel free to write Erik suggestions regarding AMA topics or the Journal discussions.
