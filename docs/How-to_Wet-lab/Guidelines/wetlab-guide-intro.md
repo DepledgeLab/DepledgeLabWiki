@@ -58,4 +58,4 @@ tags:
 ### :material-server: How to Leine & AGDepeldge-Drive
 
 - To see how to use Leine and the AGDepledge drive, and how to store/backup data, see `AGDepledge:\Bioinformatics resources\Intro to HPC course`
-- Also check out this WIki for further information
+- Also check out this Wiki for further information

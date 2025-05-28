@@ -49,7 +49,7 @@ TODO: more detailed
 
 ### Adding abbreviations (the includes/abbreviations.md file)
 - Full text automatically pops up as a tooltip (e.g.: hover over the term "HTML" on any page).
-- just add an abbreviation in includes/abbreviations.md in the format `#!yaml *[TIAE]: This Is An Example`.
+- just add an abbreviation in includes/abbreviations.md in the format `#!md *[TIAE]: This Is An Example`.
 - The rest is done by the configurations, tooltips work globally.
 
 
