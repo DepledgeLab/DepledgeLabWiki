@@ -67,6 +67,7 @@ nav:
     - Overview: How-to_Dry-lab/drylab_general.md
     - Metaplots: How-to_Dry-lab/metaplots/metaplot.md 
     - WarpDemux: How-to_Dry-lab/WarpDemux/wdx.md 
+    - Ninetails: How-to_Dry-lab/Ninetails/ninetails.md
     - Read Alignment & Processing:
       - Overview: How-to_Dry-lab/Read_Alignment_&_Processing/alignments.md
       - Fun with (alignment) Flags: How-to_Dry-lab/Read_Alignment_&_Processing/fun_with_flags.md
@@ -100,7 +101,7 @@ nav:
         - General: How-to_Dry-lab/Other_tools/R/language_r.md
         - Useful (Bioinformatics) Packages: How-to_Dry-lab/Other_tools/R/packages_r.md
     - Other useful Code:
-      - Code 1: How-to_Dry-lab/Other_useful_code/code_AB.md
+      - E.C.S.T.A.S.Y.: How-to_Dry-lab/Other_useful_code/E.C.S.T.A.S.Y..md
       - Code 2: How-to_Dry-lab/Other_useful_code/code_XY.md
   - Work at MHH:
     - MHH processes:
@@ -150,6 +151,7 @@ theme:
       drs: material/chart-gantt
       wdx: material/call-split
       nanopore: simple/circle
+      ninetails: material/numeric-9-circle
 
   favicon: img/favicon_notebook-inverse.png
   font:
@@ -225,6 +227,7 @@ extra:
     WarpDemux: wdx
     WDX: wdx
     Nanopore: nanopore
+    Ninetails: ninetails
 
   social:
     - icon: fontawesome/brands/github

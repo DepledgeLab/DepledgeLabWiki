@@ -74,7 +74,7 @@ Last updated: See the bottom of this page.
     | Monday,<br>March 10     | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                     | **Dan**               |                                  |
 
 </div>
-1.  This linked got changed on 26.05., because the paper was fully published. The original, preprint link was this: [SeqTagger Preprint Link](https://doi.org/10.1101/2024.10.29.620808)
+1.  This link got changed on 26.05., because the paper was fully published. The original, preprint link was this: [SeqTagger Preprint Link](https://doi.org/10.1101/2024.10.29.620808)
 
 
 Feel free to write Erik suggestions regarding AMA topics or the Journal discussions.
