@@ -43,8 +43,18 @@ srun --partition=leinegpu_interactive --job-name="insert_name_here" --cpus-per-t
 
 #### Get stats on run job
 ``` bash
+# (format can be changed, only examples are being shown)
+# job that already ran
 seff <jobID>
+
+# job that is still running
+sstat <jobID>.batch --format=JobID,MaxRSS
+
+# detailed list on jobs from a specific time
+sacct --starttime YYYY-MM-DD --format=User,JobID,Jobname,partition,state,time,start,end,elapsed,AveRSS,MaxRss,MaxVMSize,nnodes,ncpus,nodelis
 ```
+!!! tip
+    For a more graphical and user-friendly overview you can check out (active) jobs at the [MHH OnDemand site](https://leineood.mh-hannover.local) at jobs --> expand job --> detailed metrics
 <br>
 
 #### Check current hpc resources in detail
@@ -114,6 +124,24 @@ samtools view XXX.bam |\
 For leading + trailing softlipping per read:<br>
 [TODO]
 <br><br>
+
+#### Carrying a specific (or multiple) SAM tag (e.g. pt:i:) from the uBAM over to the aligned SAM/BAM
+``` bash
+# Use -T flag to write comments into the, fastq file; use -y to carry them over to SAM/BAM
+# In case of mutliple tags just list them comma separated
+samtools fastq -Tpt,MM,ML $BAM_DIREC/"$NAME"."$MODNAME".dorado."$DORVER".bam | \
+minimap2 -ax splice -k14 -uf -y --secondary=no $HYB_REF_GX - > \
+$OUT/"$NAME"."$MODNAME".dorado."$DORVER"."$HYB_NAME".sam
+```
+<br>
+
+#### Get poly(A)-tail length distribution (and read_id, reference) from a bam file
+``` bash
+awk '{col_pt=""; for(i=12;i<=NF;i++){if($i~/^pt/){col_pt=$i; break}}; sub(/pt:i:/,"",col_pt); print $1,$3,col_pt}' <(samtools view XXX.bam)
+```
+!!! note
+    You could also use a more straight forward approach with `grep`, but this would exclude reads without the pt:i: tag (which is the case for reads dorado couldn't determine the poly(A)-tail length), which might be inconvenient.
+<br>
 
 #### Get the number of (multiple) modifications from a bam file (order in which they appear)(with probability filtering (>98.04%)) per read in addition to read id, sequence length and poly(A)-tail length
 ``` bash
@@ -197,8 +225,14 @@ samtools view XXX.bam |\
 ```
 <br>
 
-#### Extract poly(A)-tail trace information from zhe dorado verbose log file
+
+#### Extract poly(A)-tail trace information from the dorado verbose log file
 ``` bash
+# Generate verbose dorado basecalling log
+$DORVERBIN basecaller -r $DORMOD --estimate-poly-a -vv $IN/$NAME/ > \
+$BAM_DIREC/"$NAME"."$MODNAME".dorado."$DORVER".bam 2> \
+$OUT/"$NAME"."$MODNAME".dorado."$DORVER".vlog
+
 # Get corresponding lines from the file
 awk '/^.{26}\[trace\] [a-f0-9]{8}-[a-f0-9\-]{27} PolyA/' XXX.vlog
 
@@ -206,7 +240,7 @@ awk '/^.{26}\[trace\] [a-f0-9]{8}-[a-f0-9\-]{27} PolyA/' XXX.vlog
 awk 'BEGIN {print "read_id polya_bases signal_anchor signal_range_start signal_range_end signal_length samples_per_base trim read_len"} /^.{26}\[trace\] [a-f0-9]{8}-[a-f0-9\-]{27} PolyA/ {id=gensub(/^.{34}([a-z0-9-]{36}).*/,"\\1","g"); sub(/^.{83}/,""); gsub(/[^[:digit:] \.]/,""); gsub(/  +/," "); print id,$0}' XXX.vlog >\
  XXX.txt
 ```
-As a awk multi-line:
+As an awk multi-line:
 ``` awk
 BEGIN {
     print "read_id polya_bases signal_anchor signal_range_start signal_range_end signal_length samples_per_base trim read_len"
@@ -233,6 +267,26 @@ BEGIN {
 !!! note
     Since dorado v1.0.0 this shouldn't be necessary anymore because the poly(A)-tail tracing information is now placed under its own flag in the uSAM file. (Similarly, extracting the poly(A)-tail length via `pt:i:` can instead be obtained from the sequencing summary file.)
 
+<br>
+
+#### Get overview of a pod5 file
+``` bash
+# Create conda environment and install the pod5 package, then run:
+pod5 inspect summary XXX.pod5
+```
+<br>
+
+#### Extract important stats (poly(A)-tail length, modifications (here: filter of >98.04%)) from a bam file (and list of ids; here: 99% barcode confidence) by read_id and multiplex groups (WarpDemuX)
+``` bash
+awk 'BEGIN {print "read_id barcode reference seq_length polyA_len n_inosine n_m6A n_pseU"} FNR==NR {a[$1]=$2; next}; $1 in a {col_ml="";col_pt="NA"; for(i=12;i<=NF;i++){if($i~/^pt/){col_pt=$i}; if($i~/^MM/){col_mm=$i}; if($i~/^ML/){col_ml=$i}}; sub(/pt:i:/,"",col_pt); n_mod=split(col_mm, arr_mm, ";")-1; sub(/ML:B:C,/,"",col_ml); n_ml=split(col_ml, arr_ml, ","); for(j=1;j<=n_mod;j++){ n_entr[j]=split(arr_mm[j], b, ",")-1}; start=1; end=n_entr[1]; for(k in n_entr){end=start+n_entr[k]-1; amount[k]=0; for(l=start;l<=end;l++){if(arr_ml[l]>250){amount[k]++}}; start=start+n_entr[k]}; printf "%s %s %s %s %s ",$1,a[$1],$3,length($10),col_pt; for(m in amount){printf "%s ", amount[m]}; print ""}' id_sample_keytable-filt0.99.txt <(samtools view XXX.bam) > XXX.txt
+```
+As an awk multi-line:
+``` awk
+WIPWIPWIPWIPWIP
+```
+!!! warning
+    In this iteration the modification names are not extracted automatically and instead have to be added manually, for this, the order of modification appearance in the bam file has to be checked (see the relevant MM/ML tags in the SAM/BAM file). <br>
+    This could be automated if the order of the tags gets parsed first and copied to the output file headers (or translated to proper names).
 <br>
 
 
