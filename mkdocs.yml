@@ -68,6 +68,7 @@ nav:
     - Metaplots: How-to_Dry-lab/metaplots/metaplot.md 
     - WarpDemux: How-to_Dry-lab/WarpDemux/wdx.md 
     - Ninetails: How-to_Dry-lab/Ninetails/ninetails.md
+    - Basecalling: How-to_Dry-lab/Basecalling/dorado.md
     - Read Alignment & Processing:
       - Overview: How-to_Dry-lab/Read_Alignment_&_Processing/alignments.md
       - Fun with (alignment) Flags: How-to_Dry-lab/Read_Alignment_&_Processing/fun_with_flags.md
