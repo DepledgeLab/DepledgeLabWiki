@@ -30,14 +30,14 @@ Last updated: See the bottom of this page.
     | Monday,<br>June 02  | 14:30 | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`  | [**LINK CHANGED ON 26.05!** (1)<br>SeqTagger, a rapid and accurate tool to demultiplex direct RNA nanopore sequencing datasets](https://www.genome.org/cgi/doi/10.1101/gr.279290.124) <br>**AND**<br>[Demultiplexing and barcode-specific adaptive sampling for nanopore direct RNA sequencing](https://doi.org/10.1038/s41467-025-59102-9)                   | Moderator: Erik               |
     | _Monday,<br>June 09_  |  | _CANCELLED_                 |                      | _WHIT MONDAY_                                 |
     | <span style="color:grey">Friday,<br>June 13</span> | <span style="color:grey">09:00</span> | <span style="color:grey">Viro Club</span> | <span style="color:grey">Elene</span> | |
-    | <span style="color:grey">Tuesday,<br>June 17</span> | <span style="color:grey">12:30</span> | <span style="color:grey">Viro Journal Club</span> | <span style="color:grey">Ruchira</span> | |
+    | <span style="color:grey">{--Tuesday,<br>June 17--}</span> | <span style="color:grey">{--12:30--}</span> | <span style="color:grey">{--Viro Journal Club--}</span> | <span style="color:grey">{--Ruchira--}</span> | |
     | _Monday,<br>June 16_  |  | _CANCELLED_                 |                      | _Viro practical (Masters)_                                 |
     | _Monday,<br>June 23_  |  | _CANCELLED_                 |                      | _Viro practical (Masters)_                                 |
+    | <span style="color:grey">Monday,<br>June 24</span> | <span style="color:grey">12:30</span> | <span style="color:grey">Viro Journal Club</span>                 | <span style="color:grey">Elene</span>                     |                                  |
     | _Monday,<br>June 30_  |  | _CANCELLED_                 |                      | _Dan absent_                                 |
     | Monday,<br>July 07  | 14:30 | <span style="color:orange">:material-account-question:</span> `Ask Me Anything`                 | Comparison of Sequencing platforms:<br>Illumina, Nanopore & PacBio          |                                  |
     | <span style="color:grey">Wednesday,<br>July 09</span> | <span style="color:grey">13:00</span> | <span style="color:grey">Viro Seminar</span> | <span style="color:grey">Carolin</span> | |
-    | Monday,<br>July 14 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                 | IHW attendees practice talk                     |                                  |
-    | Monday,<br>July 21 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                 | IHW attendees practice talk                     |                                  |
+    | Monday,<br>July 14 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                 | IHW attendees practice<br>(Caro, Elene, Pierina) talk                     |                                  |
 
 
 === "17.03.25-12.05.25"
@@ -107,4 +107,4 @@ This is how our weekly meetings work:
 
 Should you have ideas for other formats feel free to make suggestions. :)
 
-As we are still testing these new formats and getting a feel for them they might not yet be perfect, but we are postiive we will get there! A review of these formats in ~March would probably be sensible.
+As we are still testing these new formats and getting a feel for them they might not yet be perfect, but we are positive we will get there!
