@@ -1,6 +1,8 @@
 ---
 tags:
     - Metaplot
+    - Bash
+    - R
 ---
 
 # Metaplot
@@ -72,7 +74,7 @@ While more complicated than analyses of transcriptome-level alignments, genome-l
 
 ```    
 
-### 5. Plotting
+#### 5. Plotting
 
 The output distance measures file can be loaded into the metaplot-HG38-genome.R script for plotting. This script can be modified as needed to add additional tracks.
 

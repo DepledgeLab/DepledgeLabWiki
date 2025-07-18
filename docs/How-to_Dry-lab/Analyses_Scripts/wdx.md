@@ -1,9 +1,9 @@
 ---
 tags:
-    - WarpDemux
-    - WDX
+    - WarpDemuX
     - DRS
     - Nanopore
+    - Bash
 ---
 
 # Multiplexed Nanopore direct RNA Sequencing with WarpDemux
@@ -12,10 +12,10 @@ tags:
 
 ## Overview
 
-[WarpDemuX](https://github.com/KleistLab/WarpDemuX) is an ultra-fast and high-accuracy adapter-barcoding and demultiplexing tool for Nanopore direct RNA sequencing. It currently provides support for RNA004 chemistry, specifically poly(A) DRS and nano-tRNASeq.
+[WarpDemuX (WDX)](https://github.com/KleistLab/WarpDemuX) is an ultra-fast and high-accuracy adapter-barcoding and demultiplexing tool for Nanopore direct RNA sequencing. It currently provides support for RNA004 chemistry, specifically poly(A) DRS and nano-tRNASeq.
 
 ## Installation
-Running WarpDemux (WDX) requires setting up a conda environment and installing required packages. Below provides a general overview on how to do this but please check the [WarpDemux Github](https://github.com/KleistLab/WarpDemuX) before doing so in case changes are made to the procedure.
+Running WarpDemuX requires setting up a conda environment and installing required packages. Below provides a general overview on how to do this but please check the [WarpDemuX Github](https://github.com/KleistLab/WarpDemuX) before doing so in case changes are made to the procedure.
 
 ```
 # Switch to an interactive node, you will likely need >16Gb of memory for the installation
@@ -24,7 +24,7 @@ srun --partition=leinecpu_interactive --job-name="wdx" --cpus-per-task=1 --mem-p
 # Navigate to 
 cd /project/sysviro/tools
 
-# Grab latest version using Git (optional, usually the version available in /project/sysviro/tools/WarpDemux is the one to use)
+# Grab latest version using Git (optional, usually the version available in /project/sysviro/tools/WarpDemuX is the one to use)
 module load git
 git clone --recursive https://github.com/KleistLab/WarpDemuX.git
 

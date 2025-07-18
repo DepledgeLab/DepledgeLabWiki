@@ -20,7 +20,7 @@ nav:
       - Upcoming Events: Home/Schedules_and_Events/upcoming_events.md
     - How to use this Wiki:
       - Read, Search and Tags:
-        - Manouver through the Wiki: Home/How_to_use_this_Wiki/read_search.md
+        - Manoeuver through the Wiki: Home/How_to_use_this_Wiki/read_search.md
         - List of Tags: tags.md
       - Manage:
         - Editing this Wiki: Home/How_to_use_this_Wiki/Edit/editing_this_wiki.md
@@ -65,28 +65,25 @@ nav:
       - Disposal of Cell culture waste: How-to_Wet-lab/Protocols/cell_cuture_waste.md
   - "How to: Dry-lab":
     - Overview: How-to_Dry-lab/drylab_general.md
-    - Metaplots: How-to_Dry-lab/metaplots/metaplot.md 
-    - WarpDemux: How-to_Dry-lab/WarpDemux/wdx.md 
-    - Ninetails: How-to_Dry-lab/Ninetails/ninetails.md
-    - Basecalling: How-to_Dry-lab/Basecalling/dorado.md
-    - Read Alignment & Processing:
-      - Overview: How-to_Dry-lab/Read_Alignment_&_Processing/alignments.md
-      - Fun with (alignment) Flags: How-to_Dry-lab/Read_Alignment_&_Processing/fun_with_flags.md
     - Work with the HPC:
       - Overview: How-to_Dry-lab/hpc/hpc_general.md
       - HPC Hardware: How-to_Dry-lab/hpc/infrastructure.md
       - How to use the Terminal & Bash: How-to_Dry-lab/hpc/bash.md
-      - How to move files: How-to_Dry-lab/hpc/how_to_move_files.md
+      - Useful Commands: How-to_Dry-lab/hpc/commands.md
+      - How to move, copy and rename files: How-to_Dry-lab/hpc/how_to_move_files.md
       - Modules: How-to_Dry-lab/hpc/modules.md
-      - How jobs are managed (Slurm): How-to_Dry-lab/hpc/slurm.md
+      - How to run background jobs (Slurm): How-to_Dry-lab/hpc/slurm.md
       - Parsing documents (awk, grep & Co): How-to_Dry-lab/hpc/awk.md
       - Restoring deleted files from backup: How-to_Dry-lab/hpc/restore_backup.md
       - Other useful command line tools: How-to_Dry-lab/hpc/commandline_tools.md
-    - Analyses (Scripts):
-      - Analysis 1:
-        - Script 1: How-to_Dry-lab/Analyses_Scripts/Analysis_1/anal_1.md
-      - Analysis 2:
-        - Script 2: How-to_Dry-lab/Analyses_Scripts/Analysis_2/anal_2.md
+    - Analyses (Pipelines & Scripts):
+      - Basecalling: How-to_Dry-lab/Analyses_Scripts/dorado.md
+      - WarpDemuX: How-to_Dry-lab/Analyses_Scripts/wdx.md
+      - Read Alignment & Processing:
+        - Overview: How-to_Dry-lab/Analyses_Scripts/Read_Alignment_&_Processing/alignments.md
+        - Fun with (alignment) Flags: How-to_Dry-lab/Analyses_Scripts/Read_Alignment_&_Processing/fun_with_flags.md
+      - Metaplots: How-to_Dry-lab/Analyses_Scripts/metaplot.md
+      - Ninetails: How-to_Dry-lab/Analyses_Scripts/ninetails.md
     - Other tools:
       - AcademicCloud:
         - Overview: How-to_Dry-lab/Other_tools/AcademicCloud/accloud_general.md
@@ -153,6 +150,11 @@ theme:
       wdx: material/call-split
       nanopore: simple/circle
       ninetails: material/numeric-9-circle
+      basecalling: material/format-letter-matches
+      dorado: material/format-letter-matches
+      bash: simple/gnubash
+      python: simple/python
+      r_language: simple/r
 
   favicon: img/favicon_notebook-inverse.png
   font:
@@ -225,10 +227,14 @@ extra:
     Protocol: protocol
     Cell Culture: cell_cult
     DRS: drs
-    WarpDemux: wdx
-    WDX: wdx
+    WarpDemuX: wdx
     Nanopore: nanopore
     Ninetails: ninetails
+    Basecalling: basecalling
+    Dorado: dorado
+    Python: python
+    Bash: bash
+    R: r_language
 
   social:
     - icon: fontawesome/brands/github

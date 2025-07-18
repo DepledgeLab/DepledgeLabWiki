@@ -1,10 +1,13 @@
 ---
 tags:
     - Miscellaneous
+    - Bash
+    - Python
+    - R
 
 ---
 
-# **E**rik’s **C**ode **S**nippets **T**o **A**id **a**nd **S**upport **Y**ou (E.C.S.T.A.S.Y.)
+# **E**rik’s **C**ode **S**nippets **T**o **A**id and **S**upport **Y**ou (E.C.S.T.A.S.Y.)
 
 !!! warning "Work in progress"
 
@@ -15,80 +18,13 @@ tags:
 Hello there!
 
 Every once in a while one finds themselves in need of code. Not rarely one needs larger scripts or entire programs.
-If you have come here in search for this, you are at the wrong place. In fact, this place is quite the opposite! This place is meant to be a (unordered) collection of (random) code snippets and pieces I have created/collected and some point that might (or might not) be useful. Have fun! <br>
+If you have come here in search for this, you are at the wrong place. In fact, this place is quite the opposite! This place is meant to be a (unordered) collection of (miscellaneous) code snippets and pieces I have created/collected at some point that might (or might not) be useful. If you are looking for proper pipelines and scripts, check out the [How to Dry lab - Analyses](../Analyses_Scripts/dorado.md) section. If you are looking for general HPC/bash commands, check out [How to Dry lab - Work with the HPC - Useful Commands](../hpc/commands.md). Have fun! <br>
 ~Erik
 <br>
 <br>
 
-## bash stuff
+## HPC/bash related stuff
 
-#### Starting an interactive (CPU-)session
-
-``` bash
-srun --partition=leinecpu_interactive --job-name="insert_name_here" --cpus-per-task=1 --mem-per-cpu=1G -t4:00:0 --pty /bin/bash
-```
-
-To change the memory, number of cores or time change the parameters accordingly.
-
-!!! note
-    You might still stumble across a very similar command in some place containing `#!bash --partition=interactive` (that doesn't work). This is the old name of the partition and is no longer used.
-<br>
-
-#### Starting an interactive (GPU-)session
-
-``` bash
-srun --partition=leinegpu_interactive --job-name="insert_name_here" --cpus-per-task=1 --mem-per-cpu=1G -t4:00:0 --pty /bin/bash
-```
-<br>
-
-#### Get stats on run job
-``` bash
-# (format can be changed, only examples are being shown)
-# job that already ran
-seff <jobID>
-
-# job that is still running
-sstat <jobID>.batch --format=JobID,MaxRSS
-
-# detailed list on jobs from a specific time
-sacct --starttime YYYY-MM-DD --format=User,JobID,Jobname,partition,state,time,start,end,elapsed,AveRSS,MaxRss,MaxVMSize,nnodes,ncpus,nodelis
-```
-!!! tip
-    For a more graphical and user-friendly overview you can check out (active) jobs at the [MHH OnDemand site](https://leineood.mh-hannover.local) at jobs --> expand job --> detailed metrics
-<br>
-
-#### Check current hpc resources in detail
-``` bash
-sinfo -o "%.13n %.20P %.14G %.5a %.9T %.10e %.8m %.4c %.15C"
-```
-<br>
-
-#### Check hpc partition details
-``` bash
-scontrol show partition
-```
-<br>
-
-#### Observe GPU (NVIDIA card) usage of a running job live
-``` bash
-watch -n 1 srun --jobid=<jobID> nvidia-smi
-```
-(Cannot be run in an interactive session.)
-<br><br>
-
-#### Open process manager
-
-``` bash
-htop
-```
-<br>
-
-#### Get storage usage of current directory (recursive)(excluding backups)
-``` bash
-du -hLlxs . --exclude "./.snapshots*" 2>/dev/null # total
-du -hd1 . --exclude "./.snapshots*" 2>/dev/null # subdirectories + total
-```
-<br>
 
 #### Calculate average (mean) QS from a bam file by a list of reads
 ``` bash
@@ -301,7 +237,7 @@ scancel -f <jobID> # to end the session (do not forget!)
 <br>
 
 
-## R stuff
+## R related stuff
 
 #### Transform ASCII QUAL QS (SAM format) to decimal
 ``` R
@@ -327,7 +263,7 @@ qual_prob <- unlist(qual_prob) # Probability
 <br>
 
 
-## Word stuff
+## MS Word related stuff
 
 #### Placing a space every third letter in a continuous string (e.g. DNA sequence)
 

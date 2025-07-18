@@ -1,9 +1,11 @@
 ---
 tags:
+    - Nanopore
+    - DRS
     - Basecalling
     - Dorado
-    - DRS
-    - Nanopore
+    - Bash
+
 ---
 
 # Basecalling of Nanopore Datasets with Dorado
