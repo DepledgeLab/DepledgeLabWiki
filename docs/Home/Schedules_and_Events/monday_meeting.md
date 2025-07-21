@@ -21,9 +21,28 @@ Last updated: See the bottom of this page.
 
 <div class="annotate" markdown>
 
-=== "NEW: 19.04.25-07.75.25"
+=== "NEW [WIP]: 21.07.25-06.10.25"
 
-    | Date         | Time  | Type of meeting                                                                                 | Presentor/Topic/Paper | Comment                          |
+    | Date         | Time  | Type of meeting                                                                                 | Presenter/Topic/Paper | Comment                          |
+    | :----------- | :---: | :---------------------------------------------------------------------------------------------: | :-------------------: | :------------------------------- |
+    | _Monday,<br>July 21_  |  | _CANCELLED_                 |                      |                                  |
+    | _Monday,<br>July 28_  |  | _CANCELLED_                 |                      |                                  |
+    | _Monday,<br>August 04_  |  | _CANCELLED_                 |                      |                                  |
+    | _Monday,<br>August 11_  |  | _CANCELLED_                 |                      |                                  |
+    | Monday,<br>August 18  | TBD | TBD                 |           | First Lab Meeting after break  
+    | Monday,<br>August 25  | TBD | TBD                 |        |
+    | Monday,<br>September 01  | TBD | TBD                 |        |
+    | Monday,<br>September 08  | TBD | TBD                 |        |
+    | Monday,<br>September 15  | TBD | TBD                 |        |
+    | Monday,<br>September 22  | TBD | TBD                 |        |
+    | Monday,<br>September 29  | TBD | TBD                 |        |
+    | Monday,<br>October 06  | TBD | TBD                 |        |
+    
+
+
+=== "19.04.25-14.07.25"
+
+    | Date         | Time  | Type of meeting                                                                                 | Presenter/Topic/Paper | Comment                          |
     | :----------- | :---: | :---------------------------------------------------------------------------------------------: | :-------------------: | :------------------------------- |
     | {--Monday,<br>May 19--} | {--14:30--} | <span style="color:royalblue">{--:octicons-comment-discussion-24:--}</span> {--`General`--}<br><span style="color:red">**_CANCELLED_**</span>  | {--/--}                   |                   |
     | Monday,<br>May 26 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                 | Joana                     |                                  |
@@ -42,7 +61,7 @@ Last updated: See the bottom of this page.
 
 === "17.03.25-12.05.25"
 
-    | Date         | Time  | Type of meeting                                                                                 | Presentor/Topic/Paper | Comment                          |
+    | Date         | Time  | Type of meeting                                                                                 | Presenter/Topic/Paper | Comment                          |
     | :----------- | :---: | :---------------------------------------------------------------------------------------------: | :-------------------: | :------------------------------- |
     | <span style="color:red"> **Monday,<br>March 17** </span> | 14:30 | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`  | [MoDorado: Enhanced detection of tRNA modifications in nanopore sequencing by off-label use of modification callers](https://doi.org/10.1101/2025.02.18.638820)                   | Moderator: <span style="color:red"> Pierina </span>                  |
     | <span style="color:red"> **Monday,<br>March 24** </span> | 14:30 | <span style="color:royalblue">:octicons-comment-discussion-24:</span> `General`                 | /                     | _Dan away_                                 |
@@ -59,7 +78,7 @@ Last updated: See the bottom of this page.
 
 === "20.01.25-10.03.25"
 
-    | Date         | Time  | Type of meeting                                                                                 | Presentor/Topic/Paper | Comment                          |
+    | Date         | Time  | Type of meeting                                                                                 | Presenter/Topic/Paper | Comment                          |
     | :----------- | :---: | :---------------------------------------------------------------------------------------------: | :-------------------: | :------------------------------- |
     | Monday,<br>January 20   | 14:30 | <span style="color:royalblue">:octicons-comment-discussion-24:</span> `General`                 | /                     |                                  |
     | Monday,<br>January 27   | 14:30 | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`  | [Charting the epitranscriptomic landscape across RNA biotypes using native RNA nanopore sequencing](https://doi.org/10.1016/j.molcel.2024.12.014)                   | Moderator: Erik                   |
