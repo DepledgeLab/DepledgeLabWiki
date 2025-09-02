@@ -1063,6 +1063,39 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#adding-a-new-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding a new page
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding a new page">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obligatory-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obligatory changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-optional-things-to-add-for-better-qol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional (optional) things to add (for better QoL):
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#writing-content" class="md-nav__link">
     <span class="md-ellipsis">
       Writing content
@@ -1603,6 +1636,39 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#adding-a-new-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding a new page
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding a new page">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obligatory-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obligatory changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-optional-things-to-add-for-better-qol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional (optional) things to add (for better QoL):
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#writing-content" class="md-nav__link">
     <span class="md-ellipsis">
       Writing content
@@ -1704,7 +1770,8 @@ For a full view of currently available pages check out the <a href="../../../../
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Link to this section">⚓︎</a></h2>
 <p>Hello there, fellow researcher!<br />
 This page is written for all current and future members of AG Depledge and acts as a guiding rope in how to edit this wiki. As the long-term goal of this Wiki is to become an extensive documentation hub, a uniform coding and organising style is essential.
-Because of this, please read through this page before making any changes and make yourself familiar with the mentioned topics.</p>
+Because of this, please read through this page before making any changes and make yourself familiar with the mentioned topics.<br>
+Throughout this page, different text formatting has been used deliberately. That way, this page also serves as a reference if you want to include more sophisticated formatting elements. However, don't be alarmed by the length of this page or some sections that look complicated, most of this page is optional.</p>
 <p>Should you have any questions, feel free to ask Erik for more information.
 <sub> (That is, if I'm still around by the time you are reading this.) </sub></p>
 <h3 id="general-information">General Information<a class="headerlink" href="#general-information" title="Link to this section">⚓︎</a></h3>
@@ -1714,7 +1781,7 @@ Because of this, please read through this page before making any changes and mak
 <p>Sometime <em>Materials for MkDocs</em> is also referred to as a "theme" of MkDocs. MkDocs allows so called "themes" to change its appearance (and behavior). It contains only few themes from the get-go, but there are many independent ones.
 <em>Materials for MkDocs</em> started out as such a third party theme and since evolved into a full framework itself. The installation of MkDocs is still necessary though.</p>
 </details>
-<p class="annotate">This Wiki (which is essentially the collection of all its files and folders) is hosted on <a href="https://github.com/">GitHub</a> and deployed through <a href="https://pages.github.com/">GitHub Pages</a> (using GitHubs automatic <a href="https://github.com/features/actions">Action</a> workflows)(1)).
+<p class="annotate">This Wiki (which is essentially just the collection of all its files and folders) is hosted on <a href="https://github.com/">GitHub</a> and deployed through <a href="https://pages.github.com/">GitHub Pages</a> (using GitHubs automatic <a href="https://github.com/features/actions">Action</a> workflows)(1).
 The actual repository link of this Wiki is therefore "<a href="https://github.com/DepledgeLab/DepledgeLabWiki">https://github.com/DepledgeLab/DepledgeLabWiki</a>" (name might change). From here, it hosts the actual Wiki site you can currently see, "<a href="https://depledgelab.github.io/DepledgeLabWiki/">https://depledgelab.github.io/DepledgeLabWiki/</a>".</p>
 <ol>
 <li>...which in turn, is based on <a href="https://github.com/jekyll/jekyll">Jekyll</a>, which <em>in turn</em> is written in <a href="https://www.ruby-lang.org/en/">Ruby</a>.</li>
@@ -1767,23 +1834,30 @@ The actual repository link of this Wiki is therefore "<a href="https://github.co
 <p>The actual content of this Wiki lies at "https://github.com/DepledgeLab/DepledgeLabWiki". From the files available there, all sites are rendered to this Wiki. This means that if you want to change, add or remove any content you will have to edit, add, or remove the appropriate files in the mentioned GitHub repository. In most cases you will only want to change one of these files:</p>
 <dl>
 <dt><code>The .md (markdown) files</code></dt>
-<dd>The markdown files are the files that contain the actual content of the sites. One markdown file equals to one site on the Wiki. For example, you can find the content of this page you are currently reading at "docs/Home/How_to_ise_this_Wiki/Edit/editing_this_wiki.md" (in the GitHub repository)(name might change). If you were to change anything in that file the changes would reflect in the rendered Wiki.</dd>
+<dd>The markdown files are the files that contain the actual content of the sites. One markdown file equals to one site on the Wiki. For example, you can find the content of this page you are currently reading at "docs/Home/How_to_use_this_Wiki/Edit/editing_this_wiki.md" (in the GitHub repository)(name might change). If you were to change anything in that file the changes would reflect in the rendered Wiki.</dd>
 <dt><code>The mkdocs.yml file</code></dt>
 <dd>This is the main configuration file of this Wiki and could be considered the heart. It contains information on the structure of this Wiki, which themes and plugins are enabled etc. More info on that file can be found at <a href="../further_wiki_info/">Further Information on this Wiki</a>.</dd>
 </dl>
 <p>This leads us to the most important question in this guide:</p>
 <blockquote>
-<p>How do I properly edit the Wiki the easiest way, and without breaking anything?</p>
+<p>How do I actually edit the Wiki?</p>
 </blockquote>
-<p>There are many different options. Because of this you can find a collection of possible solutions below. You are free to use whatever method suits you best, just keep the listed (dis-)advantages in mind.<br />
-Erik <strong>strongly</strong> recommends the <a href="#option-4-local-git-ide-vscode-recommended">Local - Git + IDE (VSCode)</a> solution.</p>
+<p>There are many different options. Because of this you can find a collection of possible solutions below. You are free to use whatever method suits you best, just keep the listed (dis-)advantages in mind. <br>
+If you already have some coding experiences, Erik <strong>strongly</strong> recommends the <a href="#option-4-local-git-ide-vscode-recommended">Local - Git + IDE (VSCode)</a> solution. <br>
+Otherwise, it is recommended to stick to <a href="#option-1-remote-standard-github-editor-through-github-or-the-wiki-itself">solution 1</a>. It has a slimmer selection of features (i.e. you can't look at the changes you have made live), but it's less convoluted. If you choose this option, just ignore the other.</p>
 <p><br></p>
 <h4 id="first-steps">First steps<a class="headerlink" href="#first-steps" title="Link to this section">⚓︎</a></h4>
 <p>Either way, you will have to do the following steps to be able to edit the Wiki:</p>
+<div class="annotate">
 <ol>
 <li>Get yourself a <a href="https://github.com/signup">GitHub Account</a> (if you do not already have one).</li>
-<li>Familiarise yourself with the basics of Git. Failure to do so can easily break the Wiki.</li>
-<li>Ask Dan for access to the Wiki repository.</li>
+<li>Familiarise yourself with the <a href="https://docs.github.com/en/get-started/start-your-journey/about-github-and-git">basics of GitHub</a>.<br>
+(If you are opting to use a more extensive solution (Local repo), you should also learn the basics of git. Failure to do so can easily break the Wiki.)</li>
+<li>Ask Dan for access to the Wiki repository.(1)</li>
+</ol>
+</div>
+<ol>
+<li>Note to Dan: In the <a href="https://github.com/DepledgeLab/DepledgeLabWiki/settings">repositories settings</a> just click on Collaborators (left) and add people.</li>
 </ol>
 <p><br></p>
 <hr />
@@ -1820,7 +1894,7 @@ Erik <strong>strongly</strong> recommends the <a href="#option-4-local-git-ide-v
 </table>
 <ol>
 <li>Login into your GitHub account in your web browser.</li>
-<li>Navigate to the file you want to edit on <a href="https://github.com/DepledgeLab/DepledgeLabWiki"><ins>GitHub</ins></a> and click on <em>Edit this file</em> on the right.<br><em>OR</em><br>Navigate to the site you want to edit in the <a href="https://depledgelab.github.io/DepledgeLabWiki"><ins>Wiki</ins></a> and click on <em>Edit this page</em> in the top right.</li>
+<li>Navigate to the file you want to edit on <a href="https://github.com/DepledgeLab/DepledgeLabWiki"><ins>GitHub</ins></a> and click on <em>Edit this file</em> on the right.<br><strong>OR</strong><br>Navigate to the site you want to edit in the <a href="https://depledgelab.github.io/DepledgeLabWiki"><ins>Wiki</ins></a> and click on <em>Edit this page</em> in the top right.</li>
 <li>Edit and save the file.</li>
 </ol>
 <hr />
@@ -2045,53 +2119,150 @@ Erik <strong>strongly</strong> recommends the <a href="#option-4-local-git-ide-v
 </div>
 </div>
 <hr />
+<h2 id="adding-a-new-page">Adding a new page<a class="headerlink" href="#adding-a-new-page" title="Link to this section">⚓︎</a></h2>
+<h3 id="obligatory-changes">Obligatory changes<a class="headerlink" href="#obligatory-changes" title="Link to this section">⚓︎</a></h3>
+<p>In order to add a new page to the Wiki, you have to do just <strong>two</strong> things:</p>
+<div class="annotate">
+<ol>
+<li>Create a new .md file in the docs folder. Create subfolders if necessary. Best practise is, to mirror the layout of the wiki to the folder strucutre (e.g.: The monday lab meeting schedule is located at Home -&gt; Schedules and Events -&gt; Monday Lab meetings. Conversely, the corresponding .md file is located at /docs/Home/Schedules_and_Events/monday_meeting.md.)(1)</li>
+<li>Determine where and with which name the new page should be visible in the Wiki. For this, open the mkdocs.yml file. Under '### Structure of the Wiki', the layout of the Wiki is specified. Each bullet point is one entry in the Wiki.(2) Here, you enter your new page with the format 'Name of the page: pathtothefile/file.md'</li>
+</ol>
+</div>
+<ol>
+<li>The way the Wiki is currently set up, they don't <strong>have to</strong> match, as the Wiki itself doesn't really care where the files are; but it's more organised this way.</li>
+<li>Bullet points with no .md files attached to them are chapters (see the content table on the left), they don't have their own page. Chapters must contain at least one page underneath them.</li>
+</ol>
+<p>Example: <br>
+Say this is how the docs folder looks like (a section of it):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>docs
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>├─ Getting_started
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>│  └─ ...
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>├─ Home
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>│   ├─ How_to_use_this_Wiki
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>│   │   ├─ Edit
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>│   │   │   ├─ editing_this_wiki.md
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>│   │   │   └─ further_wiki_info.md
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>│   │   └─ read_search.md
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>│   ├─ Schedules_and_Events
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>│   │  └─ ...
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>│   └─ news.md
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>├─ How-to_Dry-lab
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>│   └─ ...
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>...
+</span></code></pre></div>
+<p>And we wanted to add a new chapter under 'How_to_use_this_Wiki' called 'Changing the layout' and add a page to that called 'Why darkmode is superior'. We would first create the needed folders and .md file, so our new structure looks like this:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docs
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>├─ Getting_started
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>│  └─ ...
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>├─ Home
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>│   ├─ How_to_use_this_Wiki
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>│   │   ├─ Edit
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>│   │   │   ├─ editing_this_wiki.md
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>│   │   │   └─ further_wiki_info.md
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>│   │   ├─ read_search.md
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="hll">│   │   └─ Change_layout
+</span></span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="hll">│   │       └─ darkmode.md
+</span></span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>│   ├─ Schedules_and_Events
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>│   │  └─ ...
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>│   └─ news.md
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>├─ How-to_Dry-lab
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>│   └─ ...
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>...
+</span></code></pre></div>
+<p>Once we have written something into the file (and saved it) we add it to our table in the mkdocs.yml file.</p>
+<p>Previously, the respective session may have looked something like this:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Home</span><span class="p">:</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Welcome</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">News</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Home/news.md</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Schedules and Events</span><span class="p">:</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">How to use this Wiki</span><span class="p">:</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Read, Search and Tags</span><span class="p p-Indicator">:</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Manoeuver through the Wiki</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Home/How_to_use_this_Wiki/read_search.md</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">List of Tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tags.md</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Manage</span><span class="p">:</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Editing this Wiki</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Home/How_to_use_this_Wiki/Edit/editing_this_wiki.md</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Further Information on this Wiki</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Home/How_to_use_this_Wiki/Edit/further_wiki_info.md</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Getting Started</span><span class="p">:</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="nn">...</span>
+</span></code></pre></div>
+<p>After our edit, it might look like this:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Home</span><span class="p">:</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Welcome</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">News</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Home/news.md</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Schedules and Events</span><span class="p">:</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">How to use this Wiki</span><span class="p">:</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Read, Search and Tags</span><span class="p p-Indicator">:</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Manoeuver through the Wiki</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Home/How_to_use_this_Wiki/read_search.md</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">List of Tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tags.md</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Manage</span><span class="p">:</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Editing this Wiki</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Home/How_to_use_this_Wiki/Edit/editing_this_wiki.md</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Further Information on this Wiki</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Home/How_to_use_this_Wiki/Edit/further_wiki_info.md</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="hll"><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Changing the layout</span><span class="p">:</span>
+</span></span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="hll"><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Why darkmode is superior</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Home/How_to_use_this_Wiki/Change_layout/darkmode.md</span>
+</span></span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Getting Started</span><span class="p">:</span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="nn">...</span>
+</span></code></pre></div>
+<p>Once both has been done, saved and pushed to the repository, it should be updated after a few minutes.</p>
+<h3 id="additional-optional-things-to-add-for-better-qol">Additional (optional) things to add (for better <abbr title="Quality of Life">QoL</abbr>):<a class="headerlink" href="#additional-optional-things-to-add-for-better-qol" title="Link to this section">⚓︎</a></h3>
+<p>You can also add tags to a page (see at top at this page). These help categorising the Wiki. The Wiki automatically creates an overview of all pages associated with a certain tag at the <a href="../../../../tags/">tags page</a>. Adding tags is technically not obligatory for the Wiki to work, but makes it significantly easier to find something.<br>
+<a href="../further_wiki_info/#adding-tags">How to add a tag</a></p>
+<p>If your text contains common abbreviations, you can also add them to the Wiki-wide abbreviation index. That way,  whenever that abbreviation is used anywhere in the Wiki, it's explanation is also automatically rendered (example: Using your mouse, hover over this abbreviation: <abbr title="Quality of Life">QoL</abbr>).<br>
+<a href="../further_wiki_info/#adding-abbreviations-the-includesabbreviationsmd-file">How to add abbreviations</a></p>
 <h2 id="writing-content">Writing content<a class="headerlink" href="#writing-content" title="Link to this section">⚓︎</a></h2>
 <h3 id="plain-text">Plain text<a class="headerlink" href="#plain-text" title="Link to this section">⚓︎</a></h3>
-<p>The content of this Wiki is written in Markdown. This means that plain text can be written <em>as is</em> and lightly modified via the <a href="https://www.markdownguide.org/basic-syntax/">Markdown syntax</a>. For example, this includes <strong>bold text</strong>, <em>italic text</em> or block quotes:</p>
+<p>The content of this Wiki is written in Markdown. This means that plain text can be written <em>as is</em> and be lightly modified via the <a href="https://www.markdownguide.org/basic-syntax/">Markdown syntax</a> (Check this link to see a table of options). For example, this includes <strong>bold text</strong>, <em>italic text</em> or block quotes:</p>
 <blockquote>
 <p>In the pursuit of great, we failed to do good.</p>
 </blockquote>
-<p>For more nuanced ways to organise your text, you can use <a href="https://www.w3schools.com/html/"><abbr title="Hyper Text Markup Language">HTML</abbr></a>.
+<p>For more nuanced ways to format your text, you can use <a href="https://www.w3schools.com/html/"><abbr title="Hyper Text Markup Language">HTML</abbr></a>.
 If even more specific modifications are required (e.g.
 <span class="rainbow-letters">
   <span>c</span><span>o</span><span>l</span><span>o</span><span>r</span><span>e</span><span>d</span>
-</span> text), use <a href="https://www.w3schools.com/css/"><abbr title="Cascading Style Sheets">CSS</abbr></a>.</p>
+</span> text), you can use <a href="https://www.w3schools.com/css/"><abbr title="Cascading Style Sheets">CSS</abbr></a>.</p>
 <details class="note">
-<summary>Balancing visuals and information</summary>
+<summary>Endless possibilities</summary>
 <p>Theoretically, <span class="rainbow-gradient"><i><b>you could go really crazy with this if you wanted to</b></i></nobr></span>.<br />
-But please remember that too much visual glitter can be distracting and the purpose of this Wiki is documentation, not winning an art contest. Should you do decide to use visual styles with your text, please refrain from using the in-build <abbr title="Hyper Text Markup Language">HTML</abbr> visual features and instead use <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
+That doesn't mean you have to, or even that you should (in fact, keeping it simple is often a good approach). But it <em>is</em> possible.</p>
 </details>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p><em>Materials for MkDcos</em> also offers various <a href="https://squidfunk.github.io/mkdocs-material/reference/formatting/">markdown-like inline text modifications</a> that can be very useful.</p>
+<p><em>Materials for MkDcos</em> also offers various <a href="https://squidfunk.github.io/mkdocs-material/reference/formatting/">markdown-like inline text modifications</a> (<ins>underlining</ins>, <mark class="critic">highlighting</mark>, <sub>sub-</sub> and <sup>superscripts</sup>, etc.) that can be very useful.</p>
 </div>
 <h3 id="everything-beyond-plain-text">Everything beyond plain text<a class="headerlink" href="#everything-beyond-plain-text" title="Link to this section">⚓︎</a></h3>
-<p>For an extensive list of all additional annotation features (admonitions, content tabs, tooltips etc.) visit the <a href="https://squidfunk.github.io/mkdocs-material/reference/">Materials for MkDcos Reference</a> page.
-Because <em>Materials for MkDocs</em> already offers many formatting options it is recommended to check its documentation before trying to implement something manually with <abbr title="Hyper Text Markup Language">HTML</abbr> or <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
+<p>For an extensive list of all additional annotation features (admonitions, content tabs, tooltips etc.) visit the <a href="https://squidfunk.github.io/mkdocs-material/reference/">Materials for MkDcos Reference</a> page. Especially the admonitions are very nice!</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>I am an admonition!</p>
+</div>
+<p>Because <em>Materials for MkDocs</em> already offers many formatting options it is recommended to check its documentation before trying to implement something manually with <abbr title="Hyper Text Markup Language">HTML</abbr> or <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
 <p>This also includes more complex structures including these (but not limited to):</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Code block example</label><label for="__tabbed_3_2">Diagram example</label><label for="__tabbed_3_3">Formula example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>An exemplary code block made with <em>Materials for MkDocs</em> including line numbers, line highlighting and correct syntax highlighting:
-<div class="language-r highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Dummy_script.R</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-2-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kr">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">mRNA_IDs</span><span class="p">)))</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">k</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="kr">for</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="nf">nrow</span><span class="p">(</span><span class="n">exon_IDs</span><span class="p">)))</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nf">str_detect</span><span class="p">(</span><span class="n">exon_parents</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="w"> </span><span class="n">mRNA_IDs</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="hll"><span class="w">    </span><span class="n">df_all_mRNA_w_exons</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">exon_IDs</span><span class="p">[</span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span>
-</span></span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="hll"><span class="w">    </span><span class="n">df_all_mRNA_w_exons</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">exon_IDs</span><span class="p">[</span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">]</span>
-</span></span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">  </span><span class="p">}</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="p">}</span>
+<div class="language-r highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Dummy_script.R</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kr">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">mRNA_IDs</span><span class="p">)))</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="n">k</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="kr">for</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="nf">nrow</span><span class="p">(</span><span class="n">exon_IDs</span><span class="p">)))</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nf">str_detect</span><span class="p">(</span><span class="n">exon_parents</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="w"> </span><span class="n">mRNA_IDs</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="hll"><span class="w">    </span><span class="n">df_all_mRNA_w_exons</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">exon_IDs</span><span class="p">[</span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span>
+</span></span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="hll"><span class="w">    </span><span class="n">df_all_mRNA_w_exons</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">exon_IDs</span><span class="p">[</span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">]</span>
+</span></span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">    </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div></p>
 </div>
 <div class="tabbed-block">
@@ -2134,7 +2305,7 @@ B ----&gt;|Yes| E[Yummy!];</code></pre></p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="May 28, 2025 15:11:07 UTC">May 28, 2025 15:11:07</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="September 2, 2025 08:10:57 UTC">September 2, 2025 08:10:57</span>
   </span>
 
     
