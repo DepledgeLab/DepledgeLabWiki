@@ -4,3 +4,4 @@
 *[MHH]: Hannover Medical School (Medizinische Hochschule Hannover)
 *[WDX]: WarpDemuX
 *[GWDG]: Gesellschaft für wissenschaftliche Datenverarbeitung mbH Göttigen
+*[QoL]: Quality of Life

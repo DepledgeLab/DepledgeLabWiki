@@ -29,6 +29,7 @@ TODO: more detailed
 ### The mkdocs.yml file
 - Main configuration file
 - Includes general configurations, Wiki structure, cosmetics (e.g. themes and colors), extensions and plugins.
+- Only edit the structure/ tags, unless you know what you are doing
 
 
 ### The .github/workflows/ci.yml file
@@ -42,10 +43,21 @@ TODO: more detailed
 - contains additional text formatting settings.
 
 ### Adding tags
-- Add Tag Name and reference name in YAML file (bottom part).
-- Add icon (using reference name) in YAML file (top part).
-- Add Tag Name to the head of an .md file.
-- Currently (automatically) lists all tags at tags.md.
+- Add the new tag name and reference name in the YAML (mkdocs.yml) file (bottom part, at '## Add new tags here').
+- (Optional but recommended) Give the tag an icon (using the reference name) in the YAML file (top part, at '## Add tag icons here').
+- Add the tag name to the head of an .md file. (Example below)
+- The Wiki currently lists all tags at tags.md (automatically).
+- The .md page that hosts the tag list can be found at docs/tags.md
+
+Example:<br>
+``` yaml title="Head of this .md file"
+---
+tags:
+    - Wiki
+    - Guide
+---
+
+```
 
 ### Adding abbreviations (the includes/abbreviations.md file)
 - Full text automatically pops up as a tooltip (e.g.: hover over the term "HTML" on any page).
@@ -58,6 +70,6 @@ TODO: more detailed
 - check the Materials for MkDocs documentation for more information.
 
 ### The site folder and offline builds
-- use `#!python mdocs build` to manually generate a static build (--> site).
+- use `#!python mdocs build` to manually generate a static build (--> site). (expert only)
 
 ---

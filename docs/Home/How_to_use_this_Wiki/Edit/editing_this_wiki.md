@@ -20,7 +20,8 @@ tags:
 ## Introduction
 Hello there, fellow researcher!  
 This page is written for all current and future members of AG Depledge and acts as a guiding rope in how to edit this wiki. As the long-term goal of this Wiki is to become an extensive documentation hub, a uniform coding and organising style is essential.
-Because of this, please read through this page before making any changes and make yourself familiar with the mentioned topics.
+Because of this, please read through this page before making any changes and make yourself familiar with the mentioned topics.<br>
+Throughout this page, different text formatting has been used deliberately. That way, this page also serves as a reference if you want to include more sophisticated formatting elements. However, don't be alarmed by the length of this page or some sections that look complicated, most of this page is optional.
 
 Should you have any questions, feel free to ask Erik for more information.
 <sub> (That is, if I'm still around by the time you are reading this.) </sub>
@@ -30,7 +31,7 @@ This Wiki is based on the [_MkDocs_](https://www.mkdocs.org/) framework, which i
 ??? info "Where _Materials for MkDocs_ comes from"
     Sometime _Materials for MkDocs_ is also referred to as a "theme" of MkDocs. MkDocs allows so called "themes" to change its appearance (and behavior). It contains only few themes from the get-go, but there are many independent ones.
     _Materials for MkDocs_ started out as such a third party theme and since evolved into a full framework itself. The installation of MkDocs is still necessary though.
-This Wiki (which is essentially the collection of all its files and folders) is hosted on [GitHub](https://github.com/) and deployed through [GitHub Pages](https://pages.github.com/) (using GitHubs automatic [Action](https://github.com/features/actions) workflows)(1)).
+This Wiki (which is essentially just the collection of all its files and folders) is hosted on [GitHub](https://github.com/) and deployed through [GitHub Pages](https://pages.github.com/) (using GitHubs automatic [Action](https://github.com/features/actions) workflows)(1).
 The actual repository link of this Wiki is therefore "[https://github.com/DepledgeLab/DepledgeLabWiki](https://github.com/DepledgeLab/DepledgeLabWiki)" (name might change). From here, it hosts the actual Wiki site you can currently see, "[https://depledgelab.github.io/DepledgeLabWiki/](https://depledgelab.github.io/DepledgeLabWiki/)".
 { .annotate }
 
@@ -57,25 +58,31 @@ The actual repository link of this Wiki is therefore "[https://github.com/Depled
 The actual content of this Wiki lies at "https://github.com/DepledgeLab/DepledgeLabWiki". From the files available there, all sites are rendered to this Wiki. This means that if you want to change, add or remove any content you will have to edit, add, or remove the appropriate files in the mentioned GitHub repository. In most cases you will only want to change one of these files:
 
 `The .md (markdown) files`
-:   The markdown files are the files that contain the actual content of the sites. One markdown file equals to one site on the Wiki. For example, you can find the content of this page you are currently reading at "docs/Home/How_to_ise_this_Wiki/Edit/editing_this_wiki.md" (in the GitHub repository)(name might change). If you were to change anything in that file the changes would reflect in the rendered Wiki.
+:   The markdown files are the files that contain the actual content of the sites. One markdown file equals to one site on the Wiki. For example, you can find the content of this page you are currently reading at "docs/Home/How_to_use_this_Wiki/Edit/editing_this_wiki.md" (in the GitHub repository)(name might change). If you were to change anything in that file the changes would reflect in the rendered Wiki.
 
 `The mkdocs.yml file`
 :   This is the main configuration file of this Wiki and could be considered the heart. It contains information on the structure of this Wiki, which themes and plugins are enabled etc. More info on that file can be found at [Further Information on this Wiki](./further_wiki_info.md).
 
 This leads us to the most important question in this guide:
-> How do I properly edit the Wiki the easiest way, and without breaking anything?
+> How do I actually edit the Wiki?
 
-There are many different options. Because of this you can find a collection of possible solutions below. You are free to use whatever method suits you best, just keep the listed (dis-)advantages in mind.  
-Erik **strongly** recommends the [Local - Git + IDE (VSCode)](#option-4-local-git-ide-vscode-recommended) solution.
+There are many different options. Because of this you can find a collection of possible solutions below. You are free to use whatever method suits you best, just keep the listed (dis-)advantages in mind. <br>
+If you already have some coding experiences, Erik **strongly** recommends the [Local - Git + IDE (VSCode)](#option-4-local-git-ide-vscode-recommended) solution. <br>
+Otherwise, it is recommended to stick to [solution 1](#option-1-remote-standard-github-editor-through-github-or-the-wiki-itself). It has a slimmer selection of features (i.e. you can't look at the changes you have made live), but it's less convoluted. If you choose this option, just ignore the other.
 
 <br>
 
 #### First steps
 Either way, you will have to do the following steps to be able to edit the Wiki:
 
+<div class="annotate" markdown>
 1. Get yourself a [GitHub Account](https://github.com/signup) (if you do not already have one).
-2. Familiarise yourself with the basics of Git. Failure to do so can easily break the Wiki.
-3. Ask Dan for access to the Wiki repository.
+2. Familiarise yourself with the [basics of GitHub](https://docs.github.com/en/get-started/start-your-journey/about-github-and-git).<br>
+(If you are opting to use a more extensive solution (Local repo), you should also learn the basics of git. Failure to do so can easily break the Wiki.)
+3. Ask Dan for access to the Wiki repository.(1)
+</div>
+
+1. Note to Dan: In the [repositories settings](https://github.com/DepledgeLab/DepledgeLabWiki/settings) just click on Collaborators (left) and add people.
 
 <br>
 
@@ -92,7 +99,7 @@ Either way, you will have to do the following steps to be able to edit the Wiki:
 |  | <span style="color:#ff1744">:material-minus-circle:</span> Many changes in quick succession might hit API limits and restrict changes temporarily |
 
 1. Login into your GitHub account in your web browser.
-2. Navigate to the file you want to edit on [^^GitHub^^](https://github.com/DepledgeLab/DepledgeLabWiki) and click on _Edit this file_ on the right.<br>_OR_<br>Navigate to the site you want to edit in the [^^Wiki^^](https://depledgelab.github.io/DepledgeLabWiki) and click on _Edit this page_ in the top right.
+2. Navigate to the file you want to edit on [^^GitHub^^](https://github.com/DepledgeLab/DepledgeLabWiki) and click on _Edit this file_ on the right.<br>**OR**<br>Navigate to the site you want to edit in the [^^Wiki^^](https://depledgelab.github.io/DepledgeLabWiki) and click on _Edit this page_ in the top right.
 3. Edit and save the file.
 
 ---
@@ -234,29 +241,144 @@ Either way, you will have to do the following steps to be able to edit the Wiki:
 
 ---
 
+## Adding a new page
+
+### Obligatory changes
+
+In order to add a new page to the Wiki, you have to do just **two** things:
+
+<div class="annotate" markdown>
+1. Create a new .md file in the docs folder. Create subfolders if necessary. Best practise is, to mirror the layout of the wiki to the folder strucutre (e.g.: The monday lab meeting schedule is located at Home -> Schedules and Events -> Monday Lab meetings. Conversely, the corresponding .md file is located at /docs/Home/Schedules_and_Events/monday_meeting.md.)(1)
+2. Determine where and with which name the new page should be visible in the Wiki. For this, open the mkdocs.yml file. Under '### Structure of the Wiki', the layout of the Wiki is specified. Each bullet point is one entry in the Wiki.(2) Here, you enter your new page with the format 'Name of the page: pathtothefile/file.md'
+</div>
+
+1. The way the Wiki is currently set up, they don't **have to** match, as the Wiki itself doesn't really care where the files are; but it's more organised this way.
+2. Bullet points with no .md files attached to them are chapters (see the content table on the left), they don't have their own page. Chapters must contain at least one page underneath them.
+
+Example: <br>
+Say this is how the docs folder looks like (a section of it):
+
+```
+docs
+├─ Getting_started
+│  └─ ...
+├─ Home
+│   ├─ How_to_use_this_Wiki
+│   │   ├─ Edit
+│   │   │   ├─ editing_this_wiki.md
+│   │   │   └─ further_wiki_info.md
+│   │   └─ read_search.md
+│   ├─ Schedules_and_Events
+│   │  └─ ...
+│   └─ news.md
+├─ How-to_Dry-lab
+│   └─ ...
+...
+```
+
+And we wanted to add a new chapter under 'How_to_use_this_Wiki' called 'Changing the layout' and add a page to that called 'Why darkmode is superior'. We would first create the needed folders and .md file, so our new structure looks like this:
+
+``` hl_lines="10 11"
+docs
+├─ Getting_started
+│  └─ ...
+├─ Home
+│   ├─ How_to_use_this_Wiki
+│   │   ├─ Edit
+│   │   │   ├─ editing_this_wiki.md
+│   │   │   └─ further_wiki_info.md
+│   │   ├─ read_search.md
+│   │   └─ Change_layout
+│   │       └─ darkmode.md
+│   ├─ Schedules_and_Events
+│   │  └─ ...
+│   └─ news.md
+├─ How-to_Dry-lab
+│   └─ ...
+...
+```
+
+Once we have written something into the file (and saved it) we add it to our table in the mkdocs.yml file.
+
+Previously, the respective session may have looked something like this:
+
+``` yaml
+- Home:
+    - Welcome: index.md
+    - News: Home/news.md
+    - Schedules and Events:
+      - ...
+    - How to use this Wiki:
+      - Read, Search and Tags:
+        - Manoeuver through the Wiki: Home/How_to_use_this_Wiki/read_search.md
+        - List of Tags: tags.md
+      - Manage:
+        - Editing this Wiki: Home/How_to_use_this_Wiki/Edit/editing_this_wiki.md
+        - Further Information on this Wiki: Home/How_to_use_this_Wiki/Edit/further_wiki_info.md
+  - Getting Started:
+    - ...
+...
+```
+
+After our edit, it might look like this:
+
+``` yaml hl_lines="13 14"
+- Home:
+    - Welcome: index.md
+    - News: Home/news.md
+    - Schedules and Events:
+      - ...
+    - How to use this Wiki:
+      - Read, Search and Tags:
+        - Manoeuver through the Wiki: Home/How_to_use_this_Wiki/read_search.md
+        - List of Tags: tags.md
+      - Manage:
+        - Editing this Wiki: Home/How_to_use_this_Wiki/Edit/editing_this_wiki.md
+        - Further Information on this Wiki: Home/How_to_use_this_Wiki/Edit/further_wiki_info.md
+      - Changing the layout:
+        - Why darkmode is superior: Home/How_to_use_this_Wiki/Change_layout/darkmode.md
+  - Getting Started:
+    - ...
+...
+```
+
+Once both has been done, saved and pushed to the repository, it should be updated after a few minutes.
+
+### Additional (optional) things to add (for better QoL):
+
+You can also add tags to a page (see at top at this page). These help categorising the Wiki. The Wiki automatically creates an overview of all pages associated with a certain tag at the [tags page](../../../tags.md). Adding tags is technically not obligatory for the Wiki to work, but makes it significantly easier to find something.<br>
+[How to add a tag](./further_wiki_info.md#adding-tags)
+
+If your text contains common abbreviations, you can also add them to the Wiki-wide abbreviation index. That way,  whenever that abbreviation is used anywhere in the Wiki, it's explanation is also automatically rendered (example: Using your mouse, hover over this abbreviation: QoL).<br>
+[How to add abbreviations](./further_wiki_info.md#adding-abbreviations-the-includesabbreviationsmd-file)
+
 
 ## Writing content
 
 ### Plain text
-The content of this Wiki is written in Markdown. This means that plain text can be written _as is_ and lightly modified via the [Markdown syntax](https://www.markdownguide.org/basic-syntax/). For example, this includes **bold text**, _italic text_ or block quotes:
+The content of this Wiki is written in Markdown. This means that plain text can be written _as is_ and be lightly modified via the [Markdown syntax](https://www.markdownguide.org/basic-syntax/) (Check this link to see a table of options). For example, this includes **bold text**, _italic text_ or block quotes:
 
 > In the pursuit of great, we failed to do good.
 
-For more nuanced ways to organise your text, you can use [HTML](https://www.w3schools.com/html/).
+For more nuanced ways to format your text, you can use [HTML](https://www.w3schools.com/html/).
 If even more specific modifications are required (e.g.
 <span class="rainbow-letters">
   <span>c</span><span>o</span><span>l</span><span>o</span><span>r</span><span>e</span><span>d</span>
-</span> text), use [CSS](https://www.w3schools.com/css/).
-??? note "Balancing visuals and information"
+</span> text), you can use [CSS](https://www.w3schools.com/css/).
+??? note "Endless possibilities"
     Theoretically, <span class="rainbow-gradient"><i><b>you could go really crazy with this if you wanted to</b></i></nobr></span>.  
-    But please remember that too much visual glitter can be distracting and the purpose of this Wiki is documentation, not winning an art contest. Should you do decide to use visual styles with your text, please refrain from using the in-build HTML visual features and instead use CSS.
+    That doesn't mean you have to, or even that you should (in fact, keeping it simple is often a good approach). But it _is_ possible.
 
 !!! info
-    _Materials for MkDcos_ also offers various [markdown-like inline text modifications](https://squidfunk.github.io/mkdocs-material/reference/formatting/) that can be very useful.
+    _Materials for MkDcos_ also offers various [markdown-like inline text modifications](https://squidfunk.github.io/mkdocs-material/reference/formatting/) (^^underlining^^, {==highlighting==}, ~sub-~ and ^superscripts^, etc.) that can be very useful.
 
 
 ### Everything beyond plain text
-For an extensive list of all additional annotation features (admonitions, content tabs, tooltips etc.) visit the [Materials for MkDcos Reference](https://squidfunk.github.io/mkdocs-material/reference/) page.
+For an extensive list of all additional annotation features (admonitions, content tabs, tooltips etc.) visit the [Materials for MkDcos Reference](https://squidfunk.github.io/mkdocs-material/reference/) page. Especially the admonitions are very nice!
+
+!!! Info
+    I am an admonition!
+
 Because _Materials for MkDocs_ already offers many formatting options it is recommended to check its documentation before trying to implement something manually with HTML or CSS.
 
 This also includes more complex structures including these (but not limited to):

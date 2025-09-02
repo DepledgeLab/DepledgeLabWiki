@@ -1,4 +1,4 @@
-### General information
+### General information (don't edit this unless you know what you are doing)
 site_name: DepledgeLabWiki
 repo_url: https://github.com/DepledgeLab/DepledgeLabWiki
 repo_name: This Wiki on GitHub
@@ -9,7 +9,7 @@ edit_uri: edit/main/docs/
 watch:
   - includes
 
-### Structure of the Wiki
+### Structure of the Wiki (you can edit this)
 nav:
   - Home:
     - Welcome: index.md
@@ -127,12 +127,13 @@ theme:
   name: material
   icon:
     logo: fontawesome/solid/vial-virus
-    # add tag here to set ion and at the bottom to define name
-    # good search at https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#logo-icon-bundled
-    # and press the "+" in the first code block (Icon, bundled)
-    # for in-text icons search at https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
-    # might be nice: :material-chart-timeline:, :material-chart-donut:
 
+    # Link to a good icon search: https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#logo-icon-bundled
+    # then press the "+" in the first code block (Icon, bundled)
+    # for in-text icons search at https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
+    # Note to self: might be nice: :material-chart-timeline:, :material-chart-donut:
+
+    ## Add tag icons here (and define the name further to the bottom, at '## Add new tags here') (you can edit this)
     tag:
       tag_lorips: material/book-open-blank-variant
       tag_dates: material/calendar-alert-outline
@@ -188,7 +189,7 @@ theme:
         name: Switch to automatic mode
 
 
-  ## Activated features
+  ## Activated features (don't edit this unless you know what you are doing)
   features:
     - navigation.tabs
     # activate to allow header sections to have content, too. Not compatible with toc.integrate.
@@ -212,7 +213,8 @@ theme:
 
 ### Additional, non-cosmetic feautures
 extra:
-  # add tags here (DisplayedName: ReferenceName) and at the top do define icon
+
+  ## Add new tags here (DisplayedName: ReferenceName), then define an icon at the top (at '## Add tag icon here') (you can edit this)
   tags:
     LoremIpsum: tag_lorips
     Dates: tag_dates
@@ -265,7 +267,7 @@ plugins:
       #enabled: !ENV [CI, false]
 
 
-### Activated markdown-extensions
+### Activated markdown-extensions (don't edit this unless you know what you are doing)
 markdown_extensions:
   - abbr
   - admonition
@@ -312,7 +314,7 @@ markdown_extensions:
   - pymdownx.tilde
 
 
-### Additional javascript files that were added
+### Additional javascript files that were added (don't edit this unless you know what you are doing)
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
