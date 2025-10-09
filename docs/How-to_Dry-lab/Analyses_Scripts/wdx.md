@@ -82,8 +82,8 @@ d1a12590-4408-4ce4-a740-0696bf6f5651,4,0.991,0.0033,0.9944,0.0006,0.0011,0.0006
 ```
 We process this using the following commands to select only high confidence barcodes to produce a list of read ids associated with each demultiplexed sample. In the below example we are compiling lists of read ids associated with barcode 04 and barcode 05 and with probability scores of >90%
 ```
-awk -F',' '$3 == 4 && $4 >= 0.9 {print $1}' predictions_filtered.bam.csv > barcode04.p0.9.list.txt
-awk -F',' '$3 == 5 && $4 >= 0.9 {print $1}' predictions_filtered.bam.csv > barcode05.p0.9.list.txt
+awk -F',' '$2 == 4 && $3 >= 0.9 {print $1}' predictions_filtered.bam.csv > barcode04.p0.9.list.txt
+awk -F',' '$2 == 5 && $3 >= 0.9 {print $1}' predictions_filtered.bam.csv > barcode05.p0.9.list.txt
 ```
 
 ## Filtering of Dorado-basecalled uBAMs
