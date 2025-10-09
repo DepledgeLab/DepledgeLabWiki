@@ -21,7 +21,27 @@ Last updated: See the bottom of this page.
 
 <div class="annotate" markdown>
 
-=== "NEW: 21.07.25-06.10.25"
+=== "NEW: 13.10.25-29.12.25"
+
+    | Date         | Time  | Type of meeting                                                                                 | Presenter/Topic/Paper | Comment                          |
+    | :----------- | :---: | :---------------------------------------------------------------------------------------------: | :-------------------: | :------------------------------- |
+    | _Monday,<br>October&nbsp;13_  |  | _CANCELLED_                 |                      |                                  |
+    | _Monday,<br>October&nbsp;20_  |  | _CANCELLED_                 |                      |                                  |
+    | Monday,<br>October&nbsp;27  | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                | Marius                     |                                  |
+    | Monday,<br>November&nbsp;03  | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                 | Max                     |                                  |
+    | Monday,<br>November&nbsp;10  | 14:30 | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`                 | [tRNA modifications tune m^6^A-dependent mRNA decay](https://doi.org/10.1016/j.cell.2025.04.013)      | Moderator: Elene |
+    | <span style="color:grey">Wednesday,<br>November&nbsp;12</span> | <span style="color:grey">13:00</span> | <span style="color:grey">Viro Seminar</span>                 | <span style="color:grey">Erik</span>                     |                                  |
+    | Monday,<br>November&nbsp;17  | 14:30 | <span style="color:orange">:material-account-question:</span> `Ask Me Anything`            | MobaXTerm/HPC/Terminal:<br>Good practices & tips          |                                  |
+    | Monday,<br>November&nbsp;24  | 14:30 | <span style="color:royalblue">:octicons-comment-discussion-24:</span> `General`                 |        |
+    | Monday,<br>December&nbsp;01 | 14:30 | <span style="color:blueviolet">:octicons-star-16:</span> `Special`                | Guest talk/discussion:<br>Yannick&nbsp;Frommeyer<br>(tRNA)                     |                                  |
+    | Monday,<br>December&nbsp;08  | 14:30 | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`                 | [Immune evasion through mitochondrial transfer in the tumour microenvironment](https://doi.org/10.1038/s41586-024-08439-0)<br>[subject to change]       | Moderator: Ruchira |
+    | Monday,<br>December&nbsp;15 | 14:30 | <span style="color:blueviolet">:octicons-star-16:</span> `Special`                |                      | Christmas market! :)                                 |
+    | <span style="color:grey">Friday,<br>December&nbsp;17</span> | <span style="color:grey">13:00</span> | <span style="color:grey">Viro Seminar</span>                 | <span style="color:grey">Ruth</span>                     |                                  |
+    | _Monday,<br>December&nbsp;22_  |  | _CANCELLED_                 |                      |                                  |
+    | _Monday,<br>December&nbsp;29_  |  | _CANCELLED_                 |                      |                                  |
+
+
+=== "21.07.25-06.10.25"
 
     | Date         | Time  | Type of meeting                                                                                 | Presenter/Topic/Paper | Comment                          |
     | :----------- | :---: | :---------------------------------------------------------------------------------------------: | :-------------------: | :------------------------------- |
@@ -38,8 +58,8 @@ Last updated: See the bottom of this page.
     | <span style="color:grey">Wednesday,<br>September&nbsp;10</span> | <span style="color:grey">13:00</span> | <span style="color:grey">Viro Seminar</span>                 | <span style="color:grey">Pierina</span>                     |                                  |
     | <span style="color:grey">Friday,<br>September&nbsp;12</span> | <span style="color:grey">09:00</span> | <span style="color:grey">Viro Club</span>                 | <span style="color:grey">Erik</span>                     |                                  |    
     | <span style="color:red"> Monday,<br>September&nbsp;15 </span>  | 14:30 | {--<span style="color:orange">:material-account-question:</span> `Ask Me Anything`--}<br>{++<span style="color:plum">:octicons-person-24:</span> `Individual Presenter`++}                 | {--CHIPseq, RNAseq, SLAMseq, XXXseq...<br>All the seqs: Which do we use and when? Which seqs are out there?--}<br>{++State of the Union++}       | {++Dan & Nora++} |
-    | <span style="color:red"> Monday,<br>September&nbsp;22 </span>  | 14:30 | {--<span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`--}<br>{++<span style="color:plum">:octicons-person-24:</span> `Individual Presenter`++}                 | {--[tRNA modifications tune m^6^A-dependent mRNA decay](https://doi.org/10.1016/j.cell.2025.04.013)--}<br>{++Huda++}       | {--Moderator: Elene--}<br>{++Huda's farewell++} |
-    | <span style="color:red"> Monday,<br>September&nbsp;29 </span>  | 14:30 | {--<span style="color:royalblue">:octicons-comment-discussion-24:</span> `General`--}<br>{--<span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`--}<br>{++<span style="color:orange">:material-account-question:</span> `Ask Me Anything`++}                 | {--[tRNA modifications tune m^6^A-dependent mRNA decay](https://doi.org/10.1016/j.cell.2025.04.013)--}<br>{++CHIPseq, RNAseq, SLAMseq, XXXseq...<br>All the seqs: Which do we use and when? Which seqs are out there?++}      | {--Moderator: Elene--} |
+    | <span style="color:red"> Monday,<br>September&nbsp;22 </span>  | 14:30 | {--<span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`--}<br>{++<span style="color:plum">:octicons-person-24:</span> `Individual Presenter`++}                 | {--tRNA modifications tune m^6^A-dependent mRNA decay--}<br>{++Huda++}       | {--Moderator: Elene--}<br>{++Huda's farewell++} |
+    | <span style="color:red"> Monday,<br>September&nbsp;29 </span>  | 14:30 | {--<span style="color:royalblue">:octicons-comment-discussion-24:</span> `General`--}<br>{--<span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`--}<br>{++<span style="color:orange">:material-account-question:</span> `Ask Me Anything`++}                 | {--tRNA modifications tune m^6^A-dependent mRNA decay--}<br>{++CHIPseq, RNAseq, SLAMseq, XXXseq...<br>All the seqs: Which do we use and when? Which seqs are out there?++}      | {--Moderator: Elene--} |
     | Tuesday,<br>September&nbsp;30 | <span style="color:grey">12:30</span> | <span style="color:grey">Viro Journal Club</span>                 | <span style="color:grey">Ruchira</span>                     |                                  |
     | <span style="color:red">**Monday,<br>October&nbsp;06**</span>  | 14:30 | {--<span style="color:plum">:octicons-person-24:</span> `Individual Presenter`--}<br>{--<span style="color:royalblue">:octicons-comment-discussion-24:</span> `General`--}<br><span style="color:red">**_CANCELLED_**</span>                 | {--Marius--}       | {--<span style="color:red"> Meeting in the seminar room on ^^FLOOR 5!^^ </span>--} |
     
