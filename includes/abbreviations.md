@@ -5,3 +5,4 @@
 *[WDX]: WarpDemuX
 *[GWDG]: Gesellschaft für wissenschaftliche Datenverarbeitung mbH Göttigen
 *[QoL]: Quality of Life
+*[ML]: Machine Learning

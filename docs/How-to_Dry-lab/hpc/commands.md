@@ -79,7 +79,7 @@ htop
 
 #### Get total disk usage of a project folder
 ``` bash
-getent group gs-mhh-hpc-sysviro
+df -h /project/sysviro
 ```
 
 <br>
@@ -93,6 +93,6 @@ du -hd1 . --exclude "./.snapshots*" 2>/dev/null # subdirectories + total
 
 #### Get a list of all users in a project folder
 ``` bash
-df -h /project/sysviro
+getent group gs-mhh-hpc-sysviro
 ```
 <br>
