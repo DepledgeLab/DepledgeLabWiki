@@ -21,7 +21,23 @@ Last updated: See the bottom of this page.
 
 <div class="annotate" markdown>
 
-=== "NEW: 13.10.25-29.12.25"
+=== "NEW: 05.01.26-02.03.26"
+
+    | Date         | Time  | Type of meeting                                                                                 | Presenter/Topic/Paper | Comment                          |
+    | :----------- | :---: | :---------------------------------------------------------------------------------------------: | :-------------------: | :------------------------------- |
+    | _Monday,<br>January&nbsp;05_  |  | _CANCELLED_                 |                      |                                  |
+    | _Monday,<br>January&nbsp;12_  |  | _CANCELLED_                 |                      |                                  |
+    | Monday,<br>January&nbsp;19  | 14:30 | <span style="color:royalblue">:octicons-comment-discussion-24:</span> `General`                 |        |
+    | <span style="color:grey">Tuesday,<br>January&nbsp;20</span> | <span style="color:grey">12:30</span> | <span style="color:grey">Viro Journal Club</span>                 | <span style="color:grey">Pierina</span>                     |                                  |
+    | Monday,<br>January&nbsp;26  | 14:30 | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`                 | [mRNA poly(A)-tail length is a battleground for coronavirus-host competition](https://doi.org/10.1101/2025.10.09.680815)       | Moderator: Erik |
+    | Monday,<br>February&nbsp;02  | 14:30 | <span style="color:orange">:material-account-question:</span> `Ask Me Anything`            | Aligners:<br>When to use what?<br>Different aligners, references and parameters           |                                  |
+    | <span style="color:grey">Tuesday,<br>February&nbsp;19</span> | <span style="color:grey">12:30</span> | <span style="color:grey">Viro Journal Club</span>                 | <span style="color:grey">Arsa</span>                     |                                  |
+    | _Monday,<br>February&nbsp;09_  |  | _CANCELLED_                 |                      | _Dan away_                                 |
+    | _Monday,<br>February&nbsp;16_  |  | _CANCELLED_                 |                      | _Dan away_                                 |
+    | Monday,<br>February&nbsp;23 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                 | Erik                     |                                  |
+    | Monday,<br>March&nbsp;02 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                 | Pierina                     |                                  |
+
+=== "13.10.25-29.12.25"
 
     | Date         | Time  | Type of meeting                                                                                 | Presenter/Topic/Paper | Comment                          |
     | :----------- | :---: | :---------------------------------------------------------------------------------------------: | :-------------------: | :------------------------------- |
