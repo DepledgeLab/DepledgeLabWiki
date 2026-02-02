@@ -39,7 +39,7 @@ REF=/project/sysviro/data/reference_transcriptomes/kallisto/gencode.v47.transcri
 The optimal choice of (human) reference transcriptome is Gencode. We currently use the v47 assembly but later versions are now [available](https://www.gencodegenes.org/human/). The Comprehensive gene annotation for the CHR regions is sufficient and the GTF file can be downloaded using wget i.e. by right-clicking on the GTF link and selecting 'copy link' and pasting this after wget e.g. 
 ```
 wget https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_47/gencode.v47.annotation.gtf.gz
- ```
+```
 
 ### Converting transcript counts into gene counts
 Given that most downstream applications involve differential gene expression analysis using DeSeq2 or edgeR, it is usually desirable to convert the reported transcript-level counts produced by kallisto into gene-level counts. This is especially useful for pathway analyses as most programs do not accept transcript IDs. The R snippet below should be sufficient to merge the kallisto outputs from all subfolders (samples) within a folder and to produce a gene-level counts file that is ready for input into e.g. DeSeq2.
