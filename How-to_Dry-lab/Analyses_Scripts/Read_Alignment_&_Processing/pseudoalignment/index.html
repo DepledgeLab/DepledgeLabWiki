@@ -1086,6 +1086,47 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Content of this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-aspects-of-pseudoalignment-include" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key aspects of pseudoalignment include:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#standard-pseudoalignment-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Standard pseudoalignment code
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#converting-transcript-counts-into-gene-counts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Converting transcript counts into gene counts
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1155,23 +1196,63 @@
 <hr />
 <p>Pseudoalignment is a rapid, k-mer-based computational method for RNA-seq and metagenomic data analysis that identifies which reference transcripts a read is compatible with, rather than finding its exact, base-by-base alignment location. 
 It uses a de Bruijn graph of the transcriptome to map reads quickly, providing sufficient accuracy for quantifying gene expression while being much faster than traditional alignment. </p>
-<p>Key aspects of pseudoalignment include:
-- Speed and Efficiency: It skips the time-consuming process of mapping base-to-base alignments, often allowing millions of reads to be processed in minutes on standard computers
-- Mechanism: It breaks reads into k-mers and maps them against a transcriptome de Bruijn graph (T-DBG) to find the set of transcripts that match the read
-- Tools: Primary tools utilizing this method include Kallisto, Salmon, and Sailfish
-- Applications: It is primarily used for RNA-seq transcript abundance quantification and metagenomic read assignment
-- Limitations: Because it does not provide exact positional information (e.g., specific splice sites or exact base mismatches), it is not suitable for applications requiring high-precision mapping, such as de novo assembly or detecting single nucleotide polymorphisms (SNPs)
-- Pseudoalignment is designed to handle non-uniquely mapped reads by identifying the potential transcripts of origin, which can then be further refined using algorithms like Expectation-Maximization</p>
-<p>Standard pseudoalignment code
-```
-REF=/project/sysviro/data/reference_transcriptomes/kallisto/gencode.v47.transcripts</p>
-<p>/project/sysviro/tools/kallisto/kallisto quant -i $REF -o $OUT -b 100 --bias --rf-stranded $IN_1.fq.gz $IN_2.fq.gz
- ```
--b 100  :  bootstrapping is a computational technique used to estimate the technical variance and uncertainty in transcript abundance quantification <br>
---bias  :  enables a model that learns the empirical fragment length distribution and fragment start position distribution from the data to improve estimation <br>
---fr-stranded : Read 1 aligns to the for strand of the transcript, Read 2 aligns to the rev strand (i.e. first read = sense). Typical for TruSeq protocols <br>
---rf-stranded : Read 1 aligns to the rev strand of the transcript, Read 2 aligns to the for strand (i.e. first read = antisense). Typical for dUTP based methods (DNBSEQ, NEB Ultra II Directional) <br>
-<b>Note: It is absolutely critical to pay attention to which stranded flag is being used </b></p>
+<h3 id="key-aspects-of-pseudoalignment-include">Key aspects of pseudoalignment include:<a class="headerlink" href="#key-aspects-of-pseudoalignment-include" title="Link to this section">⚓︎</a></h3>
+<ul>
+<li>Speed and Efficiency: It skips the time-consuming process of mapping base-to-base alignments, often allowing millions of reads to be processed in minutes on standard computers</li>
+<li>Mechanism: It breaks reads into k-mers and maps them against a transcriptome de Bruijn graph (T-DBG) to find the set of transcripts that match the read</li>
+<li>Tools: Primary tools utilizing this method include Kallisto, Salmon, and Sailfish</li>
+<li>Applications: It is primarily used for RNA-seq transcript abundance quantification and metagenomic read assignment</li>
+<li>Limitations: Because it does not provide exact positional information (e.g., specific splice sites or exact base mismatches), it is not suitable for applications requiring high-precision mapping, such as de novo assembly or detecting single nucleotide polymorphisms (SNPs)</li>
+<li>Pseudoalignment is designed to handle non-uniquely mapped reads by identifying the potential transcripts of origin, which can then be further refined using algorithms like Expectation-Maximization</li>
+</ul>
+<h3 id="standard-pseudoalignment-code">Standard pseudoalignment code<a class="headerlink" href="#standard-pseudoalignment-code" title="Link to this section">⚓︎</a></h3>
+<p>The code snippet below will allow you to quickly align paired-end RNASeq data. Note that input fastq files should not be preprocessed (i.e. no adapter or quality trimming)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>REF=/project/sysviro/data/reference_transcriptomes/kallisto/gencode.v47.transcripts
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>/project/sysviro/tools/kallisto/kallisto quant -i $REF -o $OUT -b 100 --bias --rf-stranded $IN_1.fq.gz $IN_2.fq.gz
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a> ```
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>-b 100  :  bootstrapping is a computational technique used to estimate the technical variance and uncertainty in transcript abundance quantification &lt;br&gt;
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>--bias  :  enables a model that learns the empirical fragment length distribution and fragment start position distribution from the data to improve estimation &lt;br&gt;
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>--fr-stranded : Read 1 aligns to the for strand of the transcript, Read 2 aligns to the rev strand (i.e. first read = sense). Typical for TruSeq protocols &lt;br&gt;
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>--rf-stranded : Read 1 aligns to the rev strand of the transcript, Read 2 aligns to the for strand (i.e. first read = antisense). Typical for dUTP based methods (DNBSEQ, NEB Ultra II Directional) &lt;br&gt;
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>&lt;b&gt;Note: It is absolutely critical to pay attention to which stranded flag is being used!!! &lt;/b&gt;
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>### Choice of reference transcriptome
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>The optimal choice of (human) reference transcriptome is Gencode. We currently use the v47 assembly but later versions are now [available](https://www.gencodegenes.org/human/). The Comprehensive gene annotation for the CHR regions is sufficient and the GTF file can be downloaded using wget i.e. by right-clicking on the GTF link and selecting &#39;copy link&#39; and pasting this after wget e.g. 
+</span></code></pre></div>
+wget https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_47/gencode.v47.annotation.gtf.gz
+ ```</p>
+<h3 id="converting-transcript-counts-into-gene-counts">Converting transcript counts into gene counts<a class="headerlink" href="#converting-transcript-counts-into-gene-counts" title="Link to this section">⚓︎</a></h3>
+<p>Given that most downstream applications involve differential gene expression analysis using DeSeq2 or edgeR, it is usually desirable to convert the reported transcript-level counts produced by kallisto into gene-level counts. This is especially useful for pathway analyses as most programs do not accept transcript IDs. The R snippet below should be sufficient to merge the kallisto outputs from all subfolders (samples) within a folder and to produce a gene-level counts file that is ready for input into e.g. DeSeq2.</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>library(tximport)
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>library(rhdf5)
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>library(rtracklayer)
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>### SET WORKING DIRECTORY ### You will need to edit this and direct it your downloaded kallisto folder
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>setwd(&quot;C:/Users/depledgd/Dropbox/RNASeq/kallisto&quot;)
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>### IMPORT ANNOTATION ### Import gencode v47 annotation (the same GTF file used for the pseudoalignment)
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>library(rtracklayer)
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>gtf &lt;- import(&quot;../gencode.v47.annotation.gtf&quot;) 
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>gtf &lt;- gtf[gtf$type == &quot;transcript&quot;]
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>t2g &lt;- unique(data.frame(tx = gtf$transcript_id, gene = gtf$gene_id))
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>### USE TXIMPORT TO SUMMARIZE TRANSCRIPT COUNTS INTO GENE COUNTS
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>## For multiple samples, each named as a folder in the kallisto directory (can be abundance.h5 or abundance.tsv file). 
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>accessions &lt;- list.dirs(full.names=FALSE)[-1]
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>kallisto.dir&lt;-paste0(accessions)
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>kallisto.files&lt;-file.path(kallisto.dir,&quot;abundance.tsv&quot;)
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>names(kallisto.files)&lt;- accessions
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>tx.kallisto &lt;- tximport(kallisto.files, type = &quot;kallisto&quot;, tx2gene = t2g, countsFromAbundance =&quot;no&quot;, ignoreAfterBar=TRUE)
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>### GENERATE TWO COLUMN OUTPUT FORMAT
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>counts&lt;-as.data.frame(tx.kallisto$counts)
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>### ROUND VALUES (DESEQ2 DOES NOT LIKE FRACTIONS), AND WRITE TO OUTPUT FILE
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>write.table(round(counts), &quot;allcounts.txt&quot;, row.names = TRUE, quote = FALSE, sep = &quot;\t&quot;)
+</span></code></pre></div>
+The output should be a text file containing all gene names in the first column with respective counts for each sample shown in the additional columns</p>
 
 
 
@@ -1194,7 +1275,7 @@ REF=/project/sysviro/data/reference_transcriptomes/kallisto/gencode.v47.transcri
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="February 2, 2026 11:17:15 UTC">February 2, 2026 11:17:15</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="February 2, 2026 11:29:37 UTC">February 2, 2026 11:29:37</span>
   </span>
 
     
