@@ -8,31 +8,27 @@
       
       
       
-        <link rel="canonical" href="https://depledgelab.github.io/DepledgeLabWiki/tags/">
+        <link rel="canonical" href="https://depledgelab.github.io/DepledgeLabWiki/How-to_Dry-lab/Analyses_Scripts/Read_Alignment_%26_Processing/pseudoalignment/">
       
       
-        <link rel="prev" href="../Home/How_to_use_this_Wiki/read_search/">
-      
-      
-        <link rel="next" href="../Home/How_to_use_this_Wiki/Edit/editing_this_wiki/">
       
       
         
       
       
-      <link rel="icon" href="../img/favicon_notebook-inverse.png">
+      <link rel="icon" href="../../../../img/favicon_notebook-inverse.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>List of Tags - DepledgeLabWiki</title>
+        <title>Performing pseudoalignment with kallisto - DepledgeLabWiki</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -224,9 +220,9 @@
       
     
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -251,7 +247,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tags" class="md-skip">
+        <a href="#performing-pseudoalignment-with-kallisto" class="md-skip">
           Skip to content
         </a>
       
@@ -265,7 +261,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="DepledgeLabWiki" class="md-header__button md-logo" aria-label="DepledgeLabWiki" data-md-component="logo">
+    <a href="../../../.." title="DepledgeLabWiki" class="md-header__button md-logo" aria-label="DepledgeLabWiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M64 32C64 14.3 78.3 0 96 0h224c17.7 0 32 14.3 32 32s-14.3 32-32 32v151.7c-18.5 0-37 7-51.1 21.1-21.6 21.6-26.6 53.6-15 79.9-26.9 10.4-45.9 36.6-45.9 67.1s19 56.7 45.9 67.1c-7.3 16.5-8 35.2-2.3 52.2-13.4 5.7-28.2 8.8-43.6 8.8-61.9 0-112-50.1-112-112V64c-17.7 0-32-14.3-32-32m96 32v128h96V64zm120 344c-13.3 0-24-10.7-24-24s10.7-24 24-24c28.8 0 43.2-34.8 22.9-55.2-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0c20.4 20.4 55.2 5.9 55.2-22.9 0-13.3 10.7-24 24-24s24 10.7 24 24c0 28.8 34.8 43.2 55.2 22.9 9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9c-20.4 20.4-5.9 55.2 22.9 55.2 13.3 0 24 10.7 24 24s-10.7 24-24 24c-28.8 0-43.2 34.8-22.9 55.2 9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0c-20.4-20.4-55.2-5.9-55.2 22.9 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-28.8-34.8-43.2-55.2-22.9-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9c20.4-20.4 5.9-55.2-22.9-55.2m104-32a24 24 0 1 0 0-48 24 24 0 1 0 0 48m88 40a24 24 0 1 0-48 0 24 24 0 1 0 48 0"/></svg>
@@ -285,7 +281,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              List of Tags
+              Performing pseudoalignment with kallisto
             
           </span>
         </div>
@@ -411,13 +407,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href=".." class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../.." class="md-tabs__link">
           
   
   
@@ -437,7 +431,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Getting_started/general_info/" class="md-tabs__link">
+        <a href="../../../../Getting_started/general_info/" class="md-tabs__link">
           
   
   
@@ -464,7 +458,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Theoretical_backgrounds/Topic_1/explanation_1/" class="md-tabs__link">
+        <a href="../../../../Theoretical_backgrounds/Topic_1/explanation_1/" class="md-tabs__link">
           
   
   
@@ -487,7 +481,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../How-to_Wet-lab/wetlab-general/" class="md-tabs__link">
+        <a href="../../../../How-to_Wet-lab/wetlab-general/" class="md-tabs__link">
           
   
   
@@ -507,7 +501,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../How-to_Dry-lab/drylab_general/" class="md-tabs__link">
+        <a href="../../../drylab_general/" class="md-tabs__link">
           
   
   
@@ -534,7 +528,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Work_at_MHH/MHH_processes/sharepoint_and_documents/" class="md-tabs__link">
+        <a href="../../../../Work_at_MHH/MHH_processes/sharepoint_and_documents/" class="md-tabs__link">
           
   
   
@@ -557,7 +551,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Teaching/stuff_1/" class="md-tabs__link">
+        <a href="../../../../Teaching/stuff_1/" class="md-tabs__link">
           
   
   
@@ -584,7 +578,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Miscellaneous/Helpful_MHH_LinksResources/mhh_res_1/" class="md-tabs__link">
+        <a href="../../../../Miscellaneous/Helpful_MHH_LinksResources/mhh_res_1/" class="md-tabs__link">
           
   
   
@@ -621,7 +615,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="DepledgeLabWiki" class="md-nav__button md-logo" aria-label="DepledgeLabWiki" data-md-component="logo">
+    <a href="../../../.." title="DepledgeLabWiki" class="md-nav__button md-logo" aria-label="DepledgeLabWiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M64 32C64 14.3 78.3 0 96 0h224c17.7 0 32 14.3 32 32s-14.3 32-32 32v151.7c-18.5 0-37 7-51.1 21.1-21.6 21.6-26.6 53.6-15 79.9-26.9 10.4-45.9 36.6-45.9 67.1s19 56.7 45.9 67.1c-7.3 16.5-8 35.2-2.3 52.2-13.4 5.7-28.2 8.8-43.6 8.8-61.9 0-112-50.1-112-112V64c-17.7 0-32-14.3-32-32m96 32v128h96V64zm120 344c-13.3 0-24-10.7-24-24s10.7-24 24-24c28.8 0 43.2-34.8 22.9-55.2-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0c20.4 20.4 55.2 5.9 55.2-22.9 0-13.3 10.7-24 24-24s24 10.7 24 24c0 28.8 34.8 43.2 55.2 22.9 9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9c-20.4 20.4-5.9 55.2 22.9 55.2 13.3 0 24 10.7 24 24s-10.7 24-24 24c-28.8 0-43.2 34.8-22.9 55.2 9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0c-20.4-20.4-55.2-5.9-55.2 22.9 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-28.8-34.8-43.2-55.2-22.9-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9c20.4-20.4 5.9-55.2-22.9-55.2m104-32a24 24 0 1 0 0-48 24 24 0 1 0 0 48m88 40a24 24 0 1 0-48 0 24 24 0 1 0 48 0"/></svg>
@@ -648,119 +642,6 @@
       
   
   
-    
-  
-  
-  
-    
-    
-    
-    
-      
-        
-        
-      
-      
-    
-    
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_1">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Home
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Welcome
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Home/news/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    News
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
   
   
     
@@ -782,14 +663,14 @@
   
   
   
-    <a href="../Home/Schedules_and_Events/monday_meeting/" class="md-nav__link">
+    <a href="../../../.." class="md-nav__link">
       
   
   
   <span class="md-ellipsis">
     
   
-    Schedules and Events
+    Home
   
 
     
@@ -807,559 +688,6 @@
     </li>
   
 
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
-    
-    
-      
-      
-    
-    
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    How to use this Wiki
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_1_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    How to use this Wiki
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
-    
-    
-      
-      
-    
-    
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4_1" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_1_4_1" id="__nav_1_4_1_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Read, Search and Tags
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_4_1_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_1_4_1">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Read, Search and Tags
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Home/How_to_use_this_Wiki/read_search/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Manoeuver through the Wiki
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    List of Tags
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    List of Tags
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Content of this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Content of this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tag:alignment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Alignment
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:basecalling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Basecalling
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:bash" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Bash
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:cell-culture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cell Culture
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:drs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DRS
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:dates" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Dates
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:dorado" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Dorado
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:flags" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Flags
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:guide" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Guide
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:instruction" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Instruction
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:loremipsum" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        LoremIpsum
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:metaplot" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Metaplot
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:miscellaneous" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Miscellaneous
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:nanopore" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Nanopore
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:ninetails" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ninetails
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:protocol" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Protocol
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:python" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Python
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:r" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        R
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:warpdemux" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        WarpDemuX
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:website" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Website
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:wiki" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Wiki
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:alignment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        alignment
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:kallisto" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        kallisto
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:pseudoalignment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        pseudoalignment
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../Home/How_to_use_this_Wiki/Edit/editing_this_wiki/" class="md-nav__link">
-      
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Manage
-  
-
-    
-  </span>
-  
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
     
       
       
@@ -1386,7 +714,7 @@
   
   
   
-    <a href="../Getting_started/general_info/" class="md-nav__link">
+    <a href="../../../../Getting_started/general_info/" class="md-nav__link">
       
   
   
@@ -1441,7 +769,7 @@
   
   
   
-    <a href="../Theoretical_backgrounds/Topic_1/explanation_1/" class="md-nav__link">
+    <a href="../../../../Theoretical_backgrounds/Topic_1/explanation_1/" class="md-nav__link">
       
   
   
@@ -1494,7 +822,7 @@
   
   
   
-    <a href="../How-to_Wet-lab/wetlab-general/" class="md-nav__link">
+    <a href="../../../../How-to_Wet-lab/wetlab-general/" class="md-nav__link">
       
   
   
@@ -1545,7 +873,7 @@
   
   
   
-    <a href="../How-to_Dry-lab/drylab_general/" class="md-nav__link">
+    <a href="../../../drylab_general/" class="md-nav__link">
       
   
   
@@ -1600,7 +928,7 @@
   
   
   
-    <a href="../Work_at_MHH/MHH_processes/sharepoint_and_documents/" class="md-nav__link">
+    <a href="../../../../Work_at_MHH/MHH_processes/sharepoint_and_documents/" class="md-nav__link">
       
   
   
@@ -1653,7 +981,7 @@
   
   
   
-    <a href="../Teaching/stuff_1/" class="md-nav__link">
+    <a href="../../../../Teaching/stuff_1/" class="md-nav__link">
       
   
   
@@ -1708,7 +1036,7 @@
   
   
   
-    <a href="../Miscellaneous/Helpful_MHH_LinksResources/mhh_res_1/" class="md-nav__link">
+    <a href="../../../../Miscellaneous/Helpful_MHH_LinksResources/mhh_res_1/" class="md-nav__link">
       
   
   
@@ -1758,278 +1086,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Content of this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tag:alignment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Alignment
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:basecalling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Basecalling
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:bash" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Bash
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:cell-culture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cell Culture
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:drs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DRS
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:dates" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Dates
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:dorado" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Dorado
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:flags" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Flags
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:guide" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Guide
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:instruction" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Instruction
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:loremipsum" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        LoremIpsum
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:metaplot" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Metaplot
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:miscellaneous" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Miscellaneous
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:nanopore" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Nanopore
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:ninetails" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ninetails
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:protocol" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Protocol
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:python" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Python
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:r" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        R
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:warpdemux" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        WarpDemuX
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:website" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Website
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:wiki" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Wiki
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:alignment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        alignment
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:kallisto" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        kallisto
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:pseudoalignment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        pseudoalignment
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -2043,9 +1099,43 @@
                 
                   
 
+  <nav class="md-tags" >
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tag:alignment" class="md-tag md-tag-icon">alignment</a>
+      
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tag:kallisto" class="md-tag md-tag-icon">kallisto</a>
+      
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tag:pseudoalignment" class="md-tag md-tag-icon">pseudoalignment</a>
+      
+    
+  </nav>
+
 
   
-    <a href="https://github.com/DepledgeLab/DepledgeLabWiki/edit/main/docs/tags.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/DepledgeLab/DepledgeLabWiki/edit/main/docs/How-to_Dry-lab/Analyses_Scripts/Read_Alignment_&_Processing/pseudoalignment.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -2054,670 +1144,25 @@
     
       
     
-    <a href="https://github.com/DepledgeLab/DepledgeLabWiki/raw/main/docs/tags.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/DepledgeLab/DepledgeLabWiki/raw/main/docs/How-to_Dry-lab/Analyses_Scripts/Read_Alignment_&_Processing/pseudoalignment.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-<h1 id="tags">Tags<a class="headerlink" href="#tags" title="Link to this section">⚓︎</a></h1>
+<h1 id="performing-pseudoalignment-with-kallisto">Performing pseudoalignment with kallisto<a class="headerlink" href="#performing-pseudoalignment-with-kallisto" title="Link to this section">⚓︎</a></h1>
 <hr />
-<p>Here you can find the comprehensive list of all tags that are being used across the Wiki. This site also serves as n overview of all currently available entries.</p>
-
-
-  <h2 id="tag:alignment">
-
-
-  
-  
-    
-  
-
-<span class="md-tag md-tag-icon md-tag--align">Alignment</span><a class="headerlink" href="#tag:alignment" title="Link to this section">⚓︎</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../How-to_Dry-lab/Analyses_Scripts/Read_Alignment_%26_Processing/fun_with_flags/">
-          Fun with (alignment) Flags
-        </a>
-      </li>
-    
-      <li>
-        <a href="../How-to_Dry-lab/Analyses_Scripts/Read_Alignment_%26_Processing/alignments/">
-          Overview
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:basecalling">
-
-
-  
-  
-    
-  
-
-<span class="md-tag md-tag-icon md-tag--basecalling">Basecalling</span><a class="headerlink" href="#tag:basecalling" title="Link to this section">⚓︎</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../How-to_Dry-lab/Analyses_Scripts/dorado/">
-          Basecalling
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:bash">
-
-
-  
-  
-    
-  
-
-<span class="md-tag md-tag-icon md-tag--bash">Bash</span><a class="headerlink" href="#tag:bash" title="Link to this section">⚓︎</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../How-to_Dry-lab/Analyses_Scripts/dorado/">
-          Basecalling
-        </a>
-      </li>
-    
-      <li>
-        <a href="../How-to_Dry-lab/Other_useful_code/E.C.S.T.A.S.Y./">
-          E.C.S.T.A.S.Y.
-        </a>
-      </li>
-    
-      <li>
-        <a href="../How-to_Dry-lab/Analyses_Scripts/Read_Alignment_%26_Processing/fun_with_flags/">
-          Fun with (alignment) Flags
-        </a>
-      </li>
-    
-      <li>
-        <a href="../How-to_Dry-lab/Analyses_Scripts/metaplot/">
-          Metaplots
-        </a>
-      </li>
-    
-      <li>
-        <a href="../How-to_Dry-lab/hpc/commands/">
-          Useful Commands
-        </a>
-      </li>
-    
-      <li>
-        <a href="../How-to_Dry-lab/Analyses_Scripts/wdx/">
-          WarpDemuX
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:cell-culture">
-
-
-  
-  
-    
-  
-
-<span class="md-tag md-tag-icon md-tag--cell_cult">Cell Culture</span><a class="headerlink" href="#tag:cell-culture" title="Link to this section">⚓︎</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../How-to_Wet-lab/Protocols/cell_cuture_waste/">
-          Disposal of Cell culture waste
-        </a>
-      </li>
-    
-      <li>
-        <a href="../How-to_Wet-lab/Protocols/intro_cell_culture/">
-          Intro to Cell culture
-        </a>
-      </li>
-    
-      <li>
-        <a href="../How-to_Wet-lab/Protocols/cell_cuture_table/">
-          Useful numbers for Cell culture
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:drs">
-
-
-  
-  
-    
-  
-
-<span class="md-tag md-tag-icon md-tag--drs">DRS</span><a class="headerlink" href="#tag:drs" title="Link to this section">⚓︎</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../How-to_Dry-lab/Analyses_Scripts/dorado/">
-          Basecalling
-        </a>
-      </li>
-    
-      <li>
-        <a href="../How-to_Dry-lab/Analyses_Scripts/ninetails/">
-          Ninetails
-        </a>
-      </li>
-    
-      <li>
-        <a href="../How-to_Dry-lab/Analyses_Scripts/wdx/">
-          WarpDemuX
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:dates">
-
-
-  
-  
-    
-  
-
-<span class="md-tag md-tag-icon md-tag--tag_dates">Dates</span><a class="headerlink" href="#tag:dates" title="Link to this section">⚓︎</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../Home/Schedules_and_Events/monday_meeting/">
-          Monday Lab meetings
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:dorado">
-
-
-  
-  
-    
-  
-
-<span class="md-tag md-tag-icon md-tag--dorado">Dorado</span><a class="headerlink" href="#tag:dorado" title="Link to this section">⚓︎</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../How-to_Dry-lab/Analyses_Scripts/dorado/">
-          Basecalling
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:flags">
-
-
-  
-  
-    
-  
-
-<span class="md-tag md-tag-icon md-tag--flags">Flags</span><a class="headerlink" href="#tag:flags" title="Link to this section">⚓︎</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../How-to_Dry-lab/Analyses_Scripts/Read_Alignment_%26_Processing/fun_with_flags/">
-          Fun with (alignment) Flags
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:guide">
-
-
-  
-  
-    
-  
-
-<span class="md-tag md-tag-icon md-tag--guide">Guide</span><a class="headerlink" href="#tag:guide" title="Link to this section">⚓︎</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../Home/How_to_use_this_Wiki/Edit/editing_this_wiki/">
-          Editing this Wiki
-        </a>
-      </li>
-    
-      <li>
-        <a href="../Home/How_to_use_this_Wiki/Edit/further_wiki_info/">
-          Further Information on this Wiki
-        </a>
-      </li>
-    
-      <li>
-        <a href="../How-to_Dry-lab/hpc/commands/">
-          Useful Commands
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:instruction">
-
-
-  
-  
-    
-  
-
-<span class="md-tag md-tag-icon md-tag--instr">Instruction</span><a class="headerlink" href="#tag:instruction" title="Link to this section">⚓︎</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../How-to_Wet-lab/Protocols/cell_cuture_waste/">
-          Disposal of Cell culture waste
-        </a>
-      </li>
-    
-      <li>
-        <a href="../How-to_Wet-lab/Protocols/first_aid_phenol-trizol/">
-          Emergency procedure for phenol/trizol
-        </a>
-      </li>
-    
-      <li>
-        <a href="../How-to_Wet-lab/Guidelines/wetlab-guide-intro/">
-          Wet-lab 101
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:loremipsum">
-
-
-  
-  
-    
-  
-
-<span class="md-tag md-tag-icon md-tag--tag_lorips">LoremIpsum</span><a class="headerlink" href="#tag:loremipsum" title="Link to this section">⚓︎</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../Miscellaneous/Templates/template_1/">
-          Topic 1
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:metaplot">
-
-
-  
-  
-    
-  
-
-<span class="md-tag md-tag-icon md-tag--metaplot">Metaplot</span><a class="headerlink" href="#tag:metaplot" title="Link to this section">⚓︎</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../How-to_Dry-lab/Analyses_Scripts/metaplot/">
-          Metaplots
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:miscellaneous">
-
-
-  
-  
-    
-  
-
-<span class="md-tag md-tag-icon md-tag--misc">Miscellaneous</span><a class="headerlink" href="#tag:miscellaneous" title="Link to this section">⚓︎</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../How-to_Dry-lab/Other_useful_code/E.C.S.T.A.S.Y./">
-          E.C.S.T.A.S.Y.
-        </a>
-      </li>
-    
-      <li>
-        <a href="../How-to_Dry-lab/Other_tools/AcademicCloud/accloud_general/">
-          Overview
-        </a>
-      </li>
-    
-      <li>
-        <a href="../How-to_Wet-lab/wetlab-general/">
-          Overview
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:nanopore">
-
-
-  
-  
-    
-  
-
-<span class="md-tag md-tag-icon md-tag--nanopore">Nanopore</span><a class="headerlink" href="#tag:nanopore" title="Link to this section">⚓︎</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../How-to_Dry-lab/Analyses_Scripts/dorado/">
-          Basecalling
-        </a>
-      </li>
-    
-      <li>
-        <a href="../How-to_Dry-lab/Analyses_Scripts/ninetails/">
-          Ninetails
-        </a>
-      </li>
-    
-      <li>
-        <a href="../How-to_Dry-lab/Analyses_Scripts/wdx/">
-          WarpDemuX
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:ninetails">
-
-
-  
-  
-    
-  
-
-<span class="md-tag md-tag-icon md-tag--ninetails">Ninetails</span><a class="headerlink" href="#tag:ninetails" title="Link to this section">⚓︎</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../How-to_Dry-lab/Analyses_Scripts/ninetails/">
-          Ninetails
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:protocol">
-
-
-  
-  
-    
-  
-
-<span class="md-tag md-tag-icon md-tag--protocol">Protocol</span><a class="headerlink" href="#tag:protocol" title="Link to this section">⚓︎</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../How-to_Wet-lab/Protocols/intro_cell_culture/">
-          Intro to Cell culture
-        </a>
-      </li>
-    
-      <li>
-        <a href="../How-to_Wet-lab/Protocols/cell_cuture_table/">
-          Useful numbers for Cell culture
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:python">
-
-
-  
-  
-    
-  
-
-<span class="md-tag md-tag-icon md-tag--python">Python</span><a class="headerlink" href="#tag:python" title="Link to this section">⚓︎</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../How-to_Dry-lab/Other_useful_code/E.C.S.T.A.S.Y./">
-          E.C.S.T.A.S.Y.
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:r">
-
-
-  
-  
-    
-  
-
-<span class="md-tag md-tag-icon md-tag--r_language">R</span><a class="headerlink" href="#tag:r" title="Link to this section">⚓︎</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../How-to_Dry-lab/Other_useful_code/E.C.S.T.A.S.Y./">
-          E.C.S.T.A.S.Y.
-        </a>
-      </li>
-    
-      <li>
-        <a href="../How-to_Dry-lab/Analyses_Scripts/metaplot/">
-          Metaplots
-        </a>
-      </li>
-    
-      <li>
-        <a href="../How-to_Dry-lab/Analyses_Scripts/ninetails/">
-          Ninetails
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:warpdemux">
-
-
-  
-  
-    
-  
-
-<span class="md-tag md-tag-icon md-tag--wdx">WarpDemuX</span><a class="headerlink" href="#tag:warpdemux" title="Link to this section">⚓︎</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../How-to_Dry-lab/Analyses_Scripts/wdx/">
-          WarpDemuX
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:website">
-
-
-  
-  
-    
-  
-
-<span class="md-tag md-tag-icon md-tag--website">Website</span><a class="headerlink" href="#tag:website" title="Link to this section">⚓︎</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../Miscellaneous/Helpful_externel_Resources/external_res_1/">
-          Link collection (Website)
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:wiki">
-
-
-  
-  
-    
-  
-
-<span class="md-tag md-tag-icon md-tag--wiki">Wiki</span><a class="headerlink" href="#tag:wiki" title="Link to this section">⚓︎</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../Home/How_to_use_this_Wiki/Edit/editing_this_wiki/">
-          Editing this Wiki
-        </a>
-      </li>
-    
-      <li>
-        <a href="../Home/How_to_use_this_Wiki/Edit/further_wiki_info/">
-          Further Information on this Wiki
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:alignment">
-
-
-  
-  
-
-<span class="md-tag md-tag-icon">alignment</span><a class="headerlink" href="#tag:alignment" title="Link to this section">⚓︎</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../How-to_Dry-lab/Analyses_Scripts/Read_Alignment_%26_Processing/pseudoalignment/">
-          Performing pseudoalignment with kallisto
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:kallisto">
-
-
-  
-  
-
-<span class="md-tag md-tag-icon">kallisto</span><a class="headerlink" href="#tag:kallisto" title="Link to this section">⚓︎</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../How-to_Dry-lab/Analyses_Scripts/Read_Alignment_%26_Processing/pseudoalignment/">
-          Performing pseudoalignment with kallisto
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:pseudoalignment">
-
-
-  
-  
-
-<span class="md-tag md-tag-icon">pseudoalignment</span><a class="headerlink" href="#tag:pseudoalignment" title="Link to this section">⚓︎</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../How-to_Dry-lab/Analyses_Scripts/Read_Alignment_%26_Processing/pseudoalignment/">
-          Performing pseudoalignment with kallisto
-        </a>
-      </li>
-    
-    
-  </ul>
-
+<p>Pseudoalignment is a rapid, k-mer-based computational method for RNA-seq and metagenomic data analysis that identifies which reference transcripts a read is compatible with, rather than finding its exact, base-by-base alignment location. 
+It uses a de Bruijn graph of the transcriptome to map reads quickly, providing sufficient accuracy for quantifying gene expression while being much faster than traditional alignment. </p>
+<p>Key aspects of pseudoalignment include:
+- Speed and Efficiency: It skips the time-consuming process of mapping base-to-base alignments, often allowing millions of reads to be processed in minutes on standard computers.
+- Mechanism: It breaks reads into k-mers and maps them against a transcriptome de Bruijn graph (T-DBG) to find the set of transcripts that match the read.
+- Tools: Primary tools utilizing this method include Kallisto, Salmon, and Sailfish.
+- Applications: It is primarily used for RNA-seq transcript abundance quantification and metagenomic read assignment.
+- Limitations: Because it does not provide exact positional information (e.g., specific splice sites or exact base mismatches), it is not suitable for applications requiring high-precision mapping, such as de novo assembly or detecting single nucleotide polymorphisms (SNPs). 
+- Pseudoalignment is designed to handle non-uniquely mapped reads by identifying the potential transcripts of origin, which can then be further refined using algorithms like Expectation-Maximization. </p>
+<p>Standard pseudoalignment code</p>
 
 
 
@@ -2740,7 +1185,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="June 5, 2025 06:54:22 UTC">June 5, 2025 06:54:22</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="February 2, 2026 11:09:03 UTC">February 2, 2026 11:09:03</span>
   </span>
 
     
@@ -2750,7 +1195,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="January 9, 2025 13:48:12 UTC">January 9, 2025 13:48:12</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="February 2, 2026 11:09:03 UTC">February 2, 2026 11:09:03</span>
   </span>
 
     
@@ -2768,9 +1213,14 @@
     
     <nav>
       
-        <a href="https://github.com/e-fuhrmann" class="md-author" title="@e-fuhrmann">
+        <a href="https://github.com/DepledgeLab" class="md-author" title="@DepledgeLab">
           
-          <img src="https://avatars.githubusercontent.com/u/144283574?v=4&size=72" alt="e-fuhrmann">
+          <img src="https://avatars.githubusercontent.com/u/32496778?v=4&size=72" alt="DepledgeLab">
+        </a>
+      
+        <a href="https://github.com/web-flow" class="md-author" title="@web-flow">
+          
+          <img src="https://avatars.githubusercontent.com/u/19864447?v=4&size=72" alt="web-flow">
         </a>
       
       
@@ -2849,12 +1299,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.top", "navigation.prune", "navigation.instant", "toc.follow", "search.suggest", "search.share", "content.action.edit", "content.action.view", "content.code.copy", "content.tooltips"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": {"Alignment": "align", "Basecalling": "basecalling", "Bash": "bash", "Cell Culture": "cell_cult", "DRS": "drs", "Dates": "tag_dates", "Dorado": "dorado", "Flags": "flags", "Guide": "guide", "Instruction": "instr", "LoremIpsum": "tag_lorips", "Metaplot": "metaplot", "Miscellaneous": "misc", "Nanopore": "nanopore", "Ninetails": "ninetails", "Protocol": "protocol", "Python": "python", "R": "r_language", "WarpDemuX": "wdx", "Website": "website", "Wiki": "wiki"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.top", "navigation.prune", "navigation.instant", "toc.follow", "search.suggest", "search.share", "content.action.edit", "content.action.view", "content.code.copy", "content.tooltips"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": {"Alignment": "align", "Basecalling": "basecalling", "Bash": "bash", "Cell Culture": "cell_cult", "DRS": "drs", "Dates": "tag_dates", "Dorado": "dorado", "Flags": "flags", "Guide": "guide", "Instruction": "instr", "LoremIpsum": "tag_lorips", "Metaplot": "metaplot", "Miscellaneous": "misc", "Nanopore": "nanopore", "Ninetails": "ninetails", "Protocol": "protocol", "Python": "python", "R": "r_language", "WarpDemuX": "wdx", "Website": "website", "Wiki": "wiki"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
+        <script src="../../../../javascripts/mathjax.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
