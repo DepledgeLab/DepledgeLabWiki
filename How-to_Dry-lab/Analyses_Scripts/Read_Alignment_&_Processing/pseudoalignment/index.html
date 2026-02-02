@@ -1302,13 +1302,74 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#converting-transcript-counts-into-gene-counts" class="md-nav__link">
+  <a href="#set-working-directory-you-will-need-to-edit-this-and-direct-it-your-downloaded-kallisto-folder" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Converting transcript counts into gene counts
+        SET WORKING DIRECTORY ### You will need to edit this and direct it your downloaded kallisto folder
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-annotation-import-gencode-v47-annotation-the-same-gtf-file-used-for-the-pseudoalignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IMPORT ANNOTATION ### Import gencode v47 annotation (the same GTF file used for the pseudoalignment)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-tximport-to-summarize-transcript-counts-into-gene-counts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        USE TXIMPORT TO SUMMARIZE TRANSCRIPT COUNTS INTO GENE COUNTS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-multiple-samples-each-named-as-a-folder-in-the-kallisto-directory-can-be-abundanceh5-or-abundancetsv-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For multiple samples, each named as a folder in the kallisto directory (can be abundance.h5 or abundance.tsv file).
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="For multiple samples, each named as a folder in the kallisto directory (can be abundance.h5 or abundance.tsv file).">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate-two-column-output-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GENERATE TWO COLUMN OUTPUT FORMAT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#round-values-deseq2-does-not-like-fractions-and-write-to-output-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ROUND VALUES (DESEQ2 DOES NOT LIKE FRACTIONS), AND WRITE TO OUTPUT FILE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1726,13 +1787,74 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#converting-transcript-counts-into-gene-counts" class="md-nav__link">
+  <a href="#set-working-directory-you-will-need-to-edit-this-and-direct-it-your-downloaded-kallisto-folder" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Converting transcript counts into gene counts
+        SET WORKING DIRECTORY ### You will need to edit this and direct it your downloaded kallisto folder
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-annotation-import-gencode-v47-annotation-the-same-gtf-file-used-for-the-pseudoalignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IMPORT ANNOTATION ### Import gencode v47 annotation (the same GTF file used for the pseudoalignment)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-tximport-to-summarize-transcript-counts-into-gene-counts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        USE TXIMPORT TO SUMMARIZE TRANSCRIPT COUNTS INTO GENE COUNTS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-multiple-samples-each-named-as-a-folder-in-the-kallisto-directory-can-be-abundanceh5-or-abundancetsv-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For multiple samples, each named as a folder in the kallisto directory (can be abundance.h5 or abundance.tsv file).
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="For multiple samples, each named as a folder in the kallisto directory (can be abundance.h5 or abundance.tsv file).">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate-two-column-output-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GENERATE TWO COLUMN OUTPUT FORMAT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#round-values-deseq2-does-not-like-fractions-and-write-to-output-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ROUND VALUES (DESEQ2 DOES NOT LIKE FRACTIONS), AND WRITE TO OUTPUT FILE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1833,36 +1955,31 @@ It uses a de Bruijn graph of the transcriptome to map reads quickly, providing s
 </span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>The optimal choice of (human) reference transcriptome is Gencode. We currently use the v47 assembly but later versions are now [available](https://www.gencodegenes.org/human/). The Comprehensive gene annotation for the CHR regions is sufficient and the GTF file can be downloaded using wget i.e. by right-clicking on the GTF link and selecting &#39;copy link&#39; and pasting this after wget e.g. 
 </span></code></pre></div>
 wget https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_47/gencode.v47.annotation.gtf.gz
- ```</p>
-<h3 id="converting-transcript-counts-into-gene-counts">Converting transcript counts into gene counts<a class="headerlink" href="#converting-transcript-counts-into-gene-counts" title="Link to this section">⚓︎</a></h3>
-<p>Given that most downstream applications involve differential gene expression analysis using DeSeq2 or edgeR, it is usually desirable to convert the reported transcript-level counts produced by kallisto into gene-level counts. This is especially useful for pathway analyses as most programs do not accept transcript IDs. The R snippet below should be sufficient to merge the kallisto outputs from all subfolders (samples) within a folder and to produce a gene-level counts file that is ready for input into e.g. DeSeq2.</p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>library(tximport)
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>library(rhdf5)
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>library(rtracklayer)
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>### SET WORKING DIRECTORY ### You will need to edit this and direct it your downloaded kallisto folder
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>setwd(&quot;C:/Users/depledgd/Dropbox/RNASeq/kallisto&quot;)
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>### IMPORT ANNOTATION ### Import gencode v47 annotation (the same GTF file used for the pseudoalignment)
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>library(rtracklayer)
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>gtf &lt;- import(&quot;../gencode.v47.annotation.gtf&quot;) 
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>gtf &lt;- gtf[gtf$type == &quot;transcript&quot;]
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>t2g &lt;- unique(data.frame(tx = gtf$transcript_id, gene = gtf$gene_id))
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>### USE TXIMPORT TO SUMMARIZE TRANSCRIPT COUNTS INTO GENE COUNTS
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>## For multiple samples, each named as a folder in the kallisto directory (can be abundance.h5 or abundance.tsv file). 
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>accessions &lt;- list.dirs(full.names=FALSE)[-1]
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>kallisto.dir&lt;-paste0(accessions)
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>kallisto.files&lt;-file.path(kallisto.dir,&quot;abundance.tsv&quot;)
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>names(kallisto.files)&lt;- accessions
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>tx.kallisto &lt;- tximport(kallisto.files, type = &quot;kallisto&quot;, tx2gene = t2g, countsFromAbundance =&quot;no&quot;, ignoreAfterBar=TRUE)
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>### GENERATE TWO COLUMN OUTPUT FORMAT
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>counts&lt;-as.data.frame(tx.kallisto$counts)
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>### ROUND VALUES (DESEQ2 DOES NOT LIKE FRACTIONS), AND WRITE TO OUTPUT FILE
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>write.table(round(counts), &quot;allcounts.txt&quot;, row.names = TRUE, quote = FALSE, sep = &quot;\t&quot;)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>### Converting transcript counts into gene counts
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Given that most downstream applications involve differential gene expression analysis using DeSeq2 or edgeR, it is usually desirable to convert the reported transcript-level counts produced by kallisto into gene-level counts. This is especially useful for pathway analyses as most programs do not accept transcript IDs. The R snippet below should be sufficient to merge the kallisto outputs from all subfolders (samples) within a folder and to produce a gene-level counts file that is ready for input into e.g. DeSeq2.
 </span></code></pre></div>
+library(tximport)
+library(rhdf5)
+library(rtracklayer)</p>
+<h3 id="set-working-directory-you-will-need-to-edit-this-and-direct-it-your-downloaded-kallisto-folder">SET WORKING DIRECTORY ### You will need to edit this and direct it your downloaded kallisto folder<a class="headerlink" href="#set-working-directory-you-will-need-to-edit-this-and-direct-it-your-downloaded-kallisto-folder" title="Link to this section">⚓︎</a></h3>
+<p>setwd("C:/Users/depledgd/Dropbox/RNASeq/kallisto")</p>
+<h3 id="import-annotation-import-gencode-v47-annotation-the-same-gtf-file-used-for-the-pseudoalignment">IMPORT ANNOTATION ### Import gencode v47 annotation (the same GTF file used for the pseudoalignment)<a class="headerlink" href="#import-annotation-import-gencode-v47-annotation-the-same-gtf-file-used-for-the-pseudoalignment" title="Link to this section">⚓︎</a></h3>
+<p>library(rtracklayer)
+gtf &lt;- import("../gencode.v47.annotation.gtf") 
+gtf &lt;- gtf[gtf<span class="arithmatex">\(type == "transcript"]
+t2g &lt;- unique(data.frame(tx = gtf\)</span>transcript_id, gene = gtf$gene_id))</p>
+<h3 id="use-tximport-to-summarize-transcript-counts-into-gene-counts">USE TXIMPORT TO SUMMARIZE TRANSCRIPT COUNTS INTO GENE COUNTS<a class="headerlink" href="#use-tximport-to-summarize-transcript-counts-into-gene-counts" title="Link to this section">⚓︎</a></h3>
+<h2 id="for-multiple-samples-each-named-as-a-folder-in-the-kallisto-directory-can-be-abundanceh5-or-abundancetsv-file">For multiple samples, each named as a folder in the kallisto directory (can be abundance.h5 or abundance.tsv file).<a class="headerlink" href="#for-multiple-samples-each-named-as-a-folder-in-the-kallisto-directory-can-be-abundanceh5-or-abundancetsv-file" title="Link to this section">⚓︎</a></h2>
+<p>accessions &lt;- list.dirs(full.names=FALSE)[-1]
+kallisto.dir&lt;-paste0(accessions)
+kallisto.files&lt;-file.path(kallisto.dir,"abundance.tsv")
+names(kallisto.files)&lt;- accessions
+tx.kallisto &lt;- tximport(kallisto.files, type = "kallisto", tx2gene = t2g, countsFromAbundance ="no", ignoreAfterBar=TRUE)</p>
+<h3 id="generate-two-column-output-format">GENERATE TWO COLUMN OUTPUT FORMAT<a class="headerlink" href="#generate-two-column-output-format" title="Link to this section">⚓︎</a></h3>
+<p>counts&lt;-as.data.frame(tx.kallisto$counts)</p>
+<h3 id="round-values-deseq2-does-not-like-fractions-and-write-to-output-file">ROUND VALUES (DESEQ2 DOES NOT LIKE FRACTIONS), AND WRITE TO OUTPUT FILE<a class="headerlink" href="#round-values-deseq2-does-not-like-fractions-and-write-to-output-file" title="Link to this section">⚓︎</a></h3>
+<p>write.table(round(counts), "allcounts.txt", row.names = TRUE, quote = FALSE, sep = "\t")
+```
 The output should be a text file containing all gene names in the first column with respective counts for each sample shown in the additional columns</p>
 
 
@@ -1886,7 +2003,7 @@ The output should be a text file containing all gene names in the first column w
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="February 2, 2026 11:29:37 UTC">February 2, 2026 11:29:37</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="February 2, 2026 11:33:09 UTC">February 2, 2026 11:33:09</span>
   </span>
 
     
@@ -1901,34 +2018,6 @@ The output should be a text file containing all gene names in the first column w
 
     
     
-    
-      
-  <span class="md-source-file__fact">
-    
-      
-  <span class="md-icon" title="Contributors">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
-  </span>
-  <span>GitHub</span>
-
-    
-    <nav>
-      
-        <a href="https://github.com/DepledgeLab" class="md-author" title="@DepledgeLab">
-          
-          <img src="https://avatars.githubusercontent.com/u/32496778?v=4&size=72" alt="DepledgeLab">
-        </a>
-      
-        <a href="https://github.com/web-flow" class="md-author" title="@web-flow">
-          
-          <img src="https://avatars.githubusercontent.com/u/19864447?v=4&size=72" alt="web-flow">
-        </a>
-      
-      
-      
-    </nav>
-  </span>
-
     
   </aside>
 
