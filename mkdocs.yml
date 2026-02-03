@@ -83,6 +83,7 @@ nav:
         - Overview: How-to_Dry-lab/Analyses_Scripts/Read_Alignment_&_Processing/alignments.md
         - Fun with (alignment) Flags: How-to_Dry-lab/Analyses_Scripts/Read_Alignment_&_Processing/fun_with_flags.md
         - Pseudoalignment with Kallisto: How-to_Dry-lab/Analyses_Scripts/Read_Alignment_&_Processing/pseudoalignment.md
+        - Stranded(ness): How-to_Dry-lab/Analyses_Scripts/Read_Alignment_&_Processing/stranded.md
       - Metaplots: How-to_Dry-lab/Analyses_Scripts/metaplot.md
       - Ninetails: How-to_Dry-lab/Analyses_Scripts/ninetails.md
     - Other tools:
