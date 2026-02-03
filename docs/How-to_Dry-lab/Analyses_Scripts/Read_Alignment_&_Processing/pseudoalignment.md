@@ -28,6 +28,7 @@ REF=/project/sysviro/data/reference_transcriptomes/kallisto/gencode.v47.transcri
 
 /project/sysviro/tools/kallisto/kallisto quant -i $REF -o $OUT -b 100 --bias --rf-stranded $IN_1.fq.gz $IN_2.fq.gz
 ```
+
 -b 100  :  bootstrapping is a computational technique used to estimate the technical variance and uncertainty in transcript abundance quantification <br>
 --bias  :  enables a model that learns the empirical fragment length distribution and fragment start position distribution from the data to improve estimation <br>
 --fr-stranded : Read 1 aligns to the for strand of the transcript, Read 2 aligns to the rev strand (i.e. first read = sense). Typical for TruSeq protocols <br>
