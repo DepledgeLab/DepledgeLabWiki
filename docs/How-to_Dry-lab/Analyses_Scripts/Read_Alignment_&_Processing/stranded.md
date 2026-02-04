@@ -3,9 +3,9 @@
 Strandedness in RNA-seq describes whether the sequencing protocol preserves information about which DNA strand the original RNA transcript came from. In stranded (directional) libraries, read orientation can be used to distinguish sense from antisense transcription, improving quantification accuracy for overlapping genes and isoforms. In unstranded libraries, this information is lost, and reads are compatible with transcripts on either strand. Correctly specifying strandedness during analysis is essential, as using the wrong setting can bias expression estimates, particularly for antisense-overlapping genes and at the transcript level.
 
 ### A Warning!!!
-While strandedness is broadly classified as forward-stranded or reverse-stranded, the many different tools available have played fast and loose with these terms which can cause significant confusion. Below is a table highlighting the strandedness parameters for tools commonly used in the lab. For a comprehensive list, take a look [here](https://rnabio.org/module-09-appendix/0009/12/01/StrandSettings/)
+While strandedness is broadly classified as forward-stranded or reverse-stranded, the many different tools available have played fast and loose with these terms which can cause significant confusion i.e. TopHat. Below is a table highlighting the strandedness parameters for tools commonly used in the lab. For a comprehensive list, take a look [here](https://rnabio.org/module-09-appendix/0009/12/01/StrandSettings/)
 
-| Tool | RF/fr-firststrand stranded (dUTP) |	FR/fr-secondstrand stranded (Ligation) |	Unstranded
+| Tool | RF (reverse read = strand) |	FR (forward read = strand)  |	Unstranded
 |------|-----------------------------------|-----------------------------------------|------------
 |IGV (5p to 3p read orientation) |	F2R1 |	F1R2 |	F2R1 or F1R2
 |TopHat (--library-type parameter) |	fr-firststrand |	fr-secondstrand |	fr-unstranded
