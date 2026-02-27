@@ -21,7 +21,44 @@ Last updated: See the bottom of this page.
 
 <div class="annotate" markdown>
 
-=== "NEW: 05.01.26-02.03.26"
+=== "NEW: 09.03.26-29.06.26"
+
+    [New format starting with this rotation. See updated explanation at the bottom of this page.]
+
+    | Date         | Time  | Type of meeting                                                                                 | Organiser/<br>Presenter/Topic/Paper | Comment                          |
+    | :----------- | :---: | :---------------------------------------------------------------------------------------------: | :-------------------: | :------------------------------- |
+    | <span style="color:grey">Tuesday,<br>March&nbsp;03</span> | <span style="color:grey">12:30</span> | <span style="color:grey">Viro Journal Club</span>                 | <span style="color:grey">Pierina</span>                     | <span style="color:grey">Intermediate Exam practice</span>                                 |
+    | <span style="color:grey">Friday,<br>March&nbsp;06</span> | <span style="color:grey">09:00</span> | <span style="color:grey">Viro Club</span>                 | <span style="color:grey">Joana</span>                     | <span style="color:grey">Intermediate Exam practice</span>                                 |
+    | Monday,<br>March&nbsp;09 | 14:30 | `TBD`                 | Ruth                     |                                  |
+    | <span style="color:grey">Wednesday,<br>March&nbsp;11</span> | <span style="color:grey">13:00</span> | <span style="color:grey">Viro Seminar</span>                 | <span style="color:grey">Arsa</span>                     |                                  |
+    | Monday,<br>March&nbsp;16 | 14:30 | `TBD`                 | Carolin                     |                                  |
+    | Monday,<br>March&nbsp;23 |  | _CANCELLED_<br>_(unless requested otherwise)_                 | -                     | _Dan away_                                 |
+    | <span style="color:grey">Tuesday,<br>March&nbsp;24</span> | <span style="color:grey">12:30</span> | <span style="color:grey">Viro Journal Club</span>                 | <span style="color:grey">Erik</span>                     |                                  |
+    | Monday,<br>March&nbsp;30 |   | _CANCELLED_<br>_(unless requested otherwise)_                 | -                     | _Dan away_                                 |
+    | Monday,<br>April&nbsp;06 |  | _CANCELLED_                 |                      | _EASTER MONDAY_                                 |
+    | Monday,<br>April&nbsp;13 |   | _CANCELLED_<br>_(unless requested otherwise)_                 | -                     | _Dan away_                                 |
+    | <span style="color:grey">Tuesday,<br>April&nbsp;14</span> | <span style="color:grey">12:30</span> | <span style="color:grey">Viro Journal Club</span>                 | <span style="color:grey">Elene</span>                     |                                  |
+    | Monday,<br>April&nbsp;20 | 14:30 | `TBD`                 | Hanan                     |                                  |
+    | <span style="color:grey">Friday,<br>April&nbsp;24 (?)</span> | <span style="color:grey">09:00 (?)</span> | <span style="color:grey">Viro Club (?)</span>                 | <span style="color:grey">Erik (?)</span>                     | <span style="color:grey">Intermediate Exam practice (?)<br>(not confirmed yet)</span>                                 |
+    | Monday,<br>April&nbsp;27 | 14:30 | `TBD`                 | Dan                     |                                  |
+    | Monday,<br>May&nbsp;04 |   | _CANCELLED_<br>_(unless requested otherwise)_                 | -                     | _Dan away_                                 |
+    | <span style="color:grey">Tuesday,<br>May&nbsp;05</span> | <span style="color:grey">12:30</span> | <span style="color:grey">Viro Journal Club</span>                 | <span style="color:grey">Joana</span>                     |                                  |
+    | <span style="color:grey">Wednesday,<br>May&nbsp;06</span> | <span style="color:grey">13:00</span> | <span style="color:grey">Viro Seminar</span>                 | <span style="color:grey">Hanan</span>                     |                                  |
+    | Monday,<br>May&nbsp;11 | 14:30 | `TBD`                 | Arsa                     |                                  |
+    | Monday,<br>May&nbsp;18 | 14:30 | `TBD`                 | Joana                     |                                  |
+    | <span style="color:grey">Wednesday,<br>May&nbsp;20</span> | <span style="color:grey">13:00</span> | <span style="color:grey">Viro Seminar</span>                 | <span style="color:grey">Elene</span>                     |                                  |
+    | Monday,<br>May&nbsp;25 |  | _CANCELLED_                 |                      | _PENTACOST MONDAY_                                 |
+    | Monday,<br>June&nbsp;01 | 14:30 | `TBD`                 | Elene                     |                                  |
+    | <span style="color:grey">Tuesday,<br>June&nbsp;02</span> | <span style="color:grey">12:30</span> | <span style="color:grey">Viro Journal Club</span>                 | <span style="color:grey">Ruchira</span>                     |                                  |
+    | Monday,<br>June&nbsp;08 | 14:30 | `TBD`                 | Erik                     |                                  |
+    | Monday,<br>June&nbsp;15 |   | _CANCELLED_<br>_(unless requested otherwise)_                 | -                     | _Dan away_                                 |
+    | Monday,<br>June&nbsp;22 |   | _CANCELLED_<br>_(unless requested otherwise)_                 | -                     | _Dan away_                                 |
+    | Monday,<br>June&nbsp;29 | 14:30 | `TBD`                 | Pierina                     |                                  |
+    | <span style="color:grey">Tuesday,<br>June&nbsp;30</span> | <span style="color:grey">12:30</span> | <span style="color:grey">Viro Journal Club</span>                 | <span style="color:grey">Arsa</span>                     |                                  |
+    
+    
+
+=== "05.01.26-02.03.26"
 
     | Date         | Time  | Type of meeting                                                                                 | Presenter/Topic/Paper | Comment                          |
     | :----------- | :---: | :---------------------------------------------------------------------------------------------: | :-------------------: | :------------------------------- |
@@ -31,11 +68,12 @@ Last updated: See the bottom of this page.
     | <span style="color:grey">Tuesday,<br>January&nbsp;20</span> | <span style="color:grey">12:30</span> | <span style="color:grey">Viro Journal Club</span>                 | <span style="color:grey">Pierina</span>                     |                                  |
     | Monday,<br>January&nbsp;26  | 14:30 | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`                 | [mRNA poly(A)-tail length is a battleground for coronavirus-host competition](https://doi.org/10.1101/2025.10.09.680815)       | Moderator: Erik |
     | Monday,<br>February&nbsp;02  | 14:30 | <span style="color:orange">:material-account-question:</span> `Ask Me Anything`            | Aligners:<br>When to use what?<br>Different aligners, references and parameters           |                                  |
-    | <span style="color:grey">Tuesday,<br>February&nbsp;19</span> | <span style="color:grey">12:30</span> | <span style="color:grey">Viro Journal Club</span>                 | <span style="color:grey">Arsa</span>                     |                                  |
     | _Monday,<br>February&nbsp;09_  |  | _CANCELLED_                 |                      | _Dan away_                                 |
+    | <span style="color:grey">Friday,<br>February&nbsp;13</span> | <span style="color:grey">09:00</span> | <span style="color:grey">Viro Club</span>                 | <span style="color:grey">Elene</span>                     |                                  |
     | _Monday,<br>February&nbsp;16_  |  | _CANCELLED_                 |                      | _Dan away_                                 |
     | Monday,<br>February&nbsp;23 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                 | Erik                     |                                  |
-    | Monday,<br>March&nbsp;02 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                 | Pierina                     |                                  |
+    | <span style="color:grey">Friday,<br>February&nbsp;27</span> | <span style="color:grey">09:00</span> | <span style="color:grey">Viro Club</span>                 | <span style="color:grey">Arsa</span>                     |                                  |
+    | Monday,<br>March&nbsp;02 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                 | Pierina                     | (doubles as supervisor meeting)                                 |
 
 === "13.10.25-29.12.25"
 
@@ -96,7 +134,7 @@ Last updated: See the bottom of this page.
     | _Monday,<br>June 16_  |  | _CANCELLED_                 |                      | _Viro practical (Masters)_                                 |
     | _Monday,<br>June 23_  |  | _CANCELLED_                 |                      | _Viro practical (Masters)_                                 |
     | <span style="color:grey">Tuesday,<br>June 24</span> | <span style="color:grey">12:30</span> | <span style="color:grey">Viro Journal Club</span>                 | <span style="color:grey">Elene</span>                     |                                  |
-    | _Monday,<br>June 30_  |  | _CANCELLED_                 |                      | _Dan absent_                                 |
+    | _Monday,<br>June 30_  |  | _CANCELLED_                 |                      | _Dan away_                                 |
     | {--Monday,<br>July 07--}  | {--14:30--} | <span style="color:orange">{--:material-account-question:--}</span> {--`Ask Me Anything`--}<br><span style="color:red">**_CANCELLED_**</span>             | {--Comparison of Sequencing platforms:<br>Illumina, Nanopore & PacBio--}          |                                  |
     | <span style="color:grey">Wednesday,<br>July 09</span> | <span style="color:grey">13:00</span> | <span style="color:grey">Viro Seminar</span> | <span style="color:grey">Carolin</span> | |
     | Monday,<br>July 14 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                 | IHW attendees practice<br>(Caro, Elene, Pierina) talk                     |                                  |
@@ -139,34 +177,34 @@ Last updated: See the bottom of this page.
 1.  This link got changed on 26.05., because the paper was fully published. The original, preprint link was this: [SeqTagger Preprint Link](https://doi.org/10.1101/2024.10.29.620808)
 
 
-Feel free to write Erik suggestions regarding AMA topics or the Journal discussions.
+**Please let Erik know one week in advance at the latest on what format/topic you have decided on, so he can put it in the schedule on time!**
 
 <br><br>
 
 ---
 
-## The new Monday Lab meeting explained
+## The Monday Lab meeting explained
 
-Above you can find the current schedule for the AGDepledge Monday Meeting. This meeting broadly entails all members of AG Depledge, as well as individual members from other research group at the Institue of Virology (MHH). The schedule is organised by Erik - feel free to contact him in case of questions, comments, suggestions etc.
+Above you can find the current schedule for the AGDepledge Monday Meeting. This meeting broadly entails the members of AG Depledge, AG Schmidt and AG Bohne. The schedule is organised by Erik - feel free to talk to him in case of questions, comments, suggestions etc.
 This is how our weekly meetings work:
 
 - We (try to) meet on every Monday, 14:30, in the Seminar room (J06-06).
-- To keep it a bit interesting, we are rotating between **4** different formats across the weeks. These include:
+- Every couple of months, Erik send around a poll of availabilites
+- In a rotating fashion (or for specific dates when needed), everybody is scheduled to be responsible for a specific meeting
+- The responsible person can choose the topic of the meeting (and inform Erik a week in advance). This can have one of **3** different formats:
     - <span style="color:plum">:octicons-person-24:</span> `Individual Presentations`
-        - One person presents the progress of their current work. Discussions, questions and advice is encoured.
+        - The person presents an update on their current work. Discussions, questions and advice is encouraged.
     - <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussions`
         - Similar to a journal club, but without a single, dedicated presenter
-        - In advance, one paper will be chosen as the paper for the resepective Monday Lab Meeting. For that, papers can be suggested by everyone (and cleared by Dan). The chosen paper will be added to our [papers-please collection](https://sync.academiccloud.de/index.php/apps/onlyoffice/s/jEqtZdjGY1d84fT?fileId=569377339) and marked as such.
-        - As mentioned, there is no individual presenter, instead we will discuss our thoughts and questions on said paper together (for this, everybody will need to read the paper). There will however be 1-2 people (rotating) leading the discussion.
+        - The responsible person can choose a paper in advance. The chosen paper will be added to our [papers-please collection](https://sync.academiccloud.de/index.php/apps/onlyoffice/s/jEqtZdjGY1d84fT?fileId=569377339) and marked as such.
+        - As mentioned, there is no singular presenter, instead we will discuss our thoughts and questions on said paper together (for this, everybody will need to read the paper). The person who chose the paper (or somebody else) will moderate the session however.
     - <span style="color:orange">:material-account-question:</span> `AMAs (Ask Me Anything)` 
-        - An open question session dedicated to a specific topic
-        - In advance, one specific topic will be chosen (e.g. Nanopore DRS). Before the meeting we will give this topic some thought and collect questions we have about it/ read up on some details if we are knowledgable in that topic.
-        - In the meeting, we then try to awnser each others questions (obviously, often Dan will be doing a lot of the awnsering, but that is O.K.)
-        - Feel free to suggest specific topics you would like to discuss
-    - <span style="color:royalblue">:octicons-comment-discussion-24:</span> `General meetings`
-        - General lab topics, dates etc. are discussed
-- In case of deviations from the schedule, Erik will send out a message to inform about the changes. You can always check the current schedule at [the page you are currently at](https://depledgelab.github.io/DepledgeLabWiki/Home/Schedules_and_Events/monday_meeting/)
+        - An open question session dedicated to a specific topic (it doesn't have to be directed at a single person)
+        - One specific topic will be chosen by the responsable person (e.g. Nanopore DRS). Before the meeting we will give this topic some thought and collect questions we have about it/ read up on some details if we are knowledgable in that topic.
+        - In the meeting, we then try to awnser each others questions (obviously, often the PIs will be doing a lot of the answering, but that's O.K.)
+- We will also discuss general lab related admin stuff in meetings where necessary
+- The schedule is not set in stone; if a new topic arises spontaniously or somebody who isn't currently scheduled wants to talk about something, just let Erik know and he'll try to change the schedule accordingly
+- In case of major spontanious deviations from the schedule (e.g. a cancellation), Erik will send out a message to inform about the changes. You can always check the current schedule at [the page you are currently at](https://depledgelab.github.io/DepledgeLabWiki/Home/Schedules_and_Events/monday_meeting/)
+
 
 Should you have ideas for other formats feel free to make suggestions. :)
-
-As we are still testing these new formats and getting a feel for them they might not yet be perfect, but we are positive we will get there!
