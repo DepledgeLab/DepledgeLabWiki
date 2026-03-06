@@ -29,7 +29,7 @@ Last updated: See the bottom of this page.
     | :----------- | :---: | :---------------------------------------------------------------------------------------------: | :-------------------: | :------------------------------- |
     | <span style="color:grey">Tuesday,<br>March&nbsp;03</span> | <span style="color:grey">12:30</span> | <span style="color:grey">Viro Journal Club</span>                 | <span style="color:grey">Pierina</span>                     | <span style="color:grey">Intermediate Exam practice</span>                                 |
     | <span style="color:grey">Friday,<br>March&nbsp;06</span> | <span style="color:grey">09:00</span> | <span style="color:grey">Viro Club</span>                 | <span style="color:grey">Joana</span>                     | <span style="color:grey">Intermediate Exam practice</span>                                 |
-    | Monday,<br>March&nbsp;09 | 14:30 | `TBD`                 | Ruth                     |                                  |
+    | Monday,<br>March&nbsp;09 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                 | Dan                     |                                  |
     | <span style="color:grey">Wednesday,<br>March&nbsp;11</span> | <span style="color:grey">13:00</span> | <span style="color:grey">Viro Seminar</span>                 | <span style="color:grey">Arsa</span>                     |                                  |
     | Monday,<br>March&nbsp;16 | 14:30 | `TBD`                 | Carolin                     |                                  |
     | Monday,<br>March&nbsp;23 |  | _CANCELLED_<br>_(unless requested otherwise)_                 | -                     | _Dan away_                                 |
@@ -40,7 +40,7 @@ Last updated: See the bottom of this page.
     | <span style="color:grey">Tuesday,<br>April&nbsp;14</span> | <span style="color:grey">12:30</span> | <span style="color:grey">Viro Journal Club</span>                 | <span style="color:grey">Elene</span>                     |                                  |
     | Monday,<br>April&nbsp;20 | 14:30 | `TBD`                 | Hanan                     |                                  |
     | <span style="color:grey">Friday,<br>April&nbsp;24 (?)</span> | <span style="color:grey">09:00 (?)</span> | <span style="color:grey">Viro Club (?)</span>                 | <span style="color:grey">Erik (?)</span>                     | <span style="color:grey">Intermediate Exam practice (?)<br>(not confirmed yet)</span>                                 |
-    | Monday,<br>April&nbsp;27 | 14:30 | `TBD`                 | Dan                     |                                  |
+    | Monday,<br>April&nbsp;27 | 14:30 | `TBD`                 | Ruth                     |                                  |
     | Monday,<br>May&nbsp;04 |   | _CANCELLED_<br>_(unless requested otherwise)_                 | -                     | _Dan away_                                 |
     | <span style="color:grey">Tuesday,<br>May&nbsp;05</span> | <span style="color:grey">12:30</span> | <span style="color:grey">Viro Journal Club</span>                 | <span style="color:grey">Joana</span>                     |                                  |
     | <span style="color:grey">Wednesday,<br>May&nbsp;06</span> | <span style="color:grey">13:00</span> | <span style="color:grey">Viro Seminar</span>                 | <span style="color:grey">Hanan</span>                     |                                  |
