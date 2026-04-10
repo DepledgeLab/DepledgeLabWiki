@@ -1,8 +1,9 @@
 ---
 tags:
-    - alignment
-    - pseudoalignment
-    - kallisto
+    - RNAseq
+    - Alignment
+    - Pseudoalignment
+    - Kallisto
 ---
 
 # Performing pseudoalignment with kallisto
@@ -20,7 +21,7 @@ Pseudoalignment is a rapid, k-mer-based computational method for RNA-seq and met
 
 ### Standard pseudoalignment code
 The code snippet below will allow you to quickly align paired-end RNASeq data. Note that input fastq files should not be preprocessed (i.e. no adapter or quality trimming). <i> See script_templates folder in sysviro for a SLURM compatible example. </i>
-```
+``` bash
 # define variables
 FASTA=/project/sysviro/data/reference_transcriptomes/kallisto/gencode.v47.transcripts.fa
 REF=/project/sysviro/data/reference_transcriptomes/kallisto/gencode.v47.transcripts
@@ -31,16 +32,17 @@ REF=/project/sysviro/data/reference_transcriptomes/kallisto/gencode.v47.transcri
 /project/sysviro/bin/kallisto quant -i $REF -o $OUT -b 100 --bias --rf-stranded $IN_1.fq.gz $IN_2.fq.gz
 ```
 
--b 100  :  bootstrapping is a computational technique used to estimate the technical variance and uncertainty in transcript abundance quantification <br>
---bias  :  enables a model that learns the empirical fragment length distribution and fragment start position distribution from the data to improve estimation <br>
---fr-stranded : Read 1 aligns to the for strand of the transcript, Read 2 aligns to the rev strand (i.e. first read = sense). Typical for ligation-based protocols <br>
---rf-stranded : Read 1 aligns to the rev strand of the transcript, Read 2 aligns to the for strand (i.e. first read = antisense). Typical for dUTP based methods (DNBSEQ, NEB Ultra II Directional) <br>
-<b> Note: It is absolutely critical to pay attention to which stranded flag is being used!!! For unstranded data, these flags should be omitted. If you are at all unsure about whether your data is stranded or not then read the stranded section and run RSeQC </b>
+- -b 100  :  bootstrapping is a computational technique used to estimate the technical variance and uncertainty in transcript abundance quantification <br>
+- --bias  :  enables a model that learns the empirical fragment length distribution and fragment start position distribution from the data to improve estimation <br>
+- --fr-stranded : Read 1 aligns to the for strand of the transcript, Read 2 aligns to the rev strand (i.e. first read = sense). Typical for ligation-based protocols <br>
+- --rf-stranded : Read 1 aligns to the rev strand of the transcript, Read 2 aligns to the for strand (i.e. first read = antisense). Typical for dUTP based methods (DNBSEQ, NEB Ultra II Directional) <br>
+!!! note
+    <b> It is absolutely critical to pay attention to which stranded flag is being used!!! For unstranded data, these flags should be omitted. If you are at all unsure about whether your data is stranded or not then read the stranded section and run RSeQC </b>
 
 
 ### Choice of reference transcriptome
 The optimal choice of (human) reference transcriptome is Gencode. We currently use the v47 assembly but later versions are now [available](https://www.gencodegenes.org/human/). The Comprehensive gene annotation for the CHR regions is sufficient and the GTF file can be downloaded using wget i.e. by right-clicking on the GTF link and selecting 'copy link' and pasting this after wget e.g. 
-```
+``` bash
 wget https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_47/gencode.v47.annotation.gtf.gz
 wget https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_47/gencode.v47.transcripts.fa.gz
 
@@ -51,7 +53,7 @@ gunzip gencode.v47.transcripts.fa.gz
 ### Converting transcript counts into gene counts
 Given that most downstream applications involve differential gene expression analysis using DeSeq2 or edgeR, it is usually desirable to convert the reported transcript-level counts produced by kallisto into gene-level counts. This is especially useful for pathway analyses as most programs do not accept transcript IDs. The R snippet below should be sufficient to merge the kallisto outputs from all subfolders (samples) within a folder and to produce a gene-level counts file that is ready for input into e.g. DeSeq2.
 
-```
+``` r linenums="1" title="transcript_count_to_gene_count.R"
 library(tximport)
 library(rhdf5)
 library(rtracklayer)
@@ -68,13 +70,13 @@ t2g <- unique(data.frame(tx = gtf$transcript_id, gene = gtf$gene_id))
 ### USE TXIMPORT TO SUMMARIZE TRANSCRIPT COUNTS INTO GENE COUNTS
 ## For multiple samples, each named as a folder in the kallisto directory (can be abundance.h5 or abundance.tsv file). 
 accessions <- list.dirs(full.names=FALSE)[-1]
-kallisto.dir<-paste0(accessions)
-kallisto.files<-file.path(kallisto.dir,"abundance.tsv")
-names(kallisto.files)<- accessions
+kallisto.dir <-paste0(accessions)
+kallisto.files <-file.path(kallisto.dir,"abundance.tsv")
+names(kallisto.files) <- accessions
 tx.kallisto <- tximport(kallisto.files, type = "kallisto", tx2gene = t2g, countsFromAbundance ="no", ignoreAfterBar=TRUE)
 
 ### GENERATE TWO COLUMN OUTPUT FORMAT
-counts<-as.data.frame(tx.kallisto$counts)
+counts <- as.data.frame(tx.kallisto$counts)
 
 ### ROUND VALUES (DESEQ2 DOES NOT LIKE FRACTIONS), AND WRITE TO OUTPUT FILE
 write.table(round(counts), "allcounts.txt", row.names = TRUE, quote = FALSE, sep = "\t")

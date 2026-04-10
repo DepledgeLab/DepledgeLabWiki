@@ -1,9 +1,17 @@
+---
+tags:
+    - RNAseq
+    - Alignment
+    - Nanopore
+    - Illumina
+    - RSeQC
+---
 
 ### Strandedness in (short-read) RNA-Seq experiments
 Strandedness in RNA-seq describes whether the sequencing protocol preserves information about which DNA strand the original RNA transcript came from. In stranded (directional) libraries, read orientation can be used to distinguish sense from antisense transcription, improving quantification accuracy for overlapping genes and isoforms. In unstranded libraries, this information is lost, and reads are compatible with transcripts on either strand. Correctly specifying strandedness during analysis is essential, as using the wrong setting can bias expression estimates, particularly for antisense-overlapping genes and at the transcript level.
 
-### A Warning!!!
-While strandedness is broadly classified as forward-stranded or reverse-stranded, the many different tools available have played fast and loose with these terms which can cause significant confusion i.e. TopHat. Below is a table highlighting the strandedness parameters for tools commonly used in the lab. For a comprehensive list, take a look [here](https://rnabio.org/module-09-appendix/0009/12/01/StrandSettings/)
+!!! warning "**A Warning!!!**"
+    While strandedness is broadly classified as forward-stranded or reverse-stranded, the many different tools available have played fast and loose with these terms which can cause significant confusion i.e. TopHat. Below is a table highlighting the strandedness parameters for tools commonly used in the lab. For a comprehensive list, take a look [here](https://rnabio.org/module-09-appendix/0009/12/01/StrandSettings/)
 
 | Tool | RF (reverse read = strand) |	FR (forward read = strand)  |	Unstranded
 |------|-----------------------------------|-----------------------------------------|------------
@@ -22,7 +30,7 @@ While strandedness is broadly classified as forward-stranded or reverse-stranded
 ### Setting up and running RSeQC to infer strandedness
 RSeQC includes a python script for determining strandedness. To do this, it is easiest to subsample 10,000-20,000 paired-reads from the fastq files of one of your samples. These should be aligned with STAR or HiSat2 to the target genome (not transcriptome) and parsed to a BAM file. A corresponding BED12 file containing the gene annotations should also be created or downloaded. Together, these can be fed to the infer_experiment script. 
 
-```
+``` bash
 # install using pip
 pip3 install RSeQC
 
@@ -31,7 +39,7 @@ infer_experiment.py -i aligned.bam -r genes.bed
 
 ### Interpreting the output
 A typical output would look something like 
-```
+``` bash
 This is PairEnd Data
 Fraction of reads failed to determine: 0.02
 

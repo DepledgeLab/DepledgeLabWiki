@@ -155,9 +155,13 @@ theme:
       ninetails: material/numeric-9-circle
       basecalling: material/format-letter-matches
       dorado: material/format-letter-matches
+      kallisto: fontawesome/regular/moon
       bash: simple/gnubash
       python: simple/python
       r_language: simple/r
+      rna_seq: material/format-line-spacing
+      illumina: material/iobroker
+      rseqc: fontawesome/solid/r
 
   favicon: img/favicon_notebook-inverse.png
   font:
@@ -226,6 +230,8 @@ extra:
     Instruction: instr
     Miscellaneous: misc
     Alignment: align
+    Pseudoalignment: align
+    Kallisto: kallisto
     Flags: flags
     Metaplot: metaplot
     Protocol: protocol
@@ -239,6 +245,9 @@ extra:
     Python: python
     Bash: bash
     R: r_language
+    RNAseq: rna_seq
+    Illumina: illumina
+    RSeQC: resqc
 
   social:
     - icon: fontawesome/brands/github
