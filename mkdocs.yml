@@ -1,10 +1,10 @@
 ### General information (don't edit this unless you know what you are doing)
 site_name: DepledgeLabWiki
-repo_url: https://github.com/DepledgeLab/DepledgeLabWiki
+#repo_url: https://github.com/DepledgeLab/DepledgeLabWiki
 repo_name: This Wiki on GitHub
 # set site_url to either remote or local
 site_url: https://depledgelab.github.io/DepledgeLabWiki/
-#site_url: http://127.0.0.1:8000/
+site_url: http://127.0.0.1:8000/
 edit_uri: edit/main/docs/
 watch:
   - includes
