@@ -41,14 +41,14 @@ The time table includes Monday lab meetings as well presentations in other forma
     | Monday,<br>April&nbsp;06 |  | _CANCELLED_                 |                      | _EASTER MONDAY_                                 |
     | Monday,<br>April&nbsp;13 |   | _CANCELLED_<br>_(unless requested otherwise)_                 | -                     | _Dan away_                                 |
     | <span style="color:grey">Tuesday,<br>April&nbsp;14</span> | <span style="color:grey">12:30</span> | <span style="color:grey">Viro Journal Club</span>                 | <span style="color:grey">Elene</span>                     |                                  |
-    | <span style="color:red">**Monday,<br>April&nbsp;20**</span> | {--14:30--} | {--`TBD`--}<br><span style="color:red">**_CANCELLED_**</span>                 | {--Hanan--}                     |                                  |
+    | <span style="color:red">Monday,<br>April&nbsp;20</span> | {--14:30--} | {--`TBD`--}<br><span style="color:red">_CANCELLED_</span>                 | {--Hanan--}                     |                                  |
     | <span style="color:grey">Friday,<br>April&nbsp;24</span> | <span style="color:grey">09:00</span> | <span style="color:grey">Viro Club</span>                 | <span style="color:grey">Erik</span>                     | <span style="color:grey">Intermediate Exam practice                                |
     | Monday,<br>April&nbsp;27  | 14:30 | <span style="color:seagreen">:material-newspaper-variant-multiple:</span> `Journal Discussion`                 | [Coronaviruses reprogram the tRNA epitranscriptome to favor viral protein expression](https://doi.org/10.1038/s41467-026-69700-w)       | Moderator: Ruth |
     | Monday,<br>May&nbsp;04 |   | _CANCELLED_<br>_(unless requested otherwise)_                 | -                     | _Dan away_                                 |
     | <span style="color:grey">Tuesday,<br>May&nbsp;05</span> | <span style="color:grey">12:30</span> | <span style="color:grey">Viro Journal Club</span>                 | <span style="color:grey">Joana</span>                     |                                  |
     | <span style="color:grey">Wednesday,<br>May&nbsp;06</span> | <span style="color:grey">13:00</span> | <span style="color:grey">Viro Seminar</span>                 | <span style="color:grey">Hanan</span>                     |                                  |
-    | Monday,<br>May&nbsp;11 | 14:30 | `TBD`                 | Arsa                     |                                  |
-    | Monday,<br>May&nbsp;18 | 14:30 | `TBD`                 | Joana                     |                                  |
+    | Monday,<br>May&nbsp;11 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                 | Arsa                     |                                  |
+    | Monday,<br>May&nbsp;18 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                 | Joana                     |                                  |
     | <span style="color:grey">Wednesday,<br>May&nbsp;20</span> | <span style="color:grey">13:00</span> | <span style="color:grey">Viro Seminar</span>                 | <span style="color:grey">Elene</span>                     |                                  |
     | Monday,<br>May&nbsp;25 |  | _CANCELLED_                 |                      | _PENTACOST MONDAY_                                 |
     | Monday,<br>June&nbsp;01 | 14:30 | `TBD`                 | Elene                     |                                  |
@@ -56,7 +56,7 @@ The time table includes Monday lab meetings as well presentations in other forma
     | Monday,<br>June&nbsp;08 | 14:30 | `TBD`                 | Erik                     |                                  |
     | Monday,<br>June&nbsp;15 |   | _CANCELLED_<br>_(unless requested otherwise)_                 | -                     | _Dan away_                                 |
     | Monday,<br>June&nbsp;22 |   | _CANCELLED_<br>_(unless requested otherwise)_                 | -                     | _Dan away_                                 |
-    | <span style="color:red">**Monday,<br>June&nbsp;29**</span> | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                 | {--Pierina--}<br>{++Joana++}                   | {++Supervisor Meeting++}                                 |
+    | <span style="color:red">Monday,<br>June&nbsp;29</span> | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                 | {--Pierina--}<br>{++Joana++}                   | {++Supervisor Meeting++}                                 |
     | <span style="color:grey">Tuesday,<br>June&nbsp;30</span> | <span style="color:grey">12:30</span> | <span style="color:grey">Viro Journal Club</span>                 | <span style="color:grey">Arsa</span>                     |                                  |
     
     
