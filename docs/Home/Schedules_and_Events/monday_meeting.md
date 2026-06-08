@@ -53,7 +53,7 @@ The time table includes Monday lab meetings as well presentations in other forma
     | Monday,<br>May&nbsp;25 |  | _CANCELLED_                 |                      | _PENTACOST MONDAY_                                 |
     | Monday,<br>June&nbsp;01 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                 | Elene                     |                                  |
     | <span style="color:grey">Tuesday,<br>June&nbsp;02</span> | <span style="color:grey">12:30</span> | <span style="color:grey">Viro Journal Club</span>                 | <span style="color:grey">Elene</span>                     |                                  |
-    | Monday,<br>June&nbsp;08 | 14:30 | `TBD`                 | Erik                     |                                  |
+    | Monday,<br>June&nbsp;08 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                 | Erik                     |                                  |
     | Monday,<br>June&nbsp;15 |   | _CANCELLED_<br>_(unless requested otherwise)_                 | -                     | _Dan away_                                 |
     | Monday,<br>June&nbsp;22 |   | _CANCELLED_<br>_(unless requested otherwise)_                 | -                     | _Dan away_                                 |
     | <span style="color:red">Monday,<br>June&nbsp;29</span> | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                 | {--Pierina--}<br>{++Joana++}                   | {++Supervisor Meeting++}                                 |
