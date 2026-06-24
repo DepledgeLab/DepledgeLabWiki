@@ -58,6 +58,8 @@ The time table includes Monday lab meetings as well presentations in other forma
     | Monday,<br>June&nbsp;22 |   | _CANCELLED_<br>_(unless requested otherwise)_                 | -                     | _Dan away_                                 |
     | <span style="color:red">Monday,<br>June&nbsp;29</span> | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                 | {--Pierina--}<br>{++Joana++}                   | {++Supervisor Meeting++}                                 |
     | <span style="color:grey">Tuesday,<br>June&nbsp;30</span> | <span style="color:grey">12:30</span> | <span style="color:grey">Viro Journal Club</span>                 | <span style="color:grey">Arsa</span>                     |                                  |
+        | <span style="color:grey">Tuesday,<br>June&nbsp;02</span> | <span style="color:grey">12:30</span> | <span style="color:grey">Viro Journal Club</span>                 | <span style="color:grey">Elene</span>                     |                                  |
+    | Monday,<br>July&nbsp;06 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter`                 | Caro & Pierina                     | IHW talk practice                                 |
     
     
 
