@@ -24,7 +24,30 @@ The time table includes Monday lab meetings as well presentations in other forma
 
 <div class="annotate" markdown>
 
-=== "NEW: 09.03.26-29.06.26"
+
+=== "NEW: 06.07.26-05.10.26"
+
+    [While the usual seminar room is occupied: meeting in the Mibi seminar room on floor 5.]
+
+    | Date         | Time  | Type of meeting                                                                                 | Organiser/<br>Presenter/Topic/Paper | Comment                          |
+    | :----------- | :---: | :---------------------------------------------------------------------------------------------: | :-------------------: | :------------------------------- |
+    | Monday,<br>July&nbsp;06 |  | _CANCELLED_ | - | _Renovation_ |
+    | Monday,<br>July&nbsp;13 |  | _CANCELLED_ | - | _Renovation_ |
+    | Monday,<br>July&nbsp;20 |  | _CANCELLED_ | - | _Renovation_ |
+    | Monday,<br>July&nbsp;27 |  | _CANCELLED_ | - | _Renovation_ |
+    | Monday,<br>August&nbsp;03 |  | _CANCELLED_ | - | _Renovation_ |
+    | Monday,<br>August&nbsp;10 |  | _CANCELLED_ | - | _Renovation_ |
+    | Monday,<br>August&nbsp;17 |  | _CANCELLED_ | - | _Renovation_ |
+    | Monday,<br>August&nbsp;24 | 14:30 | <span style="color:royalblue">:octicons-comment-discussion-24:</span> `General` |  |  |
+    | Monday,<br>August&nbsp;31 |  | _CANCELLED_ | - | _Dan away_ |
+    | Monday,<br>September&nbsp;07 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter` | Natalia |  |
+    | Monday,<br>September&nbsp;14 |  | _CANCELLED_ | - | _Dan away_ |
+    | Monday,<br>September&nbsp;21 | 14:30 | <span style="color:royalblue">:octicons-comment-discussion-24:</span> `General` |  |  |
+    | Monday,<br>September&nbsp;28 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter` | Marius | Marius' comittee meeting |
+    | Monday,<br>September&nbsp;05 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter` | Manel | _[room TBD]_ |
+
+
+=== "09.03.26-29.06.26"
 
     [New format starting with this rotation. See updated explanation at the bottom of this page.]
 
