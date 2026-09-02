@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../img/favicon_notebook-inverse.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1828,14 +1828,14 @@ in which RNA mods and/or poly(A) tails are not of interest, high-accuracy mode (
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>filename=XXX
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>### Run basecalling (high accuracy mode, adapter trimming, BAM output)
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>/project/sysviro/dorado-0.9.0-linux-x64/bin/dorado basecaller --trim adapters -r $MODEL/rna004_130bps_hac@v3.0.1 $IN/path/to/pod5/ &gt; $OUT/&quot;$filename&quot;.hac.trimAdaptor.dorado.0.9.0.bam
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>/project/sysviro/dorado-0.9.0-linux-x64/bin/dorado basecaller --trim adapters -r $MODEL/rna004_130bps_hac@v3.0.1 $IN/path/to/pod5/ &gt; $OUT/"$filename".hac.trimAdaptor.dorado.0.9.0.bam
 </span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
 </span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>### Generate sequencing summary file 
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>/project/sysviro/dorado-0.9.0-linux-x64/bin/dorado summary $OUT/$filename&quot;.hac.trimAdaptor.dorado.0.9.0.bam &gt; $OUT/$filename&quot;.hac.trimAdaptor.dorado.0.9.0.sequencing_summary.txt
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>/project/sysviro/dorado-0.9.0-linux-x64/bin/dorado summary $OUT/$filename".hac.trimAdaptor.dorado.0.9.0.bam &gt; $OUT/$filename".hac.trimAdaptor.dorado.0.9.0.sequencing_summary.txt
 </span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
 </span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>### Generate FASTQ file from BAM 
 </span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>module load BEDTools 
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>bamToFastq -i $OUT/$filename&quot;.hac.trimAdaptor.dorado.0.9.0.bam -fq $OUT/$filename&quot;.hac.trimAdaptor.dorado.0.9.0.fastq
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>bamToFastq -i $OUT/$filename".hac.trimAdaptor.dorado.0.9.0.bam -fq $OUT/$filename".hac.trimAdaptor.dorado.0.9.0.fastq
 </span></code></pre></div>
 <h3 id="super-accuracy-modifications-basecalling">Super-accuracy (modifications) basecalling<a class="headerlink" href="#super-accuracy-modifications-basecalling" title="Link to this section">⚓︎</a></h3>
 <p>The latest RNA004 super high accuracy (sup) model allows for direct detection of various <a href="https://github.com/nanoporetech/dorado?tab=readme-ov-file#rna-models">RNA modifications</a>, including poly(A) tail estimates. Here
@@ -1983,7 +1983,7 @@ the preferred approach is to generated a single uBAM file where all modification
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.prune", "navigation.instant", "toc.follow", "search.suggest", "search.share", "content.action.edit", "content.action.view", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": {"Alignment": "align", "Basecalling": "basecalling", "Bash": "bash", "Cell Culture": "cell_cult", "DRS": "drs", "Dates": "tag_dates", "Dorado": "dorado", "Flags": "flags", "Guide": "guide", "Illumina": "illumina", "Instruction": "instr", "Kallisto": "kallisto", "LoremIpsum": "tag_lorips", "Metaplot": "metaplot", "Miscellaneous": "misc", "Nanopore": "nanopore", "Ninetails": "ninetails", "Protocol": "protocol", "Pseudoalignment": "align", "Python": "python", "R": "r_language", "RNAseq": "rna_seq", "RSeQC": "resqc", "WarpDemuX": "wdx", "Website": "website", "Wiki": "wiki"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../javascripts/mathjax.js"></script>
       

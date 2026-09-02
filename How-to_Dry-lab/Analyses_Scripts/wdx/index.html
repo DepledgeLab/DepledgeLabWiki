@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../img/favicon_notebook-inverse.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1786,7 +1786,7 @@
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Link to this section">⚓︎</a></h2>
 <p>Running WarpDemuX requires setting up a conda environment and installing required packages. Below provides a general overview on how to do this but please check the <a href="https://github.com/KleistLab/WarpDemuX">WarpDemuX Github</a> before doing so in case changes are made to the procedure.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a># Switch to an interactive node, you will likely need &gt;16Gb of memory for the installation
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>srun --partition=leinecpu_interactive --job-name=&quot;wdx&quot; --cpus-per-task=1 --mem-per-cpu=32G -t8:00:0 --pty /bin/bash
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>srun --partition=leinecpu_interactive --job-name="wdx" --cpus-per-task=1 --mem-per-cpu=32G -t8:00:0 --pty /bin/bash
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a># Navigate to 
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>cd /project/sysviro/tools
@@ -1838,8 +1838,8 @@ The barcode_predictions.all.csv contains a list of all read ids (column 1), the 
 </span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>33bc3975-8fdd-4583-abad-0094bafba834,4,0.997,0.0009,0.998,0.0004,0.0004,0.0004
 </span></code></pre></div>
 We process this using the following commands to select only high confidence barcodes to produce a list of read ids associated with each demultiplexed sample. In the below example we are compiling lists of read ids associated with barcode 04 and barcode 05 and with probability scores of &gt;90%
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>awk -F&#39;,&#39; &#39;$2 == 4 &amp;&amp; $3 &gt;= 0.9 {print $1}&#39; predictions_filtered.bam.csv &gt; barcode04.p0.9.list.txt
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>awk -F&#39;,&#39; &#39;$2 == 5 &amp;&amp; $3 &gt;= 0.9 {print $1}&#39; predictions_filtered.bam.csv &gt; barcode05.p0.9.list.txt
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>awk -F',' '$2 == 4 &amp;&amp; $3 &gt;= 0.9 {print $1}' predictions_filtered.bam.csv &gt; barcode04.p0.9.list.txt
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>awk -F',' '$2 == 5 &amp;&amp; $3 &gt;= 0.9 {print $1}' predictions_filtered.bam.csv &gt; barcode05.p0.9.list.txt
 </span></code></pre></div></p>
 <h2 id="filtering-of-dorado-basecalled-ubams">Filtering of Dorado-basecalled uBAMs<a class="headerlink" href="#filtering-of-dorado-basecalled-ubams" title="Link to this section">⚓︎</a></h2>
 <p>Finally, we can use BBMap to create individual (demultiplexed) uBAMs from a dorado-basecalled uBAM that is generated using the full datasets (multiplexed).
@@ -1982,7 +1982,7 @@ We process this using the following commands to select only high confidence barc
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.prune", "navigation.instant", "toc.follow", "search.suggest", "search.share", "content.action.edit", "content.action.view", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": {"Alignment": "align", "Basecalling": "basecalling", "Bash": "bash", "Cell Culture": "cell_cult", "DRS": "drs", "Dates": "tag_dates", "Dorado": "dorado", "Flags": "flags", "Guide": "guide", "Illumina": "illumina", "Instruction": "instr", "Kallisto": "kallisto", "LoremIpsum": "tag_lorips", "Metaplot": "metaplot", "Miscellaneous": "misc", "Nanopore": "nanopore", "Ninetails": "ninetails", "Protocol": "protocol", "Pseudoalignment": "align", "Python": "python", "R": "r_language", "RNAseq": "rna_seq", "RSeQC": "resqc", "WarpDemuX": "wdx", "Website": "website", "Wiki": "wiki"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../javascripts/mathjax.js"></script>
       
