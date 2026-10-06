@@ -25,7 +25,26 @@ The time table includes Monday lab meetings as well presentations in other forma
 <div class="annotate" markdown>
 
 
-=== "NEW: 06.07.26-05.10.26"
+=== "NEW: 12.10.26-28.12.26"
+
+    | Date         | Time  | Type of meeting                                                                                 | Organiser/<br>Presenter/Topic/Paper | Comment                          |
+    | :----------- | :---: | :---------------------------------------------------------------------------------------------: | :-------------------: | :------------------------------- |
+    | Monday,<br>October&nbsp;05 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter` | Manel |  |
+    | Monday,<br>October&nbsp;12 |  | _CANCELLED_ | - | _Dan away_ |
+    | Monday,<br>October&nbsp;19 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter` | Arsa |  |
+    | Monday,<br>October&nbsp;26 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter` | Joana |  |
+    | Monday,<br>November&nbsp;02 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter` | Ruth |  |
+    | Monday,<br>November&nbsp;09 |   | _CANCELLED_ | - | _Dan away_ |
+    | Monday,<br>November&nbsp;16 | 14:30 | <span style="color:royalblue">:octicons-comment-discussion-24:</span> `General` |  |
+    | Monday,<br>November&nbsp;23 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter` | Natalia |  |
+    | Monday,<br>November&nbsp;30 | 14:30 | <span style="color:blueviolet">:octicons-star-16:</span> `Special` |  | Christmas market! :)  |
+    | Monday,<br>December&nbsp;07 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter` | Manel |  |
+    | Monday,<br>December&nbsp;14 | 14:30 | <span style="color:royalblue">:octicons-comment-discussion-24:</span> `General` |  |
+    | Monday,<br>December&nbsp;21 |  | _CANCELLED_ | - |  |
+    | Monday,<br>December&nbsp;28 |  | _CANCELLED_ | - |  |
+
+
+=== "06.07.26-05.10.26"
 
     [{--While the usual seminar room is occupied we meet in the Mibi seminar room on floor 5.--}<br>Meetings resume in the seminar room on floor 6 as per usual.]
 
@@ -44,7 +63,8 @@ The time table includes Monday lab meetings as well presentations in other forma
     | Monday,<br>September&nbsp;14 |  | _CANCELLED_ | - | _Dan away_ |
     | Monday,<br>September&nbsp;21 | 14:30 | <span style="color:royalblue">:octicons-comment-discussion-24:</span> `General` |  |  |
     | Monday,<br>September&nbsp;28 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter` | Marius | Marius' comittee meeting |
-    | Monday,<br>September&nbsp;05 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter` | Manel |  |
+    | Monday,<br>October&nbsp;05 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter` | Manel |  |
+
 
 
 === "09.03.26-29.06.26"
