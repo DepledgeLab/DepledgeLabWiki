@@ -31,11 +31,11 @@ The time table includes Monday lab meetings as well presentations in other forma
     | :----------- | :---: | :---------------------------------------------------------------------------------------------: | :-------------------: | :------------------------------- |
     | Monday,<br>October&nbsp;05 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter` | Manel |  |
     | Monday,<br>October&nbsp;12 |  | _CANCELLED_ | - | _Dan away_ |
-    | Monday,<br>October&nbsp;19 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter` | Arsa |  |
+    | <span style="color:red">Monday,<br>October&nbsp;19</span> | {--14:30--}<br><span style="color:red">13:00</span> | {--<span style="color:plum">:octicons-person-24:</span> `Individual Presenter`--}<br>{++<span style="color:royalblue">:octicons-comment-discussion-24:</span> `General`++} | {--Arsa--} | {++Special edition<br>(see Slack)++} |
     | Monday,<br>October&nbsp;26 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter` | Joana |  |
     | Monday,<br>November&nbsp;02 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter` | Ruth |  |
     | Monday,<br>November&nbsp;09 |   | _CANCELLED_ | - | _Dan away_ |
-    | Monday,<br>November&nbsp;16 | 14:30 | <span style="color:royalblue">:octicons-comment-discussion-24:</span> `General` |  |
+    | <span style="color:red">Monday,<br>November&nbsp;16</span> | <span style="color:red">14:30</span> | {--<span style="color:royalblue">:octicons-comment-discussion-24:</span> `General`--}<br>{++<span style="color:plum">:octicons-person-24:</span> `Individual Presenter`++} | {++Arsa++} |  |
     | Monday,<br>November&nbsp;23 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter` | Natalia |  |
     | Monday,<br>November&nbsp;30 | 14:30 | <span style="color:blueviolet">:octicons-star-16:</span> `Special` |  | Christmas market! :)  |
     | Monday,<br>December&nbsp;07 | 14:30 | <span style="color:plum">:octicons-person-24:</span> `Individual Presenter` | Manel |  |
