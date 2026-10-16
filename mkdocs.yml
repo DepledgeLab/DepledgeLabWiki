@@ -79,6 +79,7 @@ nav:
     - Analyses (Pipelines & Scripts):
       - Basecalling: How-to_Dry-lab/Analyses_Scripts/dorado.md
       - WarpDemuX: How-to_Dry-lab/Analyses_Scripts/wdx.md
+      - DRAP3R: How-to_Dry-lab/Analyses_Scripts/drap3r.md
       - Read Alignment & Processing:
         - Overview: How-to_Dry-lab/Analyses_Scripts/Read_Alignment_&_Processing/alignments.md
         - Fun with (alignment) Flags: How-to_Dry-lab/Analyses_Scripts/Read_Alignment_&_Processing/fun_with_flags.md
