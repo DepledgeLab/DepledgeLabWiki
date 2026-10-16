@@ -42,7 +42,7 @@ and the relaxed alignment parameters leads to all almost reads (inc. adapter-onl
 downstream analyses. The best option is thus to try and eliminate adapter-only reads via prefiltering. Note: It is hoped that the ongoing development of AVASARALA will provide an alternative
 solution by enabling adapter trimming.
 
-<img src="images/qscore_plot.jpg" alt="identification of adapter-only reads" width="800">
+<img src="../../img/adapter_exploration.jpg" alt="identification of adapter-only reads" width="800">
 
 In the above plot, adapter-only reads show a raw read length peak of around 70 nt and generally have low median Q scores. Based on this, we consider all reads < 85 nt to be adapter-only
 reads that should be removed prior to alignment. Note also that a small proportion of reads are extremely long (> 1 kb) and are considered to be ligation-derived artefacts. However, these
@@ -62,6 +62,34 @@ reformat.sh in=$BASE/$BASEFILE out=$BASE/$PREFIX.LR.fastq minlength=1000 overwri
 python /project/sysviro/bin/split_fastq-v1.1.py --reads_per_file 250000 $BASE/$PREFIX.SR.fastq $BASE/$PREFIX.SR.samp250k
 
 ```
+
+## Alignment
+
+Filtered reads should be aligned against a genome reference that has been indexed with BWA. A number of existing hybrid (human + virus) genome references are already available in `/project/sysviro/data/reference_genomes/Hybrid_genomes`. Note that genome-indexing only needs to be performed once for each hybrid genome reference.
+
+Alignment is performed using BWA mem with optimized parameters and should be submitted as an array job specifying the number of *split fastq* files that result from the previous step e.g. `sbatch --array=1-4 alignment.sh`. The full code for alignment, extracting relevant statistics, parsing to sorted + indexed BAM files, and removing temporary files, is as follows.
+
+```
+# Perform BWA alignment
+bwa mem -t 4 -W 13 -k 6 -T 20 -x ont2d $REF $BASE/"$PREFIX".SR.samp250k_${SLURM_ARRAY_TASK_ID}.fastq > $OUT/"$NAME"_bwa_W13k6T20.SR.250k-${SLURM_ARRAY_TASK_ID}.HG38-TB40.sam
+
+# Extract alignment metrics from SAM files 
+cut -f2 $OUT/"$NAME"_bwa_W13k6T20.SR.250k-${SLURM_ARRAY_TASK_ID}.HG38-TB40.sam | grep -v SN | sort | uniq -c > $OUT/"$NAME"_bwa_W13k6T20.SR.250k-${SLURM_ARRAY_TASK_ID}.stats.txt
+
+# Convert SAM to co-ordinate sorted and indexed BAM
+samtools view -bS $OUT/"$NAME"_bwa_W13k6T20.SR.250k-${SLURM_ARRAY_TASK_ID}.HG38-TB40.sam > $OUT/"$NAME"_bwa_W13k6T20.SR.250k-${SLURM_ARRAY_TASK_ID}.HG38-TB40.bam
+samtools sort -o $OUT/"$NAME"_bwa_W13k6T20.SR.250k-${SLURM_ARRAY_TASK_ID}.HG38-TB40.sorted.bam $OUT/"$NAME"_bwa_W13k6T20.SR.250k-${SLURM_ARRAY_TASK_ID}.HG38-TB40.bam
+samtools index $OUT/"$NAME"_bwa_W13k6T20.SR.250k-${SLURM_ARRAY_TASK_ID}.HG38-TB40.sorted.bam
+
+# Cleanup to remove temporary files
+rm $OUT/"$NAME"_bwa_W13k6T20.SR.250k-${SLURM_ARRAY_TASK_ID}.HG38-TB40.sam
+rm $OUT/"$NAME"_bwa_W13k6T20.SR.250k-${SLURM_ARRAY_TASK_ID}.HG38-TB40.bam
+```
+
+
+
+
+
 
 
 
