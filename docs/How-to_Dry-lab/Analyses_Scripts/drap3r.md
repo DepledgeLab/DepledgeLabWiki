@@ -138,8 +138,15 @@ bedtools intersect -s -F 0.25 -wao -a $OUT/"$NAME"_bwa_W13k6T20.SR.primary-merge
 bedtools intersect -s -F 0.25 -wao -a $OUT/"$NAME"_bwa_W13k6T20.SR.primary-merged.HG38-TB40.sorted.bed -b $OUT/../GTF/gencode.v45.fullAnnotation_inc_PolIIItx_tRNAs_SNARs.bed | awk '$7 ~ /chr/' > $OUT/IntersectCounts/"$NAME"_bwa_W13k6T20.HG38.merged.primary.sorted.fullAnnotation_inc_PolIIItx_tRNAs_SNARs.intersect.bed
 
 # no overlap 
-bedtools intersect -s -v -a $OUT/"$NAME"_bwa_W13k6T20.SR.primary-merged.HG38-TB40.sorted.bed -b ../GTF/gencode.v45.fullAnnotation_inc_PolIIItx_tRNAs_SNARs.bed > $OUT/IntersectCounts/"$NAME"_bwa_W13k6T20.HG38.merged.primary.sorted.NoOverlaps.intersect.bed
+bedtools intersect -s -v -a $OUT/"$NAME"_bwa_W13k6T20.SR.primary-merged.HG38-TB40.sorted.bed -b $OUT/../GTF/gencode.v45.fullAnnotation_inc_PolIIItx_tRNAs_SNARs.bed > $OUT/IntersectCounts/"$NAME"_bwa_W13k6T20.HG38.merged.primary.sorted.NoOverlaps.intersect.bed
 ```
+
+For subsequent counting, two different approaches are currently being tested.
+
+```
+
+```
+
 
 
 
