@@ -60,7 +60,6 @@ reformat.sh in=$BASE/$BASEFILE out=$BASE/$PREFIX.LR.fastq minlength=1000 overwri
 # Split SR fastq files (containing reads of 85 - 1000 nt in length)
 # Note: currently optimized for python v3.10.4
 python /project/sysviro/bin/split_fastq-v1.1.py --reads_per_file 250000 $BASE/$PREFIX.SR.fastq $BASE/$PREFIX.SR.samp250k
-
 ```
 
 ## Alignment
@@ -84,6 +83,29 @@ samtools index $OUT/"$NAME"_bwa_W13k6T20.SR.250k-${SLURM_ARRAY_TASK_ID}.HG38-TB4
 # Cleanup to remove temporary files
 rm $OUT/"$NAME"_bwa_W13k6T20.SR.250k-${SLURM_ARRAY_TASK_ID}.HG38-TB40.sam
 rm $OUT/"$NAME"_bwa_W13k6T20.SR.250k-${SLURM_ARRAY_TASK_ID}.HG38-TB40.bam
+```
+
+## Post-processing 
+
+Following alignment of the individual split fastq files, the next step is to merge the resulting sorted BAM files back together and then parse to retain only primary alignments
+and to create bed files for downstream analysis.
+
+```
+# Merge sorted BAM files (below examples assumes four BAM files, should be adjusted as needed)
+samtools merge $OUT/"$NAME"_bwa_W13k6T20.SR-merged.HG38-TB40.bam $OUT/"$NAME"_bwa_W13k6T20.SR.250k-1.HG38-TB40.sorted.bam $OUT/"$NAME"_bwa_W13k6T20.SR.250k-2.HG38-TB40.sorted.bam $OUT/"$NAME"_bwa_W13k6T20.SR.250k-3.HG38-TB40.sorted.bam $OUT/"$NAME"_bwa_W13k6T20.SR.250k-4.HG38-TB40.sorted.bam
+
+# Note: If you are feeling brave, you can also try this with a glob (can be risky though)
+samtools merge "$OUT/${NAME}_bwa_W13k6T20.SR-merged.HG38-TB40.bam" "$OUT/${NAME}"_bwa_W13k6T20.SR.250k-*.HG38-TB40.sorted.bam
+
+# Filter to retain only primary alignments
+samtools view -F 2308 -b -o $OUT/"$NAME"_bwa_W13k6T20.SR.primary-merged.HG38-TB40.bam $OUT/"$NAME"_bwa_W13k6T20.SR-merged.HG38-TB40.bam
+
+# Sort and index
+samtools sort -o $OUT/"$NAME"_bwa_W13k6T20.SR.primary-merged.HG38-TB40.sorted.bam $OUT/"$NAME"_bwa_W13k6T20.SR.primary-merged.HG38-TB40.bam
+samtools index $OUT/"$NAME"_bwa_W13k6T20.SR.primary-merged.HG38-TB40.sorted.bam
+
+# Convert to BED6 format
+bedtools bamtobed -i $OUT/"$NAME"_bwa_W13k6T20.SR.primary-merged.HG38-TB40.sorted.bam > $OUT/"$NAME"_bwa_W13k6T20.SR.primary-merged.HG38-TB40.sorted.bed
 ```
 
 
