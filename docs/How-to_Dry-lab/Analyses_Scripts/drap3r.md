@@ -47,6 +47,8 @@ solution by enabling adapter trimming.
 <img src="{{ '/img/adapter_exploration.jpg' | relative_url }}" alt="identification of adapter-only reads" width="800">
 <img src="../../img/adapter_exploration.jpg" alt="identification of adapter-only reads" width="800">
 
+<img src="/DepledgeLabWiki/img/adapter_exploration.jpg" alt="identification of adapter-only reads" width="800">
+
 In the above plot, adapter-only reads show a raw read length peak of around 70 nt and generally have low median Q scores. Based on this, we consider all reads < 85 nt to be adapter-only
 reads that should be removed prior to alignment. Note also that a small proportion of reads are extremely long (> 1 kb) and are considered to be ligation-derived artefacts. However, these
 cannot be identified and split by Dorado and should be removed because BWA MEM cannot handle reads longer than ~1000 nt. Note also that BWA MEM cannot handle large numbers of reads when
