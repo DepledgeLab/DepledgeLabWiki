@@ -115,6 +115,31 @@ bedtools bamtobed -i $OUT/"$NAME"_bwa_W13k6T20.SR.primary-merged.HG38-TB40.sorte
 ## Intersect analyses
 At this stage, analyses generally proceed in different directions and can include (i) modification analyses, (ii) extraction of viral genome alignments for visualization, and (iii) classification of human genome alignments. This section deals with the latter. Here, the aim is to determine which reads align to which genes and to generate summary counts for different feature types (e.g. tRNA genes, other pol III genes, Pol III pseudogenes, Pol II genes) and to explore potentially novel alignments.
 
+```
+# Pol III tRNAs
+bedtools intersect -s -F 0.25 -wao -a $OUT/"$NAME"_bwa_W13k6T20.SR.primary-merged.HG38-TB40.sorted.bed -b $OUT/../GTF/hg38-tRNAs.bed | awk '$7 ~ /chr/' > $OUT/IntersectCounts/"$NAME"_bwa_W13k6T20.HG38.merged.primary.sorted.hg38-tRNAs.intersect.bed
+
+# Pol III primary only
+bedtools intersect -s -F 0.25 -wao -a $OUT/"$NAME"_bwa_W13k6T20.SR.primary-merged.HG38-TB40.sorted.bed -b $OUT/../GTF/gencode.v45.PolIIItx.primaryOnly.bed | awk '$7 ~ /chr/' > $OUT/IntersectCounts/"$NAME"_bwa_W13k6T20.HG38.merged.primary.sorted.PolIIItx.primaryOnly.intersect.bed
+
+# Pol III psuedogene only
+bedtools intersect -s -F 0.25 -wao -a $OUT/"$NAME"_bwa_W13k6T20.SR.primary-merged.HG38-TB40.sorted.bed -b $OUT/../GTF/gencode.v45.PolIIItx.pseudogeneOnly.bed | awk '$7 ~ /chr/' > $OUT/IntersectCounts/"$NAME"_bwa_W13k6T20.HG38.merged.primary.sorted.PolIIItx.pseudoOnly.intersect.bed
+
+# Pol III SNAR only
+bedtools intersect -s -F 0.25 -wao -a $OUT/"$NAME"_bwa_W13k6T20.SR.primary-merged.HG38-TB40.sorted.bed -b $OUT/../GTF/SNARs.bed | awk '$7 ~ /chr/' > $OUT/IntersectCounts/"$NAME"_bwa_W13k6T20.HG38.merged.primary.sorted.SNARs.intersect.bed
+
+# no Pol III
+bedtools intersect -s -F 0.25 -wao -a $OUT/"$NAME"_bwa_W13k6T20.SR.primary-merged.HG38-TB40.sorted.bed -b $OUT/../GTF/gencode.v45.NoPolIIItx.bed | awk '$7 ~ /chr/' > $OUT/IntersectCounts/"$NAME"_bwa_W13k6T20.HG38.merged.primary.sorted.NoPolIIItx.intersect.bed
+
+# putative novel
+bedtools intersect -s -F 0.25 -wao -a $OUT/"$NAME"_bwa_W13k6T20.SR.primary-merged.HG38-TB40.sorted.bed -b $OUT/../GTF/novelPolIIItx.bed | awk '$7 ~ /chr/' > $OUT/IntersectCounts/"$NAME"_bwa_W13k6T20.HG38.merged.primary.sorted.NovelPolIIItx.intersect.bed
+
+# complete annotation
+bedtools intersect -s -F 0.25 -wao -a $OUT/"$NAME"_bwa_W13k6T20.SR.primary-merged.HG38-TB40.sorted.bed -b $OUT/../GTF/gencode.v45.fullAnnotation_inc_PolIIItx_tRNAs_SNARs.bed | awk '$7 ~ /chr/' > $OUT/IntersectCounts/"$NAME"_bwa_W13k6T20.HG38.merged.primary.sorted.fullAnnotation_inc_PolIIItx_tRNAs_SNARs.intersect.bed
+
+# no overlap 
+bedtools intersect -s -v -a $OUT/"$NAME"_bwa_W13k6T20.SR.primary-merged.HG38-TB40.sorted.bed -b ../GTF/gencode.v45.fullAnnotation_inc_PolIIItx_tRNAs_SNARs.bed > $OUT/IntersectCounts/"$NAME"_bwa_W13k6T20.HG38.merged.primary.sorted.NoOverlaps.intersect.bed
+```
 
 
 
