@@ -43,10 +43,6 @@ and the relaxed alignment parameters leads to all almost reads (inc. adapter-onl
 downstream analyses. The best option is thus to try and eliminate adapter-only reads via prefiltering. Note: It is hoped that the ongoing development of AVASARALA will provide an alternative
 solution by enabling adapter trimming.
 
-<img src="/docs/img/adapter_exploration.jpg" alt="identification of adapter-only reads" width="800">
-<img src="{{ '/img/adapter_exploration.jpg' | relative_url }}" alt="identification of adapter-only reads" width="800">
-<img src="../../img/adapter_exploration.jpg" alt="identification of adapter-only reads" width="800">
-
 <img src="/DepledgeLabWiki/img/adapter_exploration.jpg" alt="identification of adapter-only reads" width="800">
 
 In the above plot, adapter-only reads show a raw read length peak of around 70 nt and generally have low median Q scores. Based on this, we consider all reads < 85 nt to be adapter-only
