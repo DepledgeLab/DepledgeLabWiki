@@ -1153,33 +1153,16 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Post-processing">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#high-accuracy-vanilla-basecalling" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intersect-analyses" class="md-nav__link">
     <span class="md-ellipsis">
       
-        High-accuracy (vanilla) basecalling
+        Intersect analyses
       
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#super-accuracy-modifications-basecalling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Super-accuracy (modifications) basecalling
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1309,6 +1292,7 @@ The reason for disabling adapter trimming is that without a poly(A) tail being p
 </span></code></pre></div>
 Note: the exact commands to disable adapter trimming can vary between versions so always verify the output is working as expected. This can best be achieved via plotting raw read length
 distributions for a dataset that has been basecalled with and without adapter trimming.</p>
+<p><br></p>
 <h2 id="preprocessing-of-basecalled-data">Preprocessing of basecalled data<a class="headerlink" href="#preprocessing-of-basecalled-data" title="Link to this section">⚓︎</a></h2>
 <p>The current <em>best practice</em> is to align basecalled reads against genome fastas using BWA MEM with optimized parameters. However, the combination of untrimmed adapter sequence in the reads
 and the relaxed alignment parameters leads to all almost reads (inc. adapter-only reads) being aligned. While most alignments are likely accurate, those from adapter-only reads can bias
@@ -1330,10 +1314,11 @@ using relaxed alignment parameters. Thus we have to split fastq files into small
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a># Note: currently optimized for python v3.10.4
 </span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>python /project/sysviro/bin/split_fastq-v1.1.py --reads_per_file 250000 $BASE/$PREFIX.SR.fastq $BASE/$PREFIX.SR.samp250k
 </span></code></pre></div>
+<p><br></p>
 <h2 id="alignment">Alignment<a class="headerlink" href="#alignment" title="Link to this section">⚓︎</a></h2>
 <p>Filtered reads should be aligned against a genome reference that has been indexed with BWA. A number of existing hybrid (human + virus) genome references are already available in <code>/project/sysviro/data/reference_genomes/Hybrid_genomes</code>. Note that genome-indexing only needs to be performed once for each hybrid genome reference.</p>
 <p>Alignment is performed using BWA mem with optimized parameters and should be submitted as an array job specifying the number of <em>split fastq</em> files that result from the previous step e.g. <code>sbatch --array=1-4 alignment.sh</code>. The full code for alignment, extracting relevant statistics, parsing to sorted + indexed BAM files, and removing temporary files, is as follows.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a># Perform BWA alignment
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a># Perform BWA alignment
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>bwa mem -t 4 -W 13 -k 6 -T 20 -x ont2d $REF $BASE/"$PREFIX".SR.samp250k_${SLURM_ARRAY_TASK_ID}.fastq &gt; $OUT/"$NAME"_bwa_W13k6T20.SR.250k-${SLURM_ARRAY_TASK_ID}.HG38-TB40.sam
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a># Extract alignment metrics from SAM files 
@@ -1348,6 +1333,7 @@ using relaxed alignment parameters. Thus we have to split fastq files into small
 </span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>rm $OUT/"$NAME"_bwa_W13k6T20.SR.250k-${SLURM_ARRAY_TASK_ID}.HG38-TB40.sam
 </span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>rm $OUT/"$NAME"_bwa_W13k6T20.SR.250k-${SLURM_ARRAY_TASK_ID}.HG38-TB40.bam
 </span></code></pre></div>
+<br></p>
 <h2 id="post-processing">Post-processing<a class="headerlink" href="#post-processing" title="Link to this section">⚓︎</a></h2>
 <p>Following alignment of the individual split fastq files, the next step is to merge the resulting sorted BAM files back together and then parse to retain only primary alignments
 and to create bed files for downstream analysis.</p>
@@ -1367,34 +1353,9 @@ and to create bed files for downstream analysis.</p>
 </span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a># Convert to BED6 format
 </span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>bedtools bamtobed -i $OUT/"$NAME"_bwa_W13k6T20.SR.primary-merged.HG38-TB40.sorted.bam &gt; $OUT/"$NAME"_bwa_W13k6T20.SR.primary-merged.HG38-TB40.sorted.bed
 </span></code></pre></div>
-<h3 id="high-accuracy-vanilla-basecalling">High-accuracy (vanilla) basecalling<a class="headerlink" href="#high-accuracy-vanilla-basecalling" title="Link to this section">⚓︎</a></h3>
-<p>For vanilla basecalling, the following setup is appropriate</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>IN=/project/sysviro/data/Nanopore-Pod5/
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>OUT=/project/sysviro/data/DoradoBasecalling/
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>filename=XXX
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>### Run basecalling (high accuracy mode, adapter trimming, BAM output)
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>/project/sysviro/dorado-0.9.0-linux-x64/bin/dorado basecaller --trim adapters -r $MODEL/rna004_130bps_hac@v3.0.1 $IN/path/to/pod5/ &gt; $OUT/"$filename".hac.trimAdaptor.dorado.0.9.0.bam
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>### Generate sequencing summary file 
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>/project/sysviro/dorado-0.9.0-linux-x64/bin/dorado summary $OUT/$filename".hac.trimAdaptor.dorado.0.9.0.bam &gt; $OUT/$filename".hac.trimAdaptor.dorado.0.9.0.sequencing_summary.txt
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>### Generate FASTQ file from BAM 
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>module load BEDTools 
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>bamToFastq -i $OUT/$filename".hac.trimAdaptor.dorado.0.9.0.bam -fq $OUT/$filename".hac.trimAdaptor.dorado.0.9.0.fastq
-</span></code></pre></div>
-<h3 id="super-accuracy-modifications-basecalling">Super-accuracy (modifications) basecalling<a class="headerlink" href="#super-accuracy-modifications-basecalling" title="Link to this section">⚓︎</a></h3>
-<p>The latest RNA004 super high accuracy (sup) model allows for direct detection of various <a href="https://github.com/nanoporetech/dorado?tab=readme-ov-file#rna-models">RNA modifications</a>, including poly(A) tail estimates. Here
-the preferred approach is to generated a single uBAM file where all modifications (inc. poly(A) tail length estimate) is calculated for each read.</p>
-<p>STILL NEED TO UPDATE THE BELOW TO ALLOW FOR ALL MODS + TRANSFER OF ALL TAGS TO FASTQ</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>dorado basecaller --trim adaptor $MODEL/rna004_130bps_hac@v3.0.1 sample.pod5 --modified-bases m6A_DRACH &gt; sample.bam
-</span></code></pre></div>
-<p>To go from an unaligned BAM file with modifications recorded in the MM and <abbr title="Machine Learning">ML</abbr> tags, it is necessary to convert to FASTQ while retaining the tags and then align to a reference using minimap2. This sounds complicated but in principal requires a single (piped) command. Note that SAMtools v1.16 or higher is needed along with minimap2 v2.26 or higher
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>samtools fastq -TMM,ML ${USAM} | minimap2 -x map-ont -a -t ${num_threads} -y --secondary=no ${REFERENCE} - &gt; ${SAMFILE}
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>#e.g. 
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>samtools fastq -TMM,ML $OUT/EMC1-ARPE19-96h-1.sup-m6A.trimAdapters.dorado.0.5.1.bam | minimap2 -ax map-ont -L -p 0.99 -y --secondary=no /project/sysviro/data/reference_transcriptomes/VZV-Dumas-v2.0-complete.fasta - &gt; /project/sysviro/users/Dan/VZVm6Atest/EMC1-ARPE19-96h-1.sup-m6A.tx.sam
-</span></code></pre></div></p>
+<p><br></p>
+<h2 id="intersect-analyses">Intersect analyses<a class="headerlink" href="#intersect-analyses" title="Link to this section">⚓︎</a></h2>
+<p>At this stage, analyses generally proceed in different directions and can include (i) modification analyses, (ii) extraction of viral genome alignments for visualization, and (iii) classification of human genome alignments. This section deals with the latter. Here, the aim is to determine which reads align to which genes and to generate summary counts for different feature types (e.g. tRNA genes, other pol III genes, Pol III pseudogenes, Pol II genes) and to explore potentially novel alignments.</p>
 
 
 
@@ -1417,7 +1378,7 @@ the preferred approach is to generated a single uBAM file where all modification
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="October 16, 2026 06:15:36 UTC">October 16, 2026 06:15:36</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="October 16, 2026 06:19:49 UTC">October 16, 2026 06:19:49</span>
   </span>
 
     
