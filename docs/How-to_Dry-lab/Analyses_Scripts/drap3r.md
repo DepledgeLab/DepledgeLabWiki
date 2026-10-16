@@ -35,6 +35,7 @@ cut -f2,15 $OUT/"$NAME".sup-mods.notrim.dorado.2.1.2.sequencing_summary.txt > $O
 Note: the exact commands to disable adapter trimming can vary between versions so always verify the output is working as expected. This can best be achieved via plotting raw read length
 distributions for a dataset that has been basecalled with and without adapter trimming.
 
+<br>
 
 ## Preprocessing of basecalled data
 The current *best practice* is to align basecalled reads against genome fastas using BWA MEM with optimized parameters. However, the combination of untrimmed adapter sequence in the reads
@@ -62,8 +63,9 @@ reformat.sh in=$BASE/$BASEFILE out=$BASE/$PREFIX.LR.fastq minlength=1000 overwri
 python /project/sysviro/bin/split_fastq-v1.1.py --reads_per_file 250000 $BASE/$PREFIX.SR.fastq $BASE/$PREFIX.SR.samp250k
 ```
 
-## Alignment
+<br>
 
+## Alignment
 Filtered reads should be aligned against a genome reference that has been indexed with BWA. A number of existing hybrid (human + virus) genome references are already available in `/project/sysviro/data/reference_genomes/Hybrid_genomes`. Note that genome-indexing only needs to be performed once for each hybrid genome reference.
 
 Alignment is performed using BWA mem with optimized parameters and should be submitted as an array job specifying the number of *split fastq* files that result from the previous step e.g. `sbatch --array=1-4 alignment.sh`. The full code for alignment, extracting relevant statistics, parsing to sorted + indexed BAM files, and removing temporary files, is as follows.
@@ -84,9 +86,9 @@ samtools index $OUT/"$NAME"_bwa_W13k6T20.SR.250k-${SLURM_ARRAY_TASK_ID}.HG38-TB4
 rm $OUT/"$NAME"_bwa_W13k6T20.SR.250k-${SLURM_ARRAY_TASK_ID}.HG38-TB40.sam
 rm $OUT/"$NAME"_bwa_W13k6T20.SR.250k-${SLURM_ARRAY_TASK_ID}.HG38-TB40.bam
 ```
+<br>
 
 ## Post-processing 
-
 Following alignment of the individual split fastq files, the next step is to merge the resulting sorted BAM files back together and then parse to retain only primary alignments
 and to create bed files for downstream analysis.
 
@@ -108,49 +110,12 @@ samtools index $OUT/"$NAME"_bwa_W13k6T20.SR.primary-merged.HG38-TB40.sorted.bam
 bedtools bamtobed -i $OUT/"$NAME"_bwa_W13k6T20.SR.primary-merged.HG38-TB40.sorted.bam > $OUT/"$NAME"_bwa_W13k6T20.SR.primary-merged.HG38-TB40.sorted.bed
 ```
 
+<br>
+
+## Intersect analyses
+At this stage, analyses generally proceed in different directions and can include (i) modification analyses, (ii) extraction of viral genome alignments for visualization, and (iii) classification of human genome alignments. This section deals with the latter. Here, the aim is to determine which reads align to which genes and to generate summary counts for different feature types (e.g. tRNA genes, other pol III genes, Pol III pseudogenes, Pol II genes) and to explore potentially novel alignments.
 
 
-
-
-
-
-
-### High-accuracy (vanilla) basecalling
-For vanilla basecalling, the following setup is appropriate
-
-```
-IN=/project/sysviro/data/Nanopore-Pod5/
-OUT=/project/sysviro/data/DoradoBasecalling/
-filename=XXX
-
-### Run basecalling (high accuracy mode, adapter trimming, BAM output)
-/project/sysviro/dorado-0.9.0-linux-x64/bin/dorado basecaller --trim adapters -r $MODEL/rna004_130bps_hac@v3.0.1 $IN/path/to/pod5/ > $OUT/"$filename".hac.trimAdaptor.dorado.0.9.0.bam
-
-### Generate sequencing summary file 
-/project/sysviro/dorado-0.9.0-linux-x64/bin/dorado summary $OUT/$filename".hac.trimAdaptor.dorado.0.9.0.bam > $OUT/$filename".hac.trimAdaptor.dorado.0.9.0.sequencing_summary.txt
-
-### Generate FASTQ file from BAM 
-module load BEDTools 
-bamToFastq -i $OUT/$filename".hac.trimAdaptor.dorado.0.9.0.bam -fq $OUT/$filename".hac.trimAdaptor.dorado.0.9.0.fastq
-```
-
-### Super-accuracy (modifications) basecalling
-The latest RNA004 super high accuracy (sup) model allows for direct detection of various [RNA modifications](https://github.com/nanoporetech/dorado?tab=readme-ov-file#rna-models), including poly(A) tail estimates. Here
-the preferred approach is to generated a single uBAM file where all modifications (inc. poly(A) tail length estimate) is calculated for each read.
-
-STILL NEED TO UPDATE THE BELOW TO ALLOW FOR ALL MODS + TRANSFER OF ALL TAGS TO FASTQ
-
-```
-dorado basecaller --trim adaptor $MODEL/rna004_130bps_hac@v3.0.1 sample.pod5 --modified-bases m6A_DRACH > sample.bam
-```
-
-To go from an unaligned BAM file with modifications recorded in the MM and ML tags, it is necessary to convert to FASTQ while retaining the tags and then align to a reference using minimap2. This sounds complicated but in principal requires a single (piped) command. Note that SAMtools v1.16 or higher is needed along with minimap2 v2.26 or higher
-```
-samtools fastq -TMM,ML ${USAM} | minimap2 -x map-ont -a -t ${num_threads} -y --secondary=no ${REFERENCE} - > ${SAMFILE}
-
-#e.g. 
-samtools fastq -TMM,ML $OUT/EMC1-ARPE19-96h-1.sup-m6A.trimAdapters.dorado.0.5.1.bam | minimap2 -ax map-ont -L -p 0.99 -y --secondary=no /project/sysviro/data/reference_transcriptomes/VZV-Dumas-v2.0-complete.fasta - > /project/sysviro/users/Dan/VZVm6Atest/EMC1-ARPE19-96h-1.sup-m6A.tx.sam
-```
 
 
 
