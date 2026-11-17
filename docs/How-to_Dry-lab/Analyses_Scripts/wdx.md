@@ -65,9 +65,10 @@ Of critical importance is selecting the correct model (-m). The [WarpDemux Githu
 ## WDX output & parsing
 Following the demux step, an output folder will be generated in the output directory. The folder name will reflect the model used and the date of the demux run. The output folder will contain a  subfolder called predictions which contains large number of .csv files, each file containing predictions for 40000 reads. These should be combined into a single file
 ```
-cat barcode_predictions_* > barcode_predictions.all.csv
+# note: navigate first to the warpdemux output base directory (in which you can find a folder called predictions)
+cat predictions/* > barcode_predictions.all.csv.gz
 ```
-The barcode_predictions.all.csv contains a list of all read ids (column 1), the predicted barcode (col 2), the confidence score (col 3), and the individual confidence scores for each barcode (cols 4+).
+The barcode_predictions.all.csv.gz contains a list of all read ids (column 1), the predicted barcode (col 2), the confidence score (col 3), and the individual confidence scores for each barcode (cols 4+).
 ```
 read_id,predicted_barcode,confidence_score,p03,p04,p05,p07,p-1
 cd3c0eab-1e24-4059-86e5-0f5845d417d4,5,0.893,0.045,0.0047,0.9384,0.0107,0.0012
@@ -82,8 +83,8 @@ d1a12590-4408-4ce4-a740-0696bf6f5651,4,0.991,0.0033,0.9944,0.0006,0.0011,0.0006
 ```
 We process this using the following commands to select only high confidence barcodes to produce a list of read ids associated with each demultiplexed sample. In the below example we are compiling lists of read ids associated with barcode 04 and barcode 05 and with probability scores of >90%
 ```
-awk -F',' '$2 == 4 && $3 >= 0.9 {print $1}' predictions_filtered.bam.csv > barcode04.p0.9.list.txt
-awk -F',' '$2 == 5 && $3 >= 0.9 {print $1}' predictions_filtered.bam.csv > barcode05.p0.9.list.txt
+zcat barcode_predictions.all.csv.gz | awk -F',' '$2 == 4 && $3 >= 0.9 {print $1}' > sample-1.barcode04.p0.9.list.txt
+zcat barcode_predictions.all.csv.gz | awk -F',' '$2 == 5 && $3 >= 0.9 {print $1}' > sample-2.barcode05.p0.9.list.txt
 ```
 
 ## Filtering of Dorado-basecalled uBAMs
@@ -91,7 +92,12 @@ Finally, we can use BBMap to create individual (demultiplexed) uBAMs from a dora
 ```
 module load BBMap
 module load SAMtools
-filterbyname.sh in=../../EMC1_wt_U1mut_ARPE19_MPlex-2.hac.trimAdapters.dorado.0.8.0.bam out=EMC1_wt_ARPE19-wdx4.hac.trimAdapters.dorado.0.8.0.bam names=EMC1_wt_U1mut_ARPE19_MPlex-2.WDX12_rna004-v0.4.4/barcode04.p0.9.list.txt include=true overwrite=true usejni=t -Xmx16g
+filterbyname.sh in=multiplexed.bam out=sample-wdx4.sup.trimAdapters.dorado.0.8.0.bam names=barcode04.p0.9.list.txt include=true overwrite=true usejni=t -Xmx16g
 ```
 
-From here, we can proceed to generating FASTQ files for downstream alignments etc.
+## Notes on filenames
+Generally it makes sense to structure your filenames in a consistent way that captures relevant information. The following example denotes the (demultiplexed) sample name, the warpdemux barcode assigned to that sample, the confidence score used to filter the barcode, the basecalling parameters (in this case, sup basecalling adapter trimming but with no modification detection), and the dorado version
+```
+sample-1.wdx04.p0.9.sup.nomods.trimAdapters.dorado.0.8.0.bam
+```
+
