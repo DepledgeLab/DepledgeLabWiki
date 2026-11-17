@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../img/favicon_notebook-inverse.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -29,10 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -1204,6 +1204,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#notes-on-filenames" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes on filenames
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1722,6 +1733,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#notes-on-filenames" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes on filenames
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1851,9 +1873,10 @@
 <p><br></p>
 <h2 id="wdx-output-parsing"><abbr title="WarpDemuX">WDX</abbr> output &amp; parsing<a class="headerlink" href="#wdx-output-parsing" title="Link to this section">⚓︎</a></h2>
 <p>Following the demux step, an output folder will be generated in the output directory. The folder name will reflect the model used and the date of the demux run. The output folder will contain a  subfolder called predictions which contains large number of .csv files, each file containing predictions for 40000 reads. These should be combined into a single file
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>cat barcode_predictions_* &gt; barcode_predictions.all.csv
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a># note: navigate first to the warpdemux output base directory (in which you can find a folder called predictions)
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>cat predictions/* &gt; barcode_predictions.all.csv.gz
 </span></code></pre></div>
-The barcode_predictions.all.csv contains a list of all read ids (column 1), the predicted barcode (col 2), the confidence score (col 3), and the individual confidence scores for each barcode (cols 4+).
+The barcode_predictions.all.csv.gz contains a list of all read ids (column 1), the predicted barcode (col 2), the confidence score (col 3), and the individual confidence scores for each barcode (cols 4+).
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>read_id,predicted_barcode,confidence_score,p03,p04,p05,p07,p-1
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>cd3c0eab-1e24-4059-86e5-0f5845d417d4,5,0.893,0.045,0.0047,0.9384,0.0107,0.0012
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>4cc652e6-2369-452d-ad5d-668ed5b63198,5,0.964,0.0048,0.0006,0.9786,0.0141,0.0019
@@ -1866,16 +1889,19 @@ The barcode_predictions.all.csv contains a list of all read ids (column 1), the 
 </span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>33bc3975-8fdd-4583-abad-0094bafba834,4,0.997,0.0009,0.998,0.0004,0.0004,0.0004
 </span></code></pre></div>
 We process this using the following commands to select only high confidence barcodes to produce a list of read ids associated with each demultiplexed sample. In the below example we are compiling lists of read ids associated with barcode 04 and barcode 05 and with probability scores of &gt;90%
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>awk -F',' '$2 == 4 &amp;&amp; $3 &gt;= 0.9 {print $1}' predictions_filtered.bam.csv &gt; barcode04.p0.9.list.txt
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>awk -F',' '$2 == 5 &amp;&amp; $3 &gt;= 0.9 {print $1}' predictions_filtered.bam.csv &gt; barcode05.p0.9.list.txt
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>zcat barcode_predictions.all.csv.gz | awk -F',' '$2 == 4 &amp;&amp; $3 &gt;= 0.9 {print $1}' &gt; sample-1.barcode04.p0.9.list.txt
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>zcat barcode_predictions.all.csv.gz | awk -F',' '$2 == 5 &amp;&amp; $3 &gt;= 0.9 {print $1}' &gt; sample-2.barcode05.p0.9.list.txt
 </span></code></pre></div></p>
 <h2 id="filtering-of-dorado-basecalled-ubams">Filtering of Dorado-basecalled uBAMs<a class="headerlink" href="#filtering-of-dorado-basecalled-ubams" title="Link to this section">⚓︎</a></h2>
 <p>Finally, we can use BBMap to create individual (demultiplexed) uBAMs from a dorado-basecalled uBAM that is generated using the full datasets (multiplexed).
 <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>module load BBMap
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>module load SAMtools
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>filterbyname.sh in=../../EMC1_wt_U1mut_ARPE19_MPlex-2.hac.trimAdapters.dorado.0.8.0.bam out=EMC1_wt_ARPE19-wdx4.hac.trimAdapters.dorado.0.8.0.bam names=EMC1_wt_U1mut_ARPE19_MPlex-2.WDX12_rna004-v0.4.4/barcode04.p0.9.list.txt include=true overwrite=true usejni=t -Xmx16g
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>filterbyname.sh in=multiplexed.bam out=sample-wdx4.sup.trimAdapters.dorado.0.8.0.bam names=barcode04.p0.9.list.txt include=true overwrite=true usejni=t -Xmx16g
 </span></code></pre></div></p>
-<p>From here, we can proceed to generating FASTQ files for downstream alignments etc.</p>
+<h2 id="notes-on-filenames">Notes on filenames<a class="headerlink" href="#notes-on-filenames" title="Link to this section">⚓︎</a></h2>
+<p>Generally it makes sense to structure your filenames in a consistent way that captures relevant information. The following example denotes the (demultiplexed) sample name, the warpdemux barcode assigned to that sample, the confidence score used to filter the barcode, the basecalling parameters (in this case, sup basecalling adapter trimming but with no modification detection), and the dorado version
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sample-1.wdx04.p0.9.sup.nomods.trimAdapters.dorado.0.8.0.bam
+</span></code></pre></div></p>
 
 
 
@@ -1898,7 +1924,7 @@ We process this using the following commands to select only high confidence barc
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="October 9, 2025 12:30:20 UTC">October 9, 2025 12:30:20</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="November 17, 2026 08:45:14 UTC">November 17, 2026 08:45:14</span>
   </span>
 
     
@@ -1925,6 +1951,16 @@ We process this using the following commands to select only high confidence barc
 
     
     <nav>
+      
+        <a href="https://github.com/DepledgeLab" class="md-author" title="@DepledgeLab">
+          
+          <img src="https://avatars.githubusercontent.com/u/32496778?v=4&size=72" alt="DepledgeLab">
+        </a>
+      
+        <a href="https://github.com/web-flow" class="md-author" title="@web-flow">
+          
+          <img src="https://avatars.githubusercontent.com/u/19864447?v=4&size=72" alt="web-flow">
+        </a>
       
         <a href="https://github.com/e-fuhrmann" class="md-author" title="@e-fuhrmann">
           
@@ -2007,10 +2043,10 @@ We process this using the following commands to select only high confidence barc
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.prune", "navigation.instant", "toc.follow", "search.suggest", "search.share", "content.action.edit", "content.action.view", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": {"Alignment": "align", "Basecalling": "basecalling", "Bash": "bash", "Cell Culture": "cell_cult", "DRS": "drs", "Dates": "tag_dates", "Dorado": "dorado", "Flags": "flags", "Guide": "guide", "Illumina": "illumina", "Instruction": "instr", "Kallisto": "kallisto", "LoremIpsum": "tag_lorips", "Metaplot": "metaplot", "Miscellaneous": "misc", "Nanopore": "nanopore", "Ninetails": "ninetails", "Protocol": "protocol", "Pseudoalignment": "align", "Python": "python", "R": "r_language", "RNAseq": "rna_seq", "RSeQC": "resqc", "WarpDemuX": "wdx", "Website": "website", "Wiki": "wiki"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.prune", "navigation.instant", "toc.follow", "search.suggest", "search.share", "content.action.edit", "content.action.view", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": {"Alignment": "align", "Basecalling": "basecalling", "Bash": "bash", "Cell Culture": "cell_cult", "DRS": "drs", "Dates": "tag_dates", "Dorado": "dorado", "Flags": "flags", "Guide": "guide", "Illumina": "illumina", "Instruction": "instr", "Kallisto": "kallisto", "LoremIpsum": "tag_lorips", "Metaplot": "metaplot", "Miscellaneous": "misc", "Nanopore": "nanopore", "Ninetails": "ninetails", "Protocol": "protocol", "Pseudoalignment": "align", "Python": "python", "R": "r_language", "RNAseq": "rna_seq", "RSeQC": "resqc", "WarpDemuX": "wdx", "Website": "website", "Wiki": "wiki"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
         <script src="../../../javascripts/mathjax.js"></script>
       
